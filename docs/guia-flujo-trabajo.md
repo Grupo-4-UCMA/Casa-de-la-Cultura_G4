@@ -24,7 +24,7 @@ Debe mostrarte algo como `git version 2.x.x`.
 
 ### 1.2 Configurar tu identidad
 
-Esto es importante: **el email tiene que ser el mismo que usas en GitHub**, sino tus commits no aparecerán como tuyos.
+Esto es importante: **el email tiene que ser el mismo que usas en GitHub**, si no tus commits no aparecerán como tuyos.
 
 ```bash
 git config --global user.name "Tu Nombre"
