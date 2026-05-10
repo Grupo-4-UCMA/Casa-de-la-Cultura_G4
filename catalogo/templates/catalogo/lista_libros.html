@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Casa de la Cultura - Catálogo</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 20px; background-color: #f4f4f4; }
+        .header { text-align: center; border-bottom: 2px solid #333; margin-bottom: 20px; }
+        .search-box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        input[type="text"] { width: 70%; padding: 10px; }
+        button { padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; }
+        li { background: white; margin: 10px 0; padding: 15px; border-radius: 5px; list-style: none; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Casa de la Cultura</h1>
+        <p><em>"Tu lectura, nuestra cultura"</em></p> </div>
+
+    <div class="search-box">
+        <form method="get">
+            <input type="text" name="q" placeholder="Buscar libro o autor..." value="{{ query }}">
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+
+    <ul>
+        {% for libro in libros %}
+            <li>
+                <strong>{{ libro.title }}</strong><br>
+                <small>Autor: {{ libro.authors }} | Año: {{ libro.original_publication_year|default:"N/A" }}</small>
+            </li>
+        {% empty %}
+            <li>No se han encontrado libros en el catálogo.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
