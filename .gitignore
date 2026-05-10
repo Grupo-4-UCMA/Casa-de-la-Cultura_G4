@@ -1,6 +1,6 @@
 # ============================================================
 # .gitignore - Proyecto La Casa de la Cultura
-# Stack: Python + Django + PostgreSQL
+# Stack: Python + Django + SQLite
 # ============================================================
 
 
@@ -119,7 +119,7 @@ coverage.xml
 .env.local
 .env.*.local
 
-# Base de datos local SQLite (por si alguien la usa para pruebas)
+# Base de datos SQLite
 *.sqlite3
 *.sqlite3-journal
 db.sqlite3
@@ -133,29 +133,20 @@ db.sqlite3
 *.log
 logs/
 
-# Migraciones locales temporales (las definitivas SÍ se suben)
-# No ignoramos las migraciones porque deben versionarse
-
-
-# ------------------------------------------------------------
-# PostgreSQL
-# ------------------------------------------------------------
-*.dump
-*.sql.gz
-*.backup
-pg_data/
-
 
 # ------------------------------------------------------------
 # Datos y archivos pesados
 # ------------------------------------------------------------
-# El ratings.csv pesa >30MB, no debe ir al repo
+# ratings.csv pesa >30MB, no va al repo
 ratings.csv
 *.csv.gz
 
-# Datasets grandes en general (descomentar si hace falta)
-# data/raw/
-# data/processed/
+# Datos crudos (viven en local, no se versionan)
+data/raw/*
+!data/raw/.gitkeep
+
+# Outputs de notebooks (se generan en local)
+notebooks/outputs/*
 
 
 # ------------------------------------------------------------
@@ -167,9 +158,8 @@ ratings.csv
 secrets.json
 credentials.json
 
-# Archivos comprimidos (normalmente no se versionan)
+# Archivos comprimidos
 *.zip
 *.tar
 *.tar.gz
 *.rar
-*.csv
