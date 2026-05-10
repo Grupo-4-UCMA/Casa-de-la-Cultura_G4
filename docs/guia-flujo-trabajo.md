@@ -194,7 +194,7 @@ git checkout -b tu-rama-nueva
 git stash pop
 ```
 
-Y sigues normal desde ahí. Si **ya has commiteado en main local** (no pasa nada porque el push estará bloqueado), hablalo en el grupo, hay solución pero conviene hacerla con cuidado.
+Y sigues normal desde ahí. Si **ya has commiteado en main local** (no pasa nada porque el push estará bloqueado), háblalo en el grupo, hay solución pero conviene hacerla con cuidado.
 
 ### "Git me pide credenciales y mi contraseña no funciona"
 
