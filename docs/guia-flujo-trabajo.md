@@ -155,7 +155,7 @@ Cuando alguien te ponga como revisor, recibirás una notificación. Para revisar
    - **Approve:** lo apruebas, listo para mergear.
    - **Request changes:** pides cambios. El autor tendrá que arreglarlo antes de poder mergear.
 
-Una sola aprobación es suficiente para que el PR pueda mergearse. **Sé constructivo y específico** en los comentarios: en vez de *"esto está mal"*, mejor *"creo que aquí habría que validar que el ISBN no sea nulo, si no el script peta con los registros incompletos del CSV"*.
+Una sola aprobación es suficiente para que el PR pueda mergearse. **Sé constructivo y específico** en los comentarios: en vez de *"esto está mal"*, mejor *"creo que aquí habría que validar que el ISBN no sea nulo, si no, el script peta con los registros incompletos del CSV"*.
 
 ---
 
