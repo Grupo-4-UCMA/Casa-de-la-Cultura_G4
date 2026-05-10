@@ -172,3 +172,4 @@ credentials.json
 *.tar
 *.tar.gz
 *.rar
+*.csv
