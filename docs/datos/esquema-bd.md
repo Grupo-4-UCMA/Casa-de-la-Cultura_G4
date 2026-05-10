@@ -1,52 +1,148 @@
-# Esquema de la base de datos
+# Esquema de la base de datos — Casa de la Cultura
 
-Diseño del modelo de datos definitivo a partir de los archivos del sistema anterior.
-Las decisiones de depuración siguen el criterio del cliente: se descartan los registros
-de libros sin ISBN, sin autor o sin fecha de publicación. El campo `sexo` de usuarios
-se elimina por indicación expresa del cliente. Se añade el campo `genre` en libros,
-autorizado por el cliente, con valor NULL inicial.
+> Última actualización: 10/05/2026
+> Basado en el diseño de Juan Gabriel Carvajal, incorporando las decisiones previas del equipo.
 
-## Diagrama entidad-relación
+---
+
+## Decisiones de diseño
+
+- `isbn`, `title` y `original_publication_year` son NOT NULL — los registros sin estos campos se descartan según indicación expresa del cliente.
+- `author` tiene tabla propia con relación N:M a `book` a través de `book_author` — más normalizado que un campo de texto plano.
+- `sexo` eliminado de `user` — indicación expresa del cliente y principio de minimización GDPR.
+- `comment` se conserva en `user` como campo de preferencias para el motor de recomendación.
+- `rating` tiene CHECK entre 1 y 5.
+- `genre` tiene tabla propia. El valor inicial de cada libro será NULL hasta que se implemente la clasificación automática (autorizado por el cliente).
+- `copy` incluye campo `status` para gestionar la disponibilidad de cada ejemplar.
+- `recommendation` almacena las recomendaciones generadas por el motor con su puntuación y el algoritmo usado.
+- `book_statistics` y `genre_statistics` precalculan métricas para los dashboards y evitan consultas pesadas en tiempo real.
+- `dashboard_snapshot` guarda instantáneas globales del sistema para histórico de uso.
+
+---
+
+## Diagrama ER
 
 ```mermaid
 erDiagram
-  BOOKS ||--o{ COPIES : "1 a N"
-  COPIES ||--o{ RATINGS : "recibe"
-  USERS ||--o{ RATINGS : "emite"
-  BOOKS {
-    integer book_id PK
-    text isbn "NOT NULL"
-    text title "NOT NULL"
-    text original_title "NULL"
-    text authors "NOT NULL"
-    integer publication_year "NOT NULL"
-    text language_code "NULL"
-    text image_url "NULL"
-    text genre "NULL - campo nuevo"
-  }
-  COPIES {
-    integer copy_id PK
-    integer book_id FK
-  }
-  USERS {
-    integer user_id PK
-    date fecha_nacimiento "NULL"
-    text comentario "preferencias del usuario"
-  }
-  RATINGS {
-    integer user_id PK_FK
-    integer copy_id PK_FK
-    integer rating "CHECK 1 a 5"
-  }
+    user {
+        int id_user PK
+        date birth_date
+        text comment
+        datetime created_at
+    }
+
+    author {
+        int id_author PK
+        varchar name
+    }
+
+    genre {
+        int id_genre PK
+        varchar name
+    }
+
+    book {
+        int id_book PK
+        varchar isbn
+        varchar original_title
+        varchar title
+        int original_publication_year
+        varchar language_code
+        text image_url
+        int id_genre FK
+        datetime created_at
+    }
+
+    book_author {
+        int id_book FK
+        int id_author FK
+    }
+
+    copy {
+        int id_copy PK
+        int id_book FK
+        varchar status
+        datetime created_at
+    }
+
+    rating {
+        int id_rating PK
+        int id_user FK
+        int id_copy FK
+        int rating
+        datetime created_at
+    }
+
+    recommendation {
+        int id_recommendation PK
+        int id_user FK
+        int id_book FK
+        decimal score
+        text reason
+        varchar algorithm
+        datetime created_at
+    }
+
+    book_statistics {
+        int id_book_statistics PK
+        int id_book FK
+        int total_ratings
+        decimal average_rating
+        int recommendation_count
+        datetime last_updated
+    }
+
+    genre_statistics {
+        int id_genre_statistics PK
+        int id_genre FK
+        int total_books
+        int total_ratings
+        decimal average_rating
+        datetime last_updated
+    }
+
+    dashboard_snapshot {
+        int id_snapshot PK
+        datetime snapshot_date
+        int total_books
+        int total_copies
+        int total_users
+        int total_ratings
+        decimal average_rating
+    }
+
+    book }o--|| genre : "pertenece a"
+    book }o--o{ author : "book_author"
+    copy }o--|| book : "es ejemplar de"
+    rating }o--|| user : "hace"
+    rating }o--|| copy : "sobre"
+    recommendation }o--|| user : "para"
+    recommendation }o--|| book : "recomienda"
+    book_statistics ||--|| book : "estadisticas de"
+    genre_statistics ||--|| genre : "estadisticas de"
 ```
+
+---
+
+## Restricciones importantes
+
+| Tabla | Campo | Restricción |
+|-------|-------|-------------|
+| book | isbn | NOT NULL |
+| book | title | NOT NULL |
+| book | original_publication_year | NOT NULL |
+| rating | rating | CHECK entre 1 y 5 |
+| book_author | id_book + id_author | PK compuesta |
+
+---
 
 ## Índices previstos
 
-- `copies(book_id)` — para hacer JOIN entre ratings y books vía copies
-- `ratings(copy_id)` — la PK compuesta empieza por user_id, así que copy_id solo necesita índice propio
-- `books(genre)` — para filtros en los dashboards cuando el campo esté relleno
-
-## Decisiones pendientes
-
-- Origen del campo `genre`: a definir con el equipo. Opciones: aportado por el cliente,
-  enriquecido desde fuente externa (Open Library), o inferido automáticamente.
+| Tabla | Campo | Motivo |
+|-------|-------|--------|
+| copy | id_book | Joins frecuentes con book |
+| rating | id_copy | Joins frecuentes con copy |
+| rating | id_user | Filtrado por usuario |
+| book | id_genre | Filtrado por género |
+| book_statistics | id_book | Lookup rápido de métricas |
+| genre_statistics | id_genre | Lookup rápido de métricas |
