@@ -231,6 +231,12 @@ git pull
 git branch -d funcionalidad/mi-tarea
 ```
 
+> **Nota:** `git branch -d funcionalidad/mi-tarea` puede fallar aunque el PR ya esté mergeado, por ejemplo si el merge en GitHub fue por *squash* o si Git no detecta la rama como fusionada. Si has comprobado que el PR ya se integró y no necesitas conservar esa rama local, puedes borrarla con:
+>
+> ```bash
+> git branch -D funcionalidad/mi-tarea
+> ```
+
 ---
 
 *Si encuentras algún error en esta guía o crees que falta algo, abre un PR para corregirla. La documentación también es código.*
