@@ -1,38 +1,228 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <title>Casa de la Cultura - Catálogo</title>
     <style>
-        body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 20px; background-color: #f4f4f4; }
-        .header { text-align: center; border-bottom: 2px solid #333; margin-bottom: 20px; }
-        .search-box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        input[type="text"] { width: 70%; padding: 10px; }
-        button { padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; }
-        li { background: white; margin: 10px 0; padding: 15px; border-radius: 5px; list-style: none; }
+        /* Paleta Clara (Institucional Clásica) */
+        :root {
+            --bg-color: #fcfbf9; 
+            --text-main: #2c2825; 
+            --text-muted: #6e6459;
+            --accent: #8b1e28; 
+            --accent-hover: #61151c;
+            --card-bg: #ffffff;
+            --border: #e6e2d8;
+            --shadow: rgba(0,0,0,0.05);
+        }
+
+        /* Paleta Oscura (Institucional Nocturna) */
+        [data-theme="dark"] {
+            --bg-color: #1a1817; /* Gris muy oscuro con subtono cálido */
+            --text-main: #e8e6e3;
+            --text-muted: #a09a93;
+            --accent: #c43946; /* Burdeos ligeramente más claro para contraste óptimo */
+            --accent-hover: #e04a58;
+            --card-bg: #252220;
+            --border: #3d3733;
+            --shadow: rgba(0,0,0,0.3);
+        }
+
+        body { 
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: var(--bg-color); 
+            color: var(--text-main);
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 30px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Barra superior para el botón de tema */
+        .top-bar {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+
+        .theme-toggle {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            background: var(--border);
+        }
+
+        .header { width: 100%; text-align: center; padding-bottom: 30px; border-bottom: 3px double var(--border); margin-bottom: 20px;}
+        
+        .header h1 {
+            font-family: "Georgia", "Times New Roman", serif; 
+            font-size: 3rem;
+            color: var(--accent);
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .header p { font-size: 1.2rem; color: var(--text-muted); font-style: italic; margin: 0; }
+
+        .main-content { flex: 3; min-width: 600px; }
+        
+        .sidebar { 
+            flex: 1; 
+            min-width: 300px; 
+            background: var(--card-bg); 
+            padding: 25px; 
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--accent);
+            box-shadow: 2px 2px 8px var(--shadow);
+            height: fit-content;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .search-box { margin-bottom: 30px; display: flex; gap: 10px; }
+        
+        input[type="text"] { 
+            flex: 1; padding: 15px 20px; font-size: 1.1rem;
+            border: 1px solid var(--border); border-radius: 4px;
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        input[type="text"]:focus { outline: none; border-color: var(--accent); }
+
+        button.search-btn { 
+            padding: 15px 30px; font-size: 1.1rem; font-weight: bold;
+            background: var(--accent); color: white; border: none; border-radius: 4px;
+            cursor: pointer; text-transform: uppercase; letter-spacing: 1px;
+            transition: background-color 0.2s ease;
+        }
+        button.search-btn:hover { background: var(--accent-hover); }
+
+        ul { padding: 0; margin: 0; }
+        
+        .card { 
+            background: var(--card-bg); margin: 0 0 15px 0; padding: 20px 25px; 
+            list-style: none; border-left: 5px solid var(--accent);
+            box-shadow: 1px 1px 4px var(--shadow);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card strong { font-family: "Georgia", serif; font-size: 1.4rem; display: block; margin-bottom: 5px;}
+        small { color: var(--text-muted); font-size: 0.95rem; }
+
+        .sidebar h3 { font-family: "Georgia", serif; font-size: 1.5rem; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-top: 0;}
+        .top-item { padding: 12px 0; border-bottom: 1px dashed var(--border); }
+        .top-item:last-child { border-bottom: none; }
+        .chart-bar-container {
+            width: 100%;
+            background-color: var(--border);
+            border-radius: 4px;
+            margin-top: 5px;
+            height: 12px;
+            overflow: hidden;
+        }
+
+        .chart-bar-fill {
+            height: 100%;
+            background-color: var(--accent);
+            border-radius: 4px;
+            transition: width 0.5s ease-in-out;
+        }
+        
+        .stat-value {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            float: right;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Casa de la Cultura</h1>
-        <p><em>"Tu lectura, nuestra cultura"</em></p> </div>
-
-    <div class="search-box">
-        <form method="get">
-            <input type="text" name="q" placeholder="Buscar libro o autor..." value="{{ query }}">
-            <button type="submit">Buscar</button>
-        </form>
+    <div class="top-bar">
+        <button id="themeToggle" class="theme-toggle">Modo Oscuro</button>
     </div>
 
-    <ul>
-        {% for libro in libros %}
-            <li>
-                <strong>{{ libro.title }}</strong><br>
-                <small>Autor: {{ libro.authors }} | Año: {{ libro.original_publication_year|default:"N/A" }}</small>
-            </li>
-        {% empty %}
-            <li>No se han encontrado libros en el catálogo.</li>
+    <div class="header">
+        <h1>Casa de la Cultura</h1>
+        <p><em>"Tu lectura, nuestra cultura"</em></p>
+    </div>
+
+    <div class="main-content">
+        <div class="search-box">
+            <form method="get" style="display: flex; width: 100%; gap: 10px;">
+                <input type="text" name="q" placeholder="Buscar libro o autor..." value="{{ query }}">
+                <button type="submit" class="search-btn">Buscar</button>
+            </form>
+        </div>
+
+        <ul>
+            {% for libro in libros %}
+                <li class="card">
+                    <strong>{{ libro.title }}</strong>
+                    <small>Autor: {{ libro.authors }}</small>
+                </li>
+            {% empty %}
+                <li class="card">No se han encontrado libros en el catálogo.</li>
+            {% endfor %}
+        </ul>
+    <div class="sidebar">
+        <h3> Top 5: Los más leídos</h3>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">
+            Basado en el registro histórico de valoraciones.
+        </p>
+        
+        {% for top in top_libros %}
+            <div class="top-item">
+                <strong>{{ forloop.counter }}. {{ top.title }}</strong>
+                <span class="stat-value">{{ top.ratings }} votos</span><br>
+                <small>{{ top.authors }}</small>
+                
+                <div class="chart-bar-container">
+                    <div class="chart-bar-fill" style="width: {{ top.pct }}%;"></div>
+                </div>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
+
+    <script>
+        // Lógica de alternancia de tema 100% offline
+        const toggleBtn = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+        
+        // Comprobar si hay un tema guardado en el navegador local
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            htmlElement.setAttribute('data-theme', savedTheme);
+            updateButtonText(savedTheme);
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateButtonText(newTheme);
+        });
+
+        function updateButtonText(theme) {
+            toggleBtn.textContent = theme === 'dark' ? 'Modo Claro' : 'Modo Oscuro';
+        }
+    </script>
 </body>
-</html>
+</html><div class="sidebar">
