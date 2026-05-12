@@ -5,7 +5,6 @@ import unicodedata
 import re
 import pickle
 
-# Carga del "cerebro" de la IA al iniciar el servidor
 INDICES_IA_PATH = 'catalogo/indices_ia.pkl'
 indices_ia = {}
 if os.path.exists(INDICES_IA_PATH):
@@ -29,12 +28,11 @@ def logout_view(request):
 
 def buscador_catalogo(request):
     query = request.GET.get('q', '')
-    # Usamos los datos limpios de Jose Luis (Fase 4 del PMP)
     ruta_books = 'data/clean/books_clean.csv'
+    ruta_ratings = 'data/clean/ratings_clean.csv'
     user_active = request.session.get('user_id')
     recomendaciones = []
     
-    # Dashboard: Top 5 libros (Datos del PMP)
     top_libros = [
         {'title': 'The Hunger Games', 'authors': 'Suzanne Collins', 'ratings': 22806, 'pct': 100},
         {'title': "Harry Potter and the Sorcerer's Stone", 'authors': 'J.K. Rowling', 'ratings': 21850, 'pct': 95},
@@ -50,14 +48,26 @@ def buscador_catalogo(request):
             df['authors_norm'] = df['authors'].apply(normalizar_texto)
             resultados = df[(df['title_norm'].str.contains(q_norm, na=False)) | (df['authors_norm'].str.contains(q_norm, na=False))].head(20)
             
-            # IA REAL (RF-04): "Quien leyó X también disfrutó Y"
             if not resultados.empty and indices_ia:
-                # Buscamos recomendaciones para el ID del primer libro encontrado
                 book_id_buscado = resultados.iloc[0]['book_id']
-                # Nota: El índice usa copy_id/book_id según el entrenamiento
                 ids_recomendados = indices_ia.get(book_id_buscado, [])
                 if ids_recomendados:
                     recomendaciones = df[df['book_id'].isin(ids_recomendados)].head(3).to_dict('records')
+        
+        elif user_active and os.path.exists(ruta_ratings):
+            try:
+                ratings_df = pd.read_csv(ruta_ratings)
+                user_history = ratings_df[ratings_df['user_id'] == int(user_active)].sort_values('rating', ascending=False)
+                
+                if not user_history.empty and indices_ia:
+                    last_liked_id = user_history.iloc[0]['copy_id']
+                    ids_personalizados = indices_ia.get(last_liked_id, [])
+                    if ids_personalizados:
+                        recomendaciones = df[df['book_id'].isin(ids_personalizados)].head(3).to_dict('records')
+            except:
+                pass
+            
+            resultados = df.head(10)
         else:
             resultados = df.head(10)
     else:
