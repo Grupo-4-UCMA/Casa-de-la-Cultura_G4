@@ -2,9 +2,10 @@
 <html lang="es" data-theme="light">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casa de la Cultura - Catálogo</title>
     <style>
-        /* Paleta Clara (Institucional Clásica) */
+        /* Paleta de colores Institucional (Rojo Burdeos) */
         :root {
             --bg-color: #fcfbf9; 
             --text-main: #2c2825; 
@@ -16,12 +17,12 @@
             --shadow: rgba(0,0,0,0.05);
         }
 
-        /* Paleta Oscura (Institucional Nocturna) */
+        /* Paleta de colores Modo Oscuro */
         [data-theme="dark"] {
-            --bg-color: #1a1817; /* Gris muy oscuro con subtono cálido */
+            --bg-color: #1a1817; 
             --text-main: #e8e6e3;
             --text-muted: #a09a93;
-            --accent: #c43946; /* Burdeos ligeramente más claro para contraste óptimo */
+            --accent: #c43946; 
             --accent-hover: #e04a58;
             --card-bg: #252220;
             --border: #3d3733;
@@ -41,32 +42,47 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        /* Barra superior para el botón de tema */
+        /* Barra Superior de Usuario y Sistema */
         .top-bar {
             width: 100%;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
         }
 
-        .theme-toggle {
-            background: transparent;
+        .user-info { font-size: 0.95rem; color: var(--text-muted); }
+        .user-info strong { color: var(--accent); }
+
+        .nav-buttons { display: flex; gap: 15px; align-items: center; }
+
+        .btn-link {
+            text-decoration: none;
             color: var(--text-main);
-            border: 1px solid var(--border);
-            padding: 8px 16px;
-            font-family: inherit;
             font-size: 0.9rem;
             font-weight: bold;
+            padding: 8px 16px;
             border-radius: 4px;
+            border: 1px solid var(--border);
             cursor: pointer;
+            background: transparent;
             transition: all 0.2s ease;
         }
 
-        .theme-toggle:hover {
-            background: var(--border);
-        }
+        .btn-link:hover { background: var(--border); }
+        .btn-logout { color: var(--accent); border-color: var(--accent); }
+        .btn-logout:hover { background: var(--accent); color: white; }
 
-        .header { width: 100%; text-align: center; padding-bottom: 30px; border-bottom: 3px double var(--border); margin-bottom: 20px;}
+        /* Cabecera e Identidad Visual (RF-07) */
+        .header { 
+            width: 100%; 
+            text-align: center; 
+            padding-bottom: 30px; 
+            border-bottom: 3px double var(--border); 
+            margin-bottom: 20px;
+        }
         
         .header h1 {
             font-family: "Georgia", "Times New Roman", serif; 
@@ -74,11 +90,11 @@
             color: var(--accent);
             margin: 0 0 10px 0;
             letter-spacing: 1px;
-            transition: color 0.3s ease;
         }
 
         .header p { font-size: 1.2rem; color: var(--text-muted); font-style: italic; margin: 0; }
 
+        /* Estructura Principal */
         .main-content { flex: 3; min-width: 600px; }
         
         .sidebar { 
@@ -90,9 +106,9 @@
             border-top: 4px solid var(--accent);
             box-shadow: 2px 2px 8px var(--shadow);
             height: fit-content;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
 
+        /* Buscador (CU-02) */
         .search-box { margin-bottom: 30px; display: flex; gap: 10px; }
         
         input[type="text"] { 
@@ -100,34 +116,36 @@
             border: 1px solid var(--border); border-radius: 4px;
             background-color: var(--card-bg);
             color: var(--text-main);
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
         
         input[type="text"]:focus { outline: none; border-color: var(--accent); }
 
-        button.search-btn { 
+        .search-btn { 
             padding: 15px 30px; font-size: 1.1rem; font-weight: bold;
             background: var(--accent); color: white; border: none; border-radius: 4px;
             cursor: pointer; text-transform: uppercase; letter-spacing: 1px;
-            transition: background-color 0.2s ease;
         }
-        button.search-btn:hover { background: var(--accent-hover); }
 
-        ul { padding: 0; margin: 0; }
-        
+        /* Tarjetas de Libros */
         .card { 
             background: var(--card-bg); margin: 0 0 15px 0; padding: 20px 25px; 
             list-style: none; border-left: 5px solid var(--accent);
             box-shadow: 1px 1px 4px var(--shadow);
-            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
 
         .card strong { font-family: "Georgia", serif; font-size: 1.4rem; display: block; margin-bottom: 5px;}
         small { color: var(--text-muted); font-size: 0.95rem; }
 
-        .sidebar h3 { font-family: "Georgia", serif; font-size: 1.5rem; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-top: 0;}
-        .top-item { padding: 12px 0; border-bottom: 1px dashed var(--border); }
-        .top-item:last-child { border-bottom: none; }
+        /* Dashboard de Métricas (CU-04) */
+        .sidebar h3 { 
+            font-family: "Georgia", serif; 
+            font-size: 1.5rem; 
+            color: var(--accent); 
+            border-bottom: 1px solid var(--border); 
+            padding-bottom: 10px; 
+            margin-top: 0;
+        }
+        
         .chart-bar-container {
             width: 100%;
             background-color: var(--border);
@@ -137,24 +155,47 @@
             overflow: hidden;
         }
 
-        .chart-bar-fill {
-            height: 100%;
-            background-color: var(--accent);
-            border-radius: 4px;
-            transition: width 0.5s ease-in-out;
+        .chart-bar-fill { height: 100%; background-color: var(--accent); border-radius: 4px; }
+        .stat-value { font-size: 0.85rem; color: var(--text-muted); float: right; font-weight: bold; }
+        .top-item { padding: 12px 0; border-bottom: 1px dashed var(--border); }
+        .top-item:last-child { border-bottom: none; }
+
+        /* Sección de Recomendaciones (CU-03) */
+        .recommendation-box {
+            background: var(--card-bg); 
+            padding: 20px; 
+            border-radius: 12px; 
+            border: 1px solid var(--accent); 
+            margin-bottom: 30px;
         }
-        
-        .stat-value {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            float: right;
-            font-weight: bold;
+
+        .rec-container { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px; }
+        .rec-card {
+            min-width: 220px; 
+            background: var(--bg-color); 
+            padding: 15px; 
+            border-radius: 8px; 
+            border: 1px solid var(--border);
         }
     </style>
 </head>
 <body>
     <div class="top-bar">
-        <button id="themeToggle" class="theme-toggle">Modo Oscuro</button>
+        <div class="user-info">
+            {% if user_active %}
+                Bienvenido, lector <strong>{{ user_active }}</strong>
+            {% else %}
+                Modo Invitado
+            {% endif %}
+        </div>
+        <div class="nav-buttons">
+            <button id="themeToggle" class="btn-link">Modo Oscuro</button>
+            {% if user_active %}
+                <a href="{% url 'logout' %}" class="btn-link btn-logout">Cerrar Sesión</a>
+            {% else %}
+                <a href="{% url 'login' %}" class="btn-link">Identificarse</a>
+            {% endif %}
+        </div>
     </div>
 
     <div class="header">
@@ -163,6 +204,22 @@
     </div>
 
     <div class="main-content">
+        {% if recomendaciones %}
+        <div class="recommendation-box">
+            <h3 style="margin-top: 0; color: var(--accent); font-family: 'Georgia', serif;">
+                {% if user_active %}Recomendado para ti, lector {{ user_active }}{% else %}Si te gusta este autor, te recomendamos:{% endif %}
+            </h3>
+            <div class="rec-container">
+                {% for rec in recomendaciones %}
+                <div class="rec-card">
+                    <strong style="display: block; font-size: 0.95rem;">{{ rec.title }}</strong>
+                    <small>{{ rec.authors }}</small>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
         <div class="search-box">
             <form method="get" style="display: flex; width: 100%; gap: 10px;">
                 <input type="text" name="q" placeholder="Buscar libro o autor..." value="{{ query }}">
@@ -170,6 +227,7 @@
             </form>
         </div>
 
+        <h3>Resultados del Catálogo</h3>
         <ul>
             {% for libro in libros %}
                 <li class="card">
@@ -177,21 +235,18 @@
                     <small>Autor: {{ libro.authors }}</small>
                 </li>
             {% empty %}
-                <li class="card">No se han encontrado libros en el catálogo.</li>
+                <li class="card">No se han encontrado libros.</li>
             {% endfor %}
         </ul>
+    </div>
+
     <div class="sidebar">
-        <h3> Top 5: Los más leídos</h3>
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">
-            Basado en el registro histórico de valoraciones.
-        </p>
-        
+        <h3>Top 5: Los más leídos</h3>
         {% for top in top_libros %}
             <div class="top-item">
                 <strong>{{ forloop.counter }}. {{ top.title }}</strong>
                 <span class="stat-value">{{ top.ratings }} votos</span><br>
                 <small>{{ top.authors }}</small>
-                
                 <div class="chart-bar-container">
                     <div class="chart-bar-fill" style="width: {{ top.pct }}%;"></div>
                 </div>
@@ -204,7 +259,6 @@
         const toggleBtn = document.getElementById('themeToggle');
         const htmlElement = document.documentElement;
         
-        // Comprobar si hay un tema guardado en el navegador local
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
             htmlElement.setAttribute('data-theme', savedTheme);
@@ -214,7 +268,6 @@
         toggleBtn.addEventListener('click', () => {
             const currentTheme = htmlElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
             htmlElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateButtonText(newTheme);
@@ -225,4 +278,4 @@
         }
     </script>
 </body>
-</html><div class="sidebar">
+</html>
