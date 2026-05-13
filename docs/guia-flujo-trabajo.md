@@ -200,10 +200,11 @@ Y sigues normal desde ahí. Si **ya has commiteado en main local** (no pasa nada
 
 ### "Git me pide credenciales y mi contraseña no funciona"
 
-GitHub ya no acepta contraseñas para Git. Tienes dos opciones:
+GitHub ya no acepta contraseñas para Git. Tienes varias opciones:
 
 - **GitHub CLI:** instala `gh` y ejecuta `gh auth login`. Es lo más cómodo.
 - **Personal Access Token (PAT):** crea uno desde GitHub (Settings → Developer settings → Personal access tokens), y úsalo como contraseña cuando Git la pida.
+- **SSH con claves:** configura una clave SSH en tu equipo, añade la clave pública a tu cuenta de GitHub y usa la URL SSH del repositorio en lugar de la HTTPS.
 
 ### "He pusheado algo que no debía"
 
