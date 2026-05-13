@@ -24,11 +24,13 @@ Debe mostrarte algo como `git version 2.x.x`.
 
 ### 1.2 Configurar tu identidad
 
-Esto es importante: **el email tiene que ser el mismo que usas en GitHub**, si no, tus commits no aparecerán como tuyos.
+Esto es importante: **el email que configures en Git debe ser un email verificado en tu cuenta de GitHub** para que tus commits aparezcan como tuyos. Si tienes la privacidad del correo activada en GitHub, también puedes usar tu dirección `noreply` de GitHub.
 
 ```bash
 git config --global user.name "Tu Nombre"
-git config --global user.email "tu_email@ejemplo.com"
+git config --global user.email "tu_email_verificado@ejemplo.com"
+# o, si usas privacidad de email en GitHub:
+git config --global user.email "12345678+tuusuario@users.noreply.github.com"
 ```
 
 ### 1.3 Clonar el repositorio
