@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>Acceso - Casa de la Cultura</title>
+    <style>
+        /* Reutilizamos tus variables de color institucionales */
+        :root {
+            --bg-color: #fcfbf9; --text-main: #2c2825; --accent: #8b1e28; --border: #e6e2d8;
+        }
+        [data-theme="dark"] {
+            --bg-color: #1a1817; --text-main: #e8e6e3; --accent: #c43946; --border: #3d3733;
+        }
+        body { 
+            font-family: "Segoe UI", sans-serif; background-color: var(--bg-color); 
+            color: var(--text-main); display: flex; align-items: center; 
+            justify-content: center; height: 100vh; margin: 0; 
+        }
+        .login-card {
+            background: var(--bg-color); padding: 40px; border: 1px solid var(--border);
+            border-top: 5px solid var(--accent); box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center; width: 400px;
+        }
+        h1 { font-family: "Georgia", serif; color: var(--accent); margin-bottom: 10px; }
+        input { 
+            width: 80%; padding: 12px; margin: 20px 0; border: 1px solid var(--border); 
+            border-radius: 4px; background: transparent; color: inherit; text-align: center;
+        }
+        .enter-btn {
+            background: var(--accent); color: white; border: none; padding: 12px 30px;
+            cursor: pointer; font-weight: bold; text-transform: uppercase; border-radius: 4px;
+        }
+        .guest-link { display: block; margin-top: 20px; color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <h1>Casa de la Cultura</h1>
+        <p>Introduzca su identificador de lector</p>
+        <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <input type="text" name="user_id" placeholder="ID de Usuario" required autofocus>
+            <button type="submit" class="enter-btn">Entrar</button>
+        </form>
+        <a href="{% url 'buscador' %}" class="guest-link">Continuar como invitado</a>
+    </div>
+</body>
+</html>
