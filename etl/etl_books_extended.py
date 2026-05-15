@@ -6,7 +6,9 @@ DIFERENCIA CON etl_books.py (versión A):
   - La versión A descarta 718 libros sin ISBN o sin año.
   - Esta versión (B) conserva todos los registros — todos tienen al menos
     título y autor, son libros reales con ejemplares físicos en el bibliobús.
-  - Los campos faltantes (isbn, año) quedan como NULL en la BD.
+  - Los libros sin ISBN reciben un identificador sintético único (SIN-ISBN-{book_id:05d})
+    para cumplir las restricciones NOT NULL + UNIQUE del esquema sin perder el registro.
+  - El año sigue quedando como NULL cuando no está disponible.
   - Pendiente decisión del equipo/cliente antes de usar esta versión.
 
 Decisiones de limpieza aplicadas:
@@ -47,12 +49,22 @@ print(f"  Sin año:   {df['original_publication_year'].isna().sum()}")
 print(f"  Sin ambos: {(df['isbn'].isna() & df['original_publication_year'].isna()).sum()}")
 
 # ── Zero-padding en ISBNs de 9 dígitos ────────────────────────────────────────
-# Solo se aplica a los que tienen ISBN. Los que tienen isbn=None se dejan tal cual.
+# Solo se aplica a los que tienen ISBN.
 df["isbn"] = df["isbn"].apply(
     lambda x: x.strip().zfill(10) if pd.notna(x) else x
 )
-print(f"\n  ISBNs con zero-padding aplicado (ahora todos 10 dígitos): {df['isbn'].notna().sum()}")
-print(f"  ISBNs nulos conservados: {df['isbn'].isna().sum()}")
+
+# ── ISBN sintético para libros sin identificador ───────────────────────────────
+# NULL viola NOT NULL del esquema; "NA" para todos viola UNIQUE.
+# SIN-ISBN-{book_id:05d} es único, trazable al registro original y distinguible
+# de ISBNs reales a simple vista.
+mask_sin_isbn = df["isbn"].isna()
+n_sinteticos = int(mask_sin_isbn.sum())
+df.loc[mask_sin_isbn, "isbn"] = df.loc[mask_sin_isbn, "book_id"].apply(
+    lambda bid: f"SIN-ISBN-{int(bid):05d}"
+)
+print(f"\n  ISBNs reales (con zero-padding):   {(~df['isbn'].str.startswith('SIN-ISBN-')).sum()}")
+print(f"  ISBNs sintéticos (SIN-ISBN-xxxxx): {n_sinteticos}")
 
 # ── Normalización de language_code ────────────────────────────────────────────
 # Las variantes regionales del inglés se unifican en 'eng'.
@@ -95,7 +107,7 @@ print("\n── Resumen ──────────────────�
 print(f"  Filas originales:          {n_raw}")
 print(f"  Descartadas:               0 (versión extendida conserva todos)")
 print(f"  Libros limpios:            {len(df_clean)}")
-print(f"  Con ISBN:                  {df_clean['isbn'].notna().sum()}")
-print(f"  Sin ISBN (isbn=None):      {df_clean['isbn'].isna().sum()}")
+print(f"  Con ISBN real:             {(~df_clean['isbn'].str.startswith('SIN-ISBN-')).sum()}")
+print(f"  Con ISBN sintético:        {df_clean['isbn'].str.startswith('SIN-ISBN-').sum()}")
 print(f"  Con año:                   {df_clean['original_publication_year'].notna().sum()}")
 print(f"  Sin año:                   {df_clean['original_publication_year'].isna().sum()}")
