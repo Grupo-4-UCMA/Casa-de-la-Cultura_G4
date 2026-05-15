@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casa de la Cultura - Catálogo</title>
     <style>
-        /* Paleta de colores Institucional (Rojo Burdeos) */
         :root {
             --bg-color: #fcfbf9; 
             --text-main: #2c2825; 
@@ -15,9 +14,9 @@
             --card-bg: #ffffff;
             --border: #e6e2d8;
             --shadow: rgba(0,0,0,0.05);
+            --genre-bg: #f0ebe4;
         }
 
-        /* Paleta de colores Modo Oscuro */
         [data-theme="dark"] {
             --bg-color: #1a1817; 
             --text-main: #e8e6e3;
@@ -27,6 +26,7 @@
             --card-bg: #252220;
             --border: #3d3733;
             --shadow: rgba(0,0,0,0.3);
+            --genre-bg: #3d3733;
         }
 
         body { 
@@ -42,7 +42,6 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        /* Barra Superior de Usuario y Sistema */
         .top-bar {
             width: 100%;
             display: flex;
@@ -53,10 +52,20 @@
             border-bottom: 1px solid var(--border);
         }
 
-        .user-info { font-size: 0.95rem; color: var(--text-muted); }
-        .user-info strong { color: var(--accent); }
+        .user-info { 
+            font-size: 0.95rem; 
+            color: var(--text-muted); 
+        }
 
-        .nav-buttons { display: flex; gap: 15px; align-items: center; }
+        .user-info strong { 
+            color: var(--accent); 
+        }
+
+        .nav-buttons { 
+            display: flex; 
+            gap: 15px; 
+            align-items: center; 
+        }
 
         .btn-link {
             text-decoration: none;
@@ -71,11 +80,20 @@
             transition: all 0.2s ease;
         }
 
-        .btn-link:hover { background: var(--border); }
-        .btn-logout { color: var(--accent); border-color: var(--accent); }
-        .btn-logout:hover { background: var(--accent); color: white; }
+        .btn-link:hover { 
+            background: var(--border); 
+        }
 
-        /* Cabecera e Identidad Visual (RF-07) */
+        .btn-logout { 
+            color: var(--accent); 
+            border-color: var(--accent); 
+        }
+
+        .btn-logout:hover { 
+            background: var(--accent); 
+            color: white; 
+        }
+
         .header { 
             width: 100%; 
             text-align: center; 
@@ -92,75 +110,175 @@
             letter-spacing: 1px;
         }
 
-        .header p { font-size: 1.2rem; color: var(--text-muted); font-style: italic; margin: 0; }
+        .header p { 
+            font-size: 1.2rem; 
+            color: var(--text-muted); 
+            font-style: italic; 
+            margin: 0; 
+        }
 
-        /* Estructura Principal */
-        .main-content { flex: 3; min-width: 600px; }
+        .main-content { 
+            flex: 3; 
+            min-width: 600px; 
+        }
         
         .sidebar { 
             flex: 1; 
             min-width: 300px; 
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-section {
             background: var(--card-bg); 
-            padding: 25px; 
+            padding: 20px; 
             border: 1px solid var(--border);
             border-top: 4px solid var(--accent);
             box-shadow: 2px 2px 8px var(--shadow);
-            height: fit-content;
+            border-radius: 4px;
         }
 
-        /* Buscador (CU-02) */
-        .search-box { margin-bottom: 30px; display: flex; gap: 10px; }
+        .search-box { 
+            margin-bottom: 30px; 
+        }
         
-        input[type="text"] { 
-            flex: 1; padding: 15px 20px; font-size: 1.1rem;
-            border: 1px solid var(--border); border-radius: 4px;
+        .filter-form { 
+            display: flex; 
+            width: 100%; 
+            gap: 10px; 
+            flex-wrap: wrap; 
+        }
+
+        input[type="text"], input[type="number"], select { 
+            padding: 12px 15px; 
+            font-size: 1rem;
+            border: 1px solid var(--border); 
+            border-radius: 4px;
             background-color: var(--card-bg);
             color: var(--text-main);
         }
         
-        input[type="text"]:focus { outline: none; border-color: var(--accent); }
+        input[type="text"] { 
+            flex: 2; 
+            min-width: 200px; 
+        }
+
+        input[type="number"] {
+            flex: 1;
+            min-width: 100px;
+        }
+
+        select { 
+            flex: 1; 
+            min-width: 140px; 
+            cursor: pointer; 
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus, select:focus { 
+            outline: none; 
+            border-color: var(--accent); 
+        }
 
         .search-btn { 
-            padding: 15px 30px; font-size: 1.1rem; font-weight: bold;
-            background: var(--accent); color: white; border: none; border-radius: 4px;
-            cursor: pointer; text-transform: uppercase; letter-spacing: 1px;
+            padding: 12px 25px; 
+            font-size: 1rem; 
+            font-weight: bold;
+            background: var(--accent); 
+            color: white; 
+            border: none; 
+            border-radius: 4px;
+            cursor: pointer; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
         }
 
-        /* Tarjetas de Libros */
+        ul { 
+            padding: 0; 
+            margin: 0; 
+        }
+
         .card { 
-            background: var(--card-bg); margin: 0 0 15px 0; padding: 20px 25px; 
-            list-style: none; border-left: 5px solid var(--accent);
+            background: var(--card-bg); 
+            margin: 0 0 15px 0; 
+            padding: 20px 25px; 
+            list-style: none; 
+            border-left: 5px solid var(--accent);
             box-shadow: 1px 1px 4px var(--shadow);
+            border-radius: 4px;
         }
 
-        .card strong { font-family: "Georgia", serif; font-size: 1.4rem; display: block; margin-bottom: 5px;}
-        small { color: var(--text-muted); font-size: 0.95rem; }
+        .card strong { 
+            font-family: "Georgia", serif; 
+            font-size: 1.4rem; 
+            display: block; 
+            margin-bottom: 5px;
+        }
 
-        /* Dashboard de Métricas (CU-04) */
-        .sidebar h3 { 
+        .card-meta { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-top: 10px; 
+        }
+
+        small { 
+            color: var(--text-muted); 
+            font-size: 0.95rem; 
+        }
+
+        .genre-tag {
+            display: inline-block;
+            background: var(--genre-bg);
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .sidebar-section h3 { 
             font-family: "Georgia", serif; 
             font-size: 1.5rem; 
             color: var(--accent); 
             border-bottom: 1px solid var(--border); 
             padding-bottom: 10px; 
             margin-top: 0;
+            margin-bottom: 15px;
         }
         
         .chart-bar-container {
             width: 100%;
             background-color: var(--border);
             border-radius: 4px;
-            margin-top: 5px;
+            margin-top: 8px;
             height: 12px;
             overflow: hidden;
         }
 
-        .chart-bar-fill { height: 100%; background-color: var(--accent); border-radius: 4px; }
-        .stat-value { font-size: 0.85rem; color: var(--text-muted); float: right; font-weight: bold; }
-        .top-item { padding: 12px 0; border-bottom: 1px dashed var(--border); }
-        .top-item:last-child { border-bottom: none; }
+        .chart-bar-fill { 
+            height: 100%; 
+            background-color: var(--accent); 
+            border-radius: 4px; 
+        }
 
-        /* Sección de Recomendaciones (CU-03) */
+        .stat-value { 
+            font-size: 0.85rem; 
+            color: var(--text-muted); 
+            float: right; 
+            font-weight: bold; 
+        }
+
+        .top-item { 
+            padding: 12px 0; 
+            border-bottom: 1px dashed var(--border); 
+        }
+
+        .top-item:last-child { 
+            border-bottom: none; 
+        }
+
         .recommendation-box {
             background: var(--card-bg); 
             padding: 20px; 
@@ -169,7 +287,13 @@
             margin-bottom: 30px;
         }
 
-        .rec-container { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px; }
+        .rec-container { 
+            display: flex; 
+            gap: 15px; 
+            overflow-x: auto; 
+            padding-bottom: 10px; 
+        }
+
         .rec-card {
             min-width: 220px; 
             background: var(--bg-color); 
@@ -207,13 +331,18 @@
         {% if recomendaciones %}
         <div class="recommendation-box">
             <h3 style="margin-top: 0; color: var(--accent); font-family: 'Georgia', serif;">
-                {% if user_active %}Recomendado para ti, lector {{ user_active }}{% else %}Si te gusta este autor, te recomendamos:{% endif %}
+                {% if user_active and not query %}
+                    Recomendado para ti:
+                {% else %}
+                    Te puede interesar:
+                {% endif %}
             </h3>
             <div class="rec-container">
                 {% for rec in recomendaciones %}
                 <div class="rec-card">
-                    <strong style="display: block; font-size: 0.95rem;">{{ rec.title }}</strong>
-                    <small>{{ rec.authors }}</small>
+                    <strong style="display: block; font-size: 0.95rem; margin-bottom: 5px;">{{ rec.title }}</strong>
+                    <small>{{ rec.authors }}</small><br>
+                    <span class="genre-tag" style="margin-top: 10px;">{{ rec.genre }}</span>
                 </div>
                 {% endfor %}
             </div>
@@ -221,41 +350,101 @@
         {% endif %}
 
         <div class="search-box">
-            <form method="get" style="display: flex; width: 100%; gap: 10px;">
-                <input type="text" name="q" placeholder="Buscar libro o autor..." value="{{ query }}">
-                <button type="submit" class="search-btn">Buscar</button>
+            <form method="get" class="filter-form">
+                <input type="text" name="q" placeholder="Título o autor..." value="{{ query }}">
+                
+                <select name="genre">
+                    <option value="">Todos los Géneros</option>
+                    {% for g in generos %}
+                        <option value="{{ g }}" {% if genre_sel == g %}selected{% endif %}>{{ g }}</option>
+                    {% endfor %}
+                </select>
+
+                <select name="lang">
+                    <option value="">Cualquier Idioma</option>
+                    {% for l in idiomas %}
+                        <option value="{{ l }}" {% if lang_sel == l %}selected{% endif %}>{{ l }}</option>
+                    {% endfor %}
+                </select>
+
+                <input type="number" name="year" placeholder="Año" value="{{ year_sel }}" min="1000" max="2030">
+
+                <select name="sort">
+                    <option value="relevance">Relevancia</option>
+                    <option value="popular" {% if sort_sel == 'popular' %}selected{% endif %}>Más populares</option>
+                    <option value="year_new" {% if sort_sel == 'year_new' %}selected{% endif %}>Más recientes</option>
+                    <option value="year_old" {% if sort_sel == 'year_old' %}selected{% endif %}>Más antiguos</option>
+                </select>
+
+                <button type="submit" class="search-btn">Filtrar</button>
+                <a href="{% url 'buscador' %}" class="btn-link" style="display: flex; align-items: center; text-decoration: none;">Limpiar</a>
             </form>
         </div>
 
-        <h3>Resultados del Catálogo</h3>
+        <h3 style="font-family: 'Georgia', serif; color: var(--accent);">Resultados del Catálogo</h3>
         <ul>
             {% for libro in libros %}
                 <li class="card">
                     <strong>{{ libro.title }}</strong>
-                    <small>Autor: {{ libro.authors }}</small>
+                    <div class="card-meta">
+                        <small>
+                            Por {{ libro.authors }} 
+                            {% if libro.original_publication_year > 0 %}
+                                ({{ libro.original_publication_year }})
+                            {% endif %}
+                        </small>
+                        <span class="genre-tag">{{ libro.genre }}</span>
+                    </div>
+                    <small style="display: block; margin-top: 10px; color: var(--text-muted); font-weight: bold;">
+                        {{ libro.votos|floatformat:0 }} valoraciones
+                    </small>
                 </li>
             {% empty %}
-                <li class="card">No se han encontrado libros.</li>
+                <li class="card">No se han encontrado libros con los filtros aplicados.</li>
             {% endfor %}
         </ul>
     </div>
 
     <div class="sidebar">
-        <h3>Top 5: Los más leídos</h3>
-        {% for top in top_libros %}
-            <div class="top-item">
-                <strong>{{ forloop.counter }}. {{ top.title }}</strong>
-                <span class="stat-value">{{ top.ratings }} votos</span><br>
-                <small>{{ top.authors }}</small>
-                <div class="chart-bar-container">
-                    <div class="chart-bar-fill" style="width: {{ top.pct }}%;"></div>
+        {% if top_autor %}
+        <div class="sidebar-section">
+            <h3>Lo mejor de {{ top_autor.0.authors }}</h3>
+            {% for item in top_autor %}
+                <div class="top-item">
+                    <strong>{{ item.title }}</strong><br>
+                    <span class="stat-value">{{ item.votos|floatformat:0 }} votos</span>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if top_genero %}
+        <div class="sidebar-section">
+            <h3>Top en {{ genre_sel }}</h3>
+            {% for item in top_genero %}
+                <div class="top-item">
+                    <strong>{{ item.title }}</strong><br>
+                    <span class="stat-value">{{ item.votos|floatformat:0 }} votos</span>
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="sidebar-section">
+            <h3>Top 5 General</h3>
+            {% for top in top_libros %}
+                <div class="top-item">
+                    <strong>{{ forloop.counter }}. {{ top.title }}</strong>
+                    <span class="stat-value">{{ top.ratings }} votos</span><br>
+                    <div class="chart-bar-container">
+                        <div class="chart-bar-fill" style="width: {{ top.pct }}%;"></div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 
     <script>
-        // Lógica de alternancia de tema 100% offline
         const toggleBtn = document.getElementById('themeToggle');
         const htmlElement = document.documentElement;
         
