@@ -15,6 +15,7 @@
             --border: #e6e2d8;
             --shadow: rgba(0,0,0,0.05);
             --genre-bg: #f0ebe4;
+            --slider-track: #e6e2d8;
         }
 
         [data-theme="dark"] {
@@ -27,11 +28,12 @@
             --border: #3d3733;
             --shadow: rgba(0,0,0,0.3);
             --genre-bg: #3d3733;
+            --slider-track: #3d3733;
         }
 
         body { 
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
-            max-width: 1400px; 
+            max-width: 1750px; 
             margin: 0 auto; 
             padding: 20px; 
             background-color: var(--bg-color); 
@@ -52,20 +54,9 @@
             border-bottom: 1px solid var(--border);
         }
 
-        .user-info { 
-            font-size: 0.95rem; 
-            color: var(--text-muted); 
-        }
-
-        .user-info strong { 
-            color: var(--accent); 
-        }
-
-        .nav-buttons { 
-            display: flex; 
-            gap: 15px; 
-            align-items: center; 
-        }
+        .user-info { font-size: 0.95rem; color: var(--text-muted); }
+        .user-info strong { color: var(--accent); }
+        .nav-buttons { display: flex; gap: 15px; align-items: center; }
 
         .btn-link {
             text-decoration: none;
@@ -79,20 +70,9 @@
             background: transparent;
             transition: all 0.2s ease;
         }
-
-        .btn-link:hover { 
-            background: var(--border); 
-        }
-
-        .btn-logout { 
-            color: var(--accent); 
-            border-color: var(--accent); 
-        }
-
-        .btn-logout:hover { 
-            background: var(--accent); 
-            color: white; 
-        }
+        .btn-link:hover { background: var(--border); }
+        .btn-logout { color: var(--accent); border-color: var(--accent); }
+        .btn-logout:hover { background: var(--accent); color: white; }
 
         .header { 
             width: 100%; 
@@ -101,7 +81,6 @@
             border-bottom: 3px double var(--border); 
             margin-bottom: 20px;
         }
-        
         .header h1 {
             font-family: "Georgia", "Times New Roman", serif; 
             font-size: 3rem;
@@ -109,26 +88,10 @@
             margin: 0 0 10px 0;
             letter-spacing: 1px;
         }
+        .header p { font-size: 1.2rem; color: var(--text-muted); font-style: italic; margin: 0; }
 
-        .header p { 
-            font-size: 1.2rem; 
-            color: var(--text-muted); 
-            font-style: italic; 
-            margin: 0; 
-        }
-
-        .main-content { 
-            flex: 3; 
-            min-width: 600px; 
-        }
-        
-        .sidebar { 
-            flex: 1; 
-            min-width: 300px; 
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+        .main-content { flex: 3; min-width: 800px; }
+        .sidebar { flex: 1; min-width: 350px; display: flex; flex-direction: column; gap: 20px; }
 
         .sidebar-section {
             background: var(--card-bg); 
@@ -139,49 +102,91 @@
             border-radius: 4px;
         }
 
-        .search-box { 
-            margin-bottom: 30px; 
+        .filter-panel {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 2px 2px 8px var(--shadow);
+            margin-bottom: 20px;
         }
         
-        .filter-form { 
-            display: flex; 
-            width: 100%; 
-            gap: 10px; 
-            flex-wrap: wrap; 
+        .filter-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 20px; 
+            align-items: end;
         }
 
+        .filter-group { display: flex; flex-direction: column; gap: 8px; }
+        .filter-group label { font-size: 0.9rem; font-weight: bold; color: var(--text-muted); }
+        
+        .filter-group-row { display: flex; gap: 10px; }
+        .filter-group-row input { flex: 1; min-width: 0; }
+
         input[type="text"], input[type="number"], select { 
-            padding: 12px 15px; 
+            padding: 10px 12px; 
             font-size: 1rem;
             border: 1px solid var(--border); 
             border-radius: 4px;
-            background-color: var(--card-bg);
+            background-color: var(--bg-color);
             color: var(--text-main);
+            width: 100%;
+            box-sizing: border-box;
         }
         
-        input[type="text"] { 
-            flex: 2; 
-            min-width: 200px; 
-        }
-
-        input[type="number"] {
-            flex: 1;
-            min-width: 100px;
-        }
-
-        select { 
-            flex: 1; 
-            min-width: 140px; 
-            cursor: pointer; 
-        }
-
         input[type="text"]:focus, input[type="number"]:focus, select:focus { 
             outline: none; 
             border-color: var(--accent); 
         }
 
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background: var(--accent);
+            cursor: pointer;
+            margin-top: -6px;
+        }
+        input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 6px;
+            cursor: pointer;
+            background: var(--slider-track);
+            border-radius: 3px;
+        }
+        .slicer-header { display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; font-weight: bold; color: var(--text-muted); }
+        .slicer-value { color: var(--accent); font-weight: bold; }
+
+        .checkbox-label { 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            font-weight: bold; 
+            font-size: 0.95rem; 
+            cursor: pointer; 
+            color: var(--text-main);
+            padding-top: 10px;
+        }
+        .checkbox-label input { width: 18px; height: 18px; accent-color: var(--accent); }
+
+        .filter-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+            justify-content: flex-end;
+            border-top: 1px dashed var(--border);
+            padding-top: 20px;
+        }
+
         .search-btn { 
-            padding: 12px 25px; 
+            padding: 12px 30px; 
             font-size: 1rem; 
             font-weight: bold;
             background: var(--accent); 
@@ -191,123 +196,90 @@
             cursor: pointer; 
             text-transform: uppercase; 
             letter-spacing: 1px;
+            transition: background 0.2s;
+        }
+        .search-btn:hover { background: var(--accent-hover); }
+
+        .active-filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+        
+        .filter-pill { 
+            background-color: var(--genre-bg); 
+            color: var(--accent); 
+            padding: 6px 14px; 
+            border-radius: 20px; 
+            font-size: 0.85rem; 
+            font-weight: bold; 
+            border: 1px solid var(--border); 
+            display: flex;
+            align-items: center;
+        }
+        
+        .filter-pill a {
+            color: var(--accent);
+            text-decoration: none;
+            margin-left: 8px;
+            font-size: 1.2rem;
+            line-height: 1;
+            transition: color 0.2s;
+        }
+        
+        .filter-pill a:hover {
+            color: var(--accent-hover);
         }
 
-        ul { 
-            padding: 0; 
-            margin: 0; 
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
         }
 
         .card { 
             background: var(--card-bg); 
-            margin: 0 0 15px 0; 
             padding: 20px 25px; 
-            list-style: none; 
-            border-left: 5px solid var(--accent);
-            box-shadow: 1px 1px 4px var(--shadow);
-            border-radius: 4px;
-        }
-
-        .card strong { 
-            font-family: "Georgia", serif; 
-            font-size: 1.4rem; 
-            display: block; 
-            margin-bottom: 5px;
-        }
-
-        .card-meta { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            margin-top: 10px; 
-        }
-
-        small { 
-            color: var(--text-muted); 
-            font-size: 0.95rem; 
-        }
-        
-        .genre-container {
-            display: flex;
-            gap: 5px;
-            flex-wrap: wrap;
-            margin-top: 5px;
-        }
-
-        .genre-tag {
-            display: inline-block;
-            background: var(--genre-bg);
-            color: var(--accent);
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .sidebar-section h3 { 
-            font-family: "Georgia", serif; 
-            font-size: 1.5rem; 
-            color: var(--accent); 
-            border-bottom: 1px solid var(--border); 
-            padding-bottom: 10px; 
-            margin-top: 0;
-            margin-bottom: 15px;
-        }
-        
-        .chart-bar-container {
-            width: 100%;
-            background-color: var(--border);
-            border-radius: 4px;
-            margin-top: 8px;
-            height: 12px;
-            overflow: hidden;
-        }
-
-        .chart-bar-fill { 
-            height: 100%; 
-            background-color: var(--accent); 
+            border-left: 5px solid var(--accent); 
+            box-shadow: 1px 1px 4px var(--shadow); 
             border-radius: 4px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
+        .card strong { font-family: "Georgia", serif; font-size: 1.4rem; display: block; margin-bottom: 5px; }
+        .card-meta { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 15px; }
 
+        .genre-container { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 5px; }
+        .genre-tag { display: inline-block; background: var(--genre-bg); color: var(--accent); padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; }
+
+        .sidebar-section h3 { font-family: "Georgia", serif; font-size: 1.5rem; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-top: 0; margin-bottom: 15px; }
+        .chart-bar-container { width: 100%; background-color: var(--border); border-radius: 4px; margin-top: 8px; height: 12px; overflow: hidden; }
+        .chart-bar-fill { height: 100%; background-color: var(--accent); border-radius: 4px; }
+        
         .stat-value { 
             font-size: 0.85rem; 
             color: var(--text-muted); 
             float: right; 
             font-weight: bold; 
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
+        
+        .top-item { padding: 12px 0; border-bottom: 1px dashed var(--border); }
+        .top-item:last-child { border-bottom: none; }
 
-        .top-item { 
-            padding: 12px 0; 
-            border-bottom: 1px dashed var(--border); 
-        }
+        .recommendation-box { background: var(--card-bg); padding: 20px; border-radius: 12px; border: 1px solid var(--accent); margin-bottom: 30px; }
+        .rec-container { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px; }
+        .rec-card { min-width: 220px; background: var(--bg-color); padding: 15px; border-radius: 8px; border: 1px solid var(--border); }
 
-        .top-item:last-child { 
-            border-bottom: none; 
-        }
+        .pagination { display: flex; justify-content: center; align-items: center; gap: 15px; margin-top: 30px; padding: 20px; background: var(--card-bg); border-radius: 4px; border: 1px solid var(--border); }
 
-        .recommendation-box {
-            background: var(--card-bg); 
-            padding: 20px; 
-            border-radius: 12px; 
-            border: 1px solid var(--accent); 
-            margin-bottom: 30px;
-        }
-
-        .rec-container { 
-            display: flex; 
-            gap: 15px; 
-            overflow-x: auto; 
-            padding-bottom: 10px; 
-        }
-
-        .rec-card {
-            min-width: 220px; 
-            background: var(--bg-color); 
-            padding: 15px; 
-            border-radius: 8px; 
-            border: 1px solid var(--border);
-        }
+        .btn-ia { background: var(--accent); color: white; border: none; border-radius: 4px; padding: 6px 12px; font-size: 0.8rem; font-weight: bold; cursor: pointer; display: inline-block; margin-top: 15px; transition: background 0.2s; }
+        .btn-ia:hover { background: var(--accent-hover); }
+        .ia-box { background: var(--genre-bg); color: var(--text-main); padding: 15px; border-radius: 4px; margin-top: 15px; font-size: 0.9rem; border-left: 3px solid var(--accent); font-style: italic; display: none; line-height: 1.4; }
+        .loading-ia { animation: pulse 1.5s infinite; color: var(--text-muted); }
+        @keyframes pulse { 0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; } }
     </style>
 </head>
 <body>
@@ -322,9 +294,10 @@
         <div class="nav-buttons">
             <button id="themeToggle" class="btn-link">Modo Oscuro</button>
             {% if user_active %}
+                <a href="{% url 'perfil' %}" class="btn-link" style="color: var(--accent); border-color: var(--accent);">Mis Gustos</a>
                 <a href="{% url 'logout' %}" class="btn-link btn-logout">Cerrar Sesión</a>
             {% else %}
-                <a href="{% url 'login' %}" class="btn-link">Identificarse</a>
+                <a href="{% url 'login' %}" class="btn-link">Identificarse / Registrarse</a>
             {% endif %}
         </div>
     </div>
@@ -337,13 +310,7 @@
     <div class="main-content">
         {% if recomendaciones %}
         <div class="recommendation-box">
-            <h3 style="margin-top: 0; color: var(--accent); font-family: 'Georgia', serif;">
-                {% if user_active and not query %}
-                    Recomendado para ti:
-                {% else %}
-                    Te puede interesar:
-                {% endif %}
-            </h3>
+            <h3 style="margin-top: 0; color: var(--accent); font-family: 'Georgia', serif;">{{ titulo_recomendacion }}</h3>
             <div class="rec-container">
                 {% for rec in recomendaciones %}
                 <div class="rec-card">
@@ -360,74 +327,185 @@
         </div>
         {% endif %}
 
-        <div class="search-box">
-            <form method="get" class="filter-form">
-                <input type="text" name="q" placeholder="Título o autor..." value="{{ query }}">
-                
-                <select name="genre">
-                    <option value="">Todos los Géneros</option>
-                    {% for g in generos %}
-                        <option value="{{ g }}" {% if genre_sel == g %}selected{% endif %}>{{ g }}</option>
-                    {% endfor %}
-                </select>
+        <div class="filter-panel">
+            <form method="get" id="searchForm">
+                <div class="filter-grid">
+                    <div class="filter-group" style="grid-column: span 2;">
+                        <label>Búsqueda libre</label>
+                        <input type="text" name="q" placeholder="Título, autor o ISBN..." value="{{ query }}">
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Género</label>
+                        <select name="genre">
+                            <option value="">Todos los Géneros</option>
+                            {% for g in generos %}
+                                <option value="{{ g }}" {% if genre_sel == g %}selected{% endif %}>{{ g }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
 
-                <select name="lang">
-                    <option value="">Cualquier Idioma</option>
-                    {% for l in idiomas %}
-                        <option value="{{ l }}" {% if lang_sel == l %}selected{% endif %}>{{ l }}</option>
-                    {% endfor %}
-                </select>
+                    <div class="filter-group">
+                        <label>Idioma principal</label>
+                        <select name="lang">
+                            <option value="">Cualquier Idioma</option>
+                            {% for l in idiomas %}
+                                <option value="{{ l }}" {% if lang_sel == l %}selected{% endif %}>{{ l }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
 
-                <input type="number" name="year" placeholder="Año" value="{{ year_sel }}" min="1000" max="2030">
+                    <div class="filter-group">
+                        <label>Rango de publicación</label>
+                        <div class="filter-group-row">
+                            <input type="number" name="year_min" placeholder="Desde" value="{{ year_min_sel }}" min="1000" max="2030">
+                            <input type="number" name="year_max" placeholder="Hasta" value="{{ year_max_sel }}" min="1000" max="2030">
+                        </div>
+                    </div>
 
-                <select name="sort">
-                    <option value="relevance">Relevancia</option>
-                    <option value="popular" {% if sort_sel == 'popular' %}selected{% endif %}>Más populares</option>
-                    <option value="year_new" {% if sort_sel == 'year_new' %}selected{% endif %}>Más recientes</option>
-                    <option value="year_old" {% if sort_sel == 'year_old' %}selected{% endif %}>Más antiguos</option>
-                </select>
+                    <div class="filter-group">
+                        <div class="slicer-header">
+                            <span>Nota mínima</span>
+                            <span class="slicer-value"><span id="ratingDisplay">{{ rating_sel|default:"0" }}</span> ⭐</span>
+                        </div>
+                        <input type="range" name="rating" min="0" max="5" step="0.1" value="{{ rating_sel|default:"0" }}" 
+                               oninput="document.getElementById('ratingDisplay').innerText = this.value">
+                    </div>
 
-                <button type="submit" class="search-btn">Filtrar</button>
-                <a href="{% url 'buscador' %}" class="btn-link" style="display: flex; align-items: center; text-decoration: none;">Limpiar</a>
+                    <div class="filter-group">
+                        <div class="slicer-header">
+                            <span>Mínimo de valoraciones</span>
+                            <span class="slicer-value"><span id="votesDisplay">{{ votes_sel|default:"0" }}</span> votos</span>
+                        </div>
+                        <input type="range" name="votes" min="0" max="10000" step="100" value="{{ votes_sel|default:"0" }}" 
+                               oninput="document.getElementById('votesDisplay').innerText = this.value">
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Ordenación</label>
+                        <select name="sort">
+                            <option value="relevance">Relevancia</option>
+                            <option value="top_rated" {% if sort_sel == 'top_rated' %}selected{% endif %}>Mejor valorados</option>
+                            <option value="popular" {% if sort_sel == 'popular' %}selected{% endif %}>Más populares</option>
+                            <option value="year_new" {% if sort_sel == 'year_new' %}selected{% endif %}>Más recientes</option>
+                            <option value="year_old" {% if sort_sel == 'year_old' %}selected{% endif %}>Más antiguos</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="filter-actions">
+                    <label class="checkbox-label" style="margin-right: auto;">
+                        <input type="checkbox" name="available" {% if available_sel %}checked{% endif %}>
+                        Solo ejemplares físicos disponibles
+                    </label>
+                    <a href="{% url 'buscador' %}" class="btn-link" style="display: flex; align-items: center;">Limpiar todo</a>
+                    <button type="submit" class="search-btn">Aplicar Filtros</button>
+                </div>
             </form>
         </div>
 
-        <h3 style="font-family: 'Georgia', serif; color: var(--accent);">Resultados del Catálogo</h3>
-        <ul>
+        <div class="active-filters">
+            {% if query %}
+                <span class="filter-pill">Búsqueda: "{{ query }}" <a href="#" onclick="clearFilterAndSubmit(['q']); return false;" title="Eliminar filtro">&times;</a></span>
+            {% endif %}
+            
+            {% if genre_sel %}
+                <span class="filter-pill">Género: {{ genre_sel }} <a href="#" onclick="clearFilterAndSubmit(['genre']); return false;" title="Eliminar filtro">&times;</a></span>
+            {% endif %}
+            
+            {% if lang_sel %}
+                <span class="filter-pill">Idioma: {{ lang_sel }} <a href="#" onclick="clearFilterAndSubmit(['lang']); return false;" title="Eliminar filtro">&times;</a></span>
+            {% endif %}
+            
+            {% if year_min_sel and year_max_sel %}
+                <span class="filter-pill">Época: {{ year_min_sel }} - {{ year_max_sel }} <a href="#" onclick="clearFilterAndSubmit(['year_min', 'year_max']); return false;" title="Eliminar filtro">&times;</a></span>
+            {% elif year_min_sel %}
+                <span class="filter-pill">Desde: {{ year_min_sel }} <a href="#" onclick="clearFilterAndSubmit(['year_min']); return false;" title="Eliminar filtro">&times;</a></span>
+            {% elif year_max_sel %}
+                <span class="filter-pill">Hasta: {{ year_max_sel }} <a href="#" onclick="clearFilterAndSubmit(['year_max']); return false;" title="Eliminar filtro">&times;</a></span>
+            {% endif %}
+            
+            {% if rating_sel and rating_sel != '0' %}
+                <span class="filter-pill">Valoración: +{{ rating_sel }} ⭐ <a href="#" onclick="clearFilterAndSubmit(['rating']); return false;" title="Eliminar filtro">&times;</a></span>
+            {% endif %}
+            
+            {% if votes_sel and votes_sel != '0' %}
+                <span class="filter-pill">Popularidad: +{{ votes_sel }} votos <a href="#" onclick="clearFilterAndSubmit(['votes']); return false;" title="Eliminar filtro">&times;</a></span>
+            {% endif %}
+            
+            {% if available_sel %}
+                <span class="filter-pill">Solo en formato físico <a href="#" onclick="clearFilterAndSubmit(['available']); return false;" title="Eliminar filtro">&times;</a></span>
+            {% endif %}
+        </div>
+
+        <h3 style="font-family: 'Georgia', serif; color: var(--accent);">Resultados del Catálogo (Pág. {{ page }} de {{ total_paginas }})</h3>
+        
+        <ul class="results-grid">
             {% for libro in libros %}
                 <li class="card">
-                    <strong>{{ libro.title }}</strong>
-                    <div class="card-meta">
+                    <div>
+                        <strong>{{ libro.title }}</strong>
                         <small>
                             Por {{ libro.authors }} 
                             {% if libro.original_publication_year > 0 %}
                                 ({{ libro.original_publication_year }})
                             {% endif %}
                         </small>
-                        <div class="genre-container">
+                    </div>
+                    <div>
+                        <button class="btn-ia" onclick="pedirResumen(this, '{{ libro.title|escapejs }}', '{{ libro.authors|escapejs }}')">✨ Preguntar a la IA</button>
+                        <div class="ia-box"></div>
+                    </div>
+                    <div class="card-meta">
+                        <div>
+                            <span style="color: var(--text-muted); font-size: 0.8rem;">ISBN: {{ libro.isbn|default:"N/A" }}</span>
+                            <div style="margin-top: 5px; font-weight: bold; color: #b8860b;">
+                                ⭐ {{ libro.nota_media|floatformat:1 }} 
+                                <span style="color: var(--text-muted); font-size: 0.8rem; font-weight: normal;">
+                                    ({{ libro.votos|floatformat:0 }} valoraciones)
+                                </span>
+                            </div>
+                        </div>
+                        <div class="genre-container" style="justify-content: flex-end;">
                             {% for g in libro.genre_list %}
                                 <span class="genre-tag">{{ g }}</span>
                             {% endfor %}
                         </div>
                     </div>
-                    <small style="display: block; margin-top: 10px; color: var(--text-muted); font-weight: bold;">
-                        {{ libro.votos|floatformat:0 }} valoraciones
-                    </small>
                 </li>
             {% empty %}
-                <li class="card">No se han encontrado libros con los filtros aplicados.</li>
+                <li class="card" style="grid-column: span 2; text-align: center; color: var(--text-muted);">
+                    No se han encontrado libros que coincidan con todos los filtros seleccionados.
+                </li>
             {% endfor %}
         </ul>
+
+        {% if total_paginas > 1 %}
+        <div class="pagination">
+            {% if page > 1 %}
+                <a href="?q={{query}}&genre={{genre_sel}}&lang={{lang_sel}}&year_min={{year_min_sel}}&year_max={{year_max_sel}}&rating={{rating_sel}}&votes={{votes_sel}}&available={{available_sel}}&sort={{sort_sel}}&page={{ page|add:'-1' }}" class="btn-link">← Anterior</a>
+            {% endif %}
+            
+            <strong style="color: var(--accent);">Página {{ page }} de {{ total_paginas }}</strong>
+            
+            {% if page < total_paginas %}
+                <a href="?q={{query}}&genre={{genre_sel}}&lang={{lang_sel}}&year_min={{year_min_sel}}&year_max={{year_max_sel}}&rating={{rating_sel}}&votes={{votes_sel}}&available={{available_sel}}&sort={{sort_sel}}&page={{ page|add:'1' }}" class="btn-link">Siguiente →</a>
+            {% endif %}
+        </div>
+        {% endif %}
     </div>
 
     <div class="sidebar">
-        {% if top_autor %}
+        {% if top_dinamico %}
         <div class="sidebar-section">
-            <h3>Lo mejor de {{ top_autor.0.authors }}</h3>
-            {% for item in top_autor %}
+            <h3>{{ titulo_sidebar_dinamico }}</h3>
+            {% for item in top_dinamico %}
                 <div class="top-item">
                     <strong>{{ item.title }}</strong><br>
-                    <span class="stat-value">{{ item.votos|floatformat:0 }} votos</span>
+                    <span class="stat-value">
+                        ⭐ {{ item.nota_media|floatformat:1 }} 
+                        <small style="font-weight:normal; margin-left: 4px;">({{ item.votos|floatformat:0 }} votos)</small>
+                    </span>
                 </div>
             {% endfor %}
         </div>
@@ -439,7 +517,10 @@
             {% for item in top_genero %}
                 <div class="top-item">
                     <strong>{{ item.title }}</strong><br>
-                    <span class="stat-value">{{ item.votos|floatformat:0 }} votos</span>
+                    <span class="stat-value">
+                        ⭐ {{ item.nota_media|floatformat:1 }} 
+                        <small style="font-weight:normal; margin-left: 4px;">({{ item.votos|floatformat:0 }} votos)</small>
+                    </span>
                 </div>
             {% endfor %}
         </div>
@@ -447,10 +528,26 @@
 
         <div class="sidebar-section">
             <h3>Top 5 General</h3>
-            {% for top in top_libros %}
+            {% for top in top_valorados_general %}
                 <div class="top-item">
                     <strong>{{ forloop.counter }}. {{ top.title }}</strong>
-                    <span class="stat-value">{{ top.ratings }} votos</span><br>
+                    <span class="stat-value" style="display:block; margin-bottom:4px;">
+                        ⭐ {{ top.nota_media|floatformat:1 }} 
+                        <small style="font-weight:normal; margin-left: 4px;">({{ top.votos|floatformat:0 }} votos)</small>
+                    </span>
+                    <div class="chart-bar-container">
+                        <div class="chart-bar-fill" style="width: {{ top.pct }}%;"></div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        
+        <div class="sidebar-section">
+            <h3>Top 5 Más Populares</h3>
+            {% for top in top_populares_general %}
+                <div class="top-item">
+                    <strong>{{ forloop.counter }}. {{ top.title }}</strong>
+                    <span class="stat-value" style="display:block; margin-bottom:4px;">{{ top.ratings }} votos</span>
                     <div class="chart-bar-container">
                         <div class="chart-bar-fill" style="width: {{ top.pct }}%;"></div>
                     </div>
@@ -479,6 +576,42 @@
 
         function updateButtonText(theme) {
             toggleBtn.textContent = theme === 'dark' ? 'Modo Claro' : 'Modo Oscuro';
+        }
+
+        function clearFilterAndSubmit(inputNames) {
+            const form = document.getElementById('searchForm');
+            inputNames.forEach(name => {
+                const input = form.querySelector(`[name="${name}"]`);
+                if (input) {
+                    if (input.type === 'checkbox') {
+                        input.checked = false;
+                    } else if (input.type === 'range') {
+                        input.value = '0';
+                    } else {
+                        input.value = '';
+                    }
+                }
+            });
+            form.submit();
+        }
+
+        function pedirResumen(btn, titulo, autor) {
+            const box = btn.nextElementSibling;
+            if (box.style.display === 'block') {
+                box.style.display = 'none';
+                return;
+            }
+            box.style.display = 'block';
+            box.innerHTML = '<span class="loading-ia">Preguntando al modelo de IA local...</span>';
+            
+            fetch(`/api/ia/?titulo=${encodeURIComponent(titulo)}&autor=${encodeURIComponent(autor)}`)
+                .then(res => res.json())
+                .then(data => {
+                    box.innerHTML = data.resumen;
+                })
+                .catch(err => {
+                    box.innerHTML = 'Error de conexión con el modelo Qwen local.';
+                });
         }
     </script>
 </body>

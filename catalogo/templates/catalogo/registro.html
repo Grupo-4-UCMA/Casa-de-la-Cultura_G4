@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa de la Cultura - Registro</title>
+    <style>
+        :root { --bg-color: #fcfbf9; --text-main: #2c2825; --accent: #8b1e28; --card-bg: #ffffff; --border: #e6e2d8; }
+        [data-theme="dark"] { --bg-color: #1a1817; --text-main: #e8e6e3; --accent: #c43946; --card-bg: #252220; --border: #3d3733; }
+        body { font-family: "Segoe UI", sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: var(--bg-color); color: var(--text-main); }
+        .login-box { background: var(--card-bg); padding: 40px; border-radius: 8px; border: 1px solid var(--border); box-shadow: 2px 2px 15px rgba(0,0,0,0.1); width: 100%; max-width: 500px; }
+        .login-box h1 { font-family: "Georgia", serif; color: var(--accent); margin-top: 0; text-align: center; }
+        input[type="date"], textarea { width: 100%; padding: 12px; margin-top: 5px; margin-bottom: 20px; border: 1px solid var(--border); border-radius: 4px; box-sizing: border-box; background: var(--bg-color); color: var(--text-main); }
+        textarea { height: 120px; resize: vertical; }
+        .btn-main { width: 100%; padding: 12px; background: var(--accent); color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; text-transform: uppercase; margin-bottom: 10px; }
+        .btn-guest { width: 100%; padding: 12px; background: transparent; color: var(--text-main); border: none; font-weight: bold; cursor: pointer; text-align: center; text-decoration: underline; display: block; box-sizing: border-box; }
+        label { font-weight: bold; font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h1>Nuevo Lector</h1>
+        <p style="text-align: center; margin-bottom: 25px;">Dinos qué te gusta leer para poder recomendarte libros a tu medida.</p>
+        <form method="post">
+            {% csrf_token %}
+            
+            <label>Fecha de Nacimiento:</label>
+            <input type="date" name="fecha_nacimiento" required>
+
+            <label>Mis gustos y preferencias:</label>
+            <textarea name="gustos" placeholder="Ej: Me encantan los libros de magia, las novelas históricas y autores como 'Stephen King'..." required></textarea>
+            
+            <button type="submit" class="btn-main">Completar Registro</button>
+        </form>
+        <a href="{% url 'login' %}" class="btn-guest">Cancelar y volver</a>
+    </div>
+</body>
+</html>

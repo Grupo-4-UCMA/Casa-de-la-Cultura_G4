@@ -2,47 +2,38 @@
 <html lang="es" data-theme="light">
 <head>
     <meta charset="UTF-8">
-    <title>Acceso - Casa de la Cultura</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa de la Cultura - Acceso</title>
     <style>
-        /* Reutilizamos tus variables de color institucionales */
-        :root {
-            --bg-color: #fcfbf9; --text-main: #2c2825; --accent: #8b1e28; --border: #e6e2d8;
-        }
-        [data-theme="dark"] {
-            --bg-color: #1a1817; --text-main: #e8e6e3; --accent: #c43946; --border: #3d3733;
-        }
-        body { 
-            font-family: "Segoe UI", sans-serif; background-color: var(--bg-color); 
-            color: var(--text-main); display: flex; align-items: center; 
-            justify-content: center; height: 100vh; margin: 0; 
-        }
-        .login-card {
-            background: var(--bg-color); padding: 40px; border: 1px solid var(--border);
-            border-top: 5px solid var(--accent); box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            text-align: center; width: 400px;
-        }
-        h1 { font-family: "Georgia", serif; color: var(--accent); margin-bottom: 10px; }
-        input { 
-            width: 80%; padding: 12px; margin: 20px 0; border: 1px solid var(--border); 
-            border-radius: 4px; background: transparent; color: inherit; text-align: center;
-        }
-        .enter-btn {
-            background: var(--accent); color: white; border: none; padding: 12px 30px;
-            cursor: pointer; font-weight: bold; text-transform: uppercase; border-radius: 4px;
-        }
-        .guest-link { display: block; margin-top: 20px; color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+        :root { --bg-color: #fcfbf9; --text-main: #2c2825; --accent: #8b1e28; --card-bg: #ffffff; --border: #e6e2d8; }
+        [data-theme="dark"] { --bg-color: #1a1817; --text-main: #e8e6e3; --accent: #c43946; --card-bg: #252220; --border: #3d3733; }
+        body { font-family: "Segoe UI", sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: var(--bg-color); color: var(--text-main); }
+        .login-box { background: var(--card-bg); padding: 40px; border-radius: 8px; border: 1px solid var(--border); box-shadow: 2px 2px 15px rgba(0,0,0,0.1); width: 100%; max-width: 400px; text-align: center; }
+        .login-box h1 { font-family: "Georgia", serif; color: var(--accent); margin-top: 0; }
+        input[type="number"] { width: 100%; padding: 12px; margin: 15px 0; border: 1px solid var(--border); border-radius: 4px; box-sizing: border-box; background: var(--bg-color); color: var(--text-main); }
+        .btn-main { width: 100%; padding: 12px; background: var(--accent); color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; text-transform: uppercase; margin-bottom: 10px; }
+        .btn-secondary { width: 100%; padding: 12px; background: transparent; color: var(--text-main); border: 1px solid var(--border); border-radius: 4px; font-weight: bold; cursor: pointer; text-decoration: none; display: block; box-sizing: border-box; margin-bottom: 10px; }
+        .btn-guest { width: 100%; padding: 12px; background: transparent; color: var(--accent); border: none; font-weight: bold; cursor: pointer; text-decoration: underline; display: block; box-sizing: border-box; }
+        .divider { border-top: 1px dashed var(--border); margin: 25px 0; }
     </style>
 </head>
 <body>
-    <div class="login-card">
+    <div class="login-box">
         <h1>Casa de la Cultura</h1>
-        <p>Introduzca su identificador de lector</p>
-        <form method="POST" action="{% url 'login' %}">
+        <form method="post">
             {% csrf_token %}
-            <input type="text" name="user_id" placeholder="ID de Usuario" required autofocus>
-            <button type="submit" class="enter-btn">Entrar</button>
+            <p style="margin-bottom: 5px;">Identifícate con tu ID de usuario:</p>
+            <input type="number" name="user_id" placeholder="ID de Usuario" required min="1">
+            <button type="submit" name="action" value="login" class="btn-main">Entrar</button>
+            <div class="divider"></div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px;">Opciones de gestión:</p>
+            <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                <button type="submit" name="action" value="edit" class="btn-secondary" style="margin-bottom: 0;">Modificar Gustos</button>
+                <button type="submit" name="action" value="delete" class="btn-secondary" style="margin-bottom: 0; color: var(--accent); border-color: var(--accent);">Borrar Usuario</button>
+            </div>
         </form>
-        <a href="{% url 'buscador' %}" class="guest-link">Continuar como invitado</a>
+        <a href="{% url 'registro' %}" class="btn-secondary">Soy nuevo, quiero registrarme</a>
+        <a href="{% url 'buscador' %}" class="btn-guest">Continuar como invitado</a>
     </div>
 </body>
 </html>
