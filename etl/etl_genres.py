@@ -16,7 +16,8 @@ se reanuda sin reprocesar lotes ya completados.
 
 Input:  data/clean/books_clean_extended.csv
         data/clean/book_authors_extended.csv
-Output: data/clean/books_with_genre.csv
+Output: data/clean/books_clean_final.csv  (catálogo limpio sin género)
+        data/clean/book_genres.csv        (tabla N:M libro-género)
 """
 
 import os
@@ -33,9 +34,10 @@ DATA_CLEAN   = os.path.join("data", "clean")
 DATA_PROMPTS = os.path.join("data", "prompts")
 DATA_RESPS   = os.path.join("data", "responses")
 
-IN_BOOKS   = os.path.join(DATA_CLEAN, "books_clean_extended.csv")
-IN_AUTHORS = os.path.join(DATA_CLEAN, "book_authors_extended.csv")
-OUT_CSV    = os.path.join(DATA_CLEAN, "books_with_genre.csv")
+IN_BOOKS        = os.path.join(DATA_CLEAN, "books_clean_extended.csv")
+IN_AUTHORS      = os.path.join(DATA_CLEAN, "book_authors_extended.csv")
+OUT_BOOKS_FINAL = os.path.join(DATA_CLEAN, "books_clean_final.csv")
+OUT_BOOK_GENRES = os.path.join(DATA_CLEAN, "book_genres.csv")
 
 # ── Taxonomía cerrada ────────────────────────────────────────────────────
 # 29 categorías + "Desconocido" como salida de seguridad.
@@ -49,31 +51,39 @@ TAXONOMIA = [
     "Religión y espiritualidad", "Romántica", "Terror", "Thriller",
     "Viajes", "Desconocido",
 ]
+
 # ── Configuración de la API ──────────────────────────────────────────────
 MODEL = "claude-sonnet-4-5"
-MAX_TOKENS = 4096   # Margen amplio para 50 pares book_id -> género
+MAX_TOKENS = 4096   # Margen amplio para 50 libros con 1-3 géneros cada uno
 TEMPERATURE = 0     # Determinista, sin creatividad para esta tarea
 
 cliente_api = Anthropic()  # Lee ANTHROPIC_API_KEY del entorno
+
 # ── Prompt ───────────────────────────────────────────────────────────────
 PROMPT_TEMPLATE = """Eres un bibliotecario experto clasificando libros para una biblioteca pública municipal.
 
-A continuación tienes una lista de {n_libros} libros. Para cada uno, asigna UN ÚNICO género de la siguiente taxonomía cerrada (no inventes géneros nuevos, no devuelvas varios):
+A continuación tienes una lista de {n_libros} libros. Para cada uno, asigna entre 1 y 3 géneros aplicables de la siguiente taxonomía cerrada (no inventes géneros nuevos):
 
 {taxonomia}
 
 Reglas:
 - Usa exactamente la grafía de la taxonomía (con tildes y mayúsculas como están).
-- Si dudas entre dos géneros, elige el más específico (p. ej. "Ciencia ficción" antes que "Ficción").
-- Si un libro es clásico de cualquier género, prioriza "Clásicos" solo si está claramente reconocido como tal (Cervantes, Dickens, Tolstói, Homero...). Si no, usa el género literario.
-- Usa "Infantil" para 0-12 años y "Juvenil" para 13-17.
-- Usa "Desconocido" solo si realmente no puedes determinarlo con la información dada.
+- Mínimo 1 género, máximo 3. No abuses: solo añade un género extra si realmente aplica al libro.
+- Combina géneros literarios con público objetivo cuando proceda. Ejemplos típicos:
+    · Una novela de fantasía para adolescentes → ["Fantasía", "Juvenil"]
+    · Un cuento ilustrado para niños → ["Infantil"] (o ["Infantil", "Aventura"] si la trama es claramente de aventuras)
+    · Un thriller para adultos → ["Thriller"] (sin "Juvenil")
+- Si dudas entre dos géneros literarios, elige el más específico (p. ej. "Ciencia ficción" antes que "Ficción").
+- Usa "Clásicos" solo si el libro está claramente reconocido como tal (Cervantes, Dickens, Tolstói, Homero...). Suele combinarse con su género literario, p. ej. ["Clásicos", "Aventura"].
+- Usa "Infantil" para libros dirigidos a 0-12 años y "Juvenil" para 13-17. Nunca ambos.
+- Usa "Desconocido" como único género solo si realmente no puedes determinar nada.
 
-Devuelve EXCLUSIVAMENTE un objeto JSON con esta estructura, sin texto adicional, sin markdown, sin explicaciones:
+Devuelve EXCLUSIVAMENTE un objeto JSON con esta estructura, sin texto adicional, sin markdown, sin explicaciones. Los valores son SIEMPRE listas, aunque tengan un único elemento:
 
 {{
-  "<book_id>": "<género>",
-  "<book_id>": "<género>"
+  "<book_id>": ["<género>"],
+  "<book_id>": ["<género>", "<género>"],
+  "<book_id>": ["<género>", "<género>", "<género>"]
 }}
 
 Lista de libros:
@@ -105,6 +115,7 @@ def generar_prompt(df_lote):
         taxonomia=", ".join(TAXONOMIA) + ".",
         libros="\n".join(lineas),
     )
+
 
 # ── Carga de datos ───────────────────────────────────────────────────────
 def cargar_libros_con_autores():
@@ -164,6 +175,7 @@ def generate_prompts(batch_size=50):
 
     print(f"✓ {n_lotes} prompts generados en {DATA_PROMPTS}/")
 
+
 # ── Fase 2: procesar prompts contra la API ───────────────────────────────
 def limpiar_respuesta(texto):
     """
@@ -179,6 +191,7 @@ def limpiar_respuesta(texto):
         if texto.endswith("```"):
             texto = texto[:-3].rstrip()
     return texto.strip()
+
 
 def process_prompts():
     """
@@ -261,19 +274,21 @@ def process_prompts():
     print(f"  Coste total sesión: ${coste_total:.4f}")
     print(f"  Duración total:     {duracion_total/60:.1f} min")
 
+
 # ── Fase 3: integrar respuestas en CSV final ─────────────────────────────
 def merge_responses():
     """
-    Lee todas las respuestas JSON de data/responses/, extrae el género
-    de cada libro y produce books_with_genre.csv añadiendo una columna
-    'genre' al CSV original.
+    Lee todas las respuestas JSON de data/responses/ y produce dos
+    artefactos:
+      - books_clean_final.csv : el catálogo limpio sin columna de género.
+      - book_genres.csv       : tabla N:M (book_id, genre), una fila por par.
 
-    Si un libro no tiene respuesta (lote fallido o falta), se asigna
-    'Desconocido'. Si un género devuelto no está en la taxonomía, también
-    se reemplaza por 'Desconocido' y se reporta.
+    Si un género devuelto no está en la taxonomía, se descarta y se
+    reporta. Si un libro queda sin ningún género válido tras descartar
+    los fuera de taxonomía, se le asigna "Desconocido".
     """
     print("Cargando respuestas...")
-    asignaciones = {}        # book_id (int) -> género (str)
+    asignaciones = {}        # book_id (int) -> list[str]
     fuera_taxonomia = []     # (book_id, género) para reportar
 
     ficheros = sorted(f for f in os.listdir(DATA_RESPS) if f.endswith(".json"))
@@ -288,67 +303,107 @@ def merge_responses():
             print(f"  ⚠ {nombre}: JSON inválido, se omite ({e})")
             continue
 
-        for book_id_str, genero in generos_lote.items():
+        for book_id_str, generos in generos_lote.items():
             book_id = int(book_id_str)
-            if genero not in TAXONOMIA:
-                fuera_taxonomia.append((book_id, genero))
-                genero = "Desconocido"
-            asignaciones[book_id] = genero
+            # Defensa: si el modelo devolvió string en vez de lista, lo
+            # envolvemos. Si devolvió otra cosa rara, lo descartamos.
+            if isinstance(generos, str):
+                generos = [generos]
+            elif not isinstance(generos, list):
+                continue
 
-    print(f"  Asignaciones recogidas: {len(asignaciones)}")
+            validos = []
+            for g in generos:
+                if g in TAXONOMIA:
+                    validos.append(g)
+                else:
+                    fuera_taxonomia.append((book_id, g))
+
+            if not validos:
+                validos = ["Desconocido"]
+            # Deduplicamos preservando orden
+            asignaciones[book_id] = list(dict.fromkeys(validos))
+
+    print(f"  Libros con asignaciones: {len(asignaciones)}")
+    total_pares = sum(len(gs) for gs in asignaciones.values())
+    print(f"  Pares libro-género: {total_pares}")
+    print(f"  Media de géneros por libro: {total_pares / len(asignaciones):.2f}")
+
     if fuera_taxonomia:
-        print(f"  ⚠ Géneros fuera de taxonomía corregidos a "
-              f"'Desconocido': {len(fuera_taxonomia)}")
+        print(f"  ⚠ Géneros fuera de taxonomía descartados: "
+              f"{len(fuera_taxonomia)}")
         for bid, g in fuera_taxonomia[:5]:
             print(f"      book_id={bid} → '{g}'")
 
-    # Cargar el CSV base y añadir la columna
-    print("\nIntegrando en books_clean_extended.csv...")
+    # Cargar el CSV base
+    print("\nGenerando artefactos...")
     df = pd.read_csv(IN_BOOKS)
-    df["genre"] = df["book_id"].map(asignaciones).fillna("Desconocido")
 
-    n_sin_asignar = (df["genre"] == "Desconocido").sum()
-    n_total = len(df)
-    df.to_csv(OUT_CSV, index=False)
+    # books_clean_final.csv : catálogo sin columna de género
+    df.to_csv(OUT_BOOKS_FINAL, index=False)
+    print(f"✓ {OUT_BOOKS_FINAL} guardado ({len(df)} filas)")
 
-    print(f"✓ {OUT_CSV} guardado ({n_total} filas)")
-    print(f"  Con género asignado: {n_total - n_sin_asignar}")
-    print(f"  Como 'Desconocido':  {n_sin_asignar}")
+    # book_genres.csv : tabla N:M
+    pares = []
+    for book_id in df["book_id"]:
+        for genero in asignaciones.get(book_id, ["Desconocido"]):
+            pares.append({"book_id": book_id, "genre": genero})
+    df_genres = pd.DataFrame(pares)
+    df_genres.to_csv(OUT_BOOK_GENRES, index=False)
+    print(f"✓ {OUT_BOOK_GENRES} guardado ({len(df_genres)} filas)")
 
 
 # ── Fase 4: validar resultado ────────────────────────────────────────────
 def validate():
     """
-    Verifica que el CSV final cumple las invariantes esperadas y
-    muestra el reparto por género.
+    Verifica que los artefactos finales cumplen las invariantes y
+    muestra estadísticas del reparto.
     """
-    print(f"Validando {OUT_CSV}...\n")
-    df = pd.read_csv(OUT_CSV)
+    print(f"Validando {OUT_BOOKS_FINAL} y {OUT_BOOK_GENRES}...\n")
+
+    df_b = pd.read_csv(OUT_BOOKS_FINAL)
+    df_g = pd.read_csv(OUT_BOOK_GENRES)
 
     # Invariantes
-    assert len(df) == 9998, f"Esperaba 9998 filas, hay {len(df)}"
-    assert df["genre"].notna().all(), "Hay filas con genre NULL"
+    assert len(df_b) == 9998, f"Esperaba 9998 libros, hay {len(df_b)}"
+    libros_con_genero = df_g["book_id"].nunique()
+    assert libros_con_genero == 9998, (
+        f"Solo {libros_con_genero} libros tienen género asignado, "
+        f"esperaba 9998"
+    )
 
-    # Verificar que todos los géneros están en la taxonomía
-    fuera = set(df["genre"].unique()) - set(TAXONOMIA)
+    # Verificar taxonomía
+    fuera = set(df_g["genre"].unique()) - set(TAXONOMIA)
     assert not fuera, f"Géneros fuera de taxonomía: {fuera}"
 
-    print(f"  ✓ {len(df)} libros con columna 'genre' rellena")
-    print(f"  ✓ Todos los géneros están dentro de la taxonomía cerrada\n")
+    # Verificar 1-3 géneros por libro
+    conteo_por_libro = df_g.groupby("book_id").size()
+    max_g = conteo_por_libro.max()
+    min_g = conteo_por_libro.min()
+    media = conteo_por_libro.mean()
 
-    # Reparto por género
-    print("── Reparto por género ─────────────────────────────────")
-    conteo = df["genre"].value_counts()
+    print(f"  ✓ 9998 libros en books_clean_final.csv")
+    print(f"  ✓ {libros_con_genero} libros con al menos un género")
+    print(f"  ✓ Todos los géneros están dentro de la taxonomía cerrada")
+    print(f"  ✓ Géneros por libro: min={min_g}, max={max_g}, "
+          f"media={media:.2f}\n")
+
+    # Reparto por género (en cuántos libros aparece cada uno)
+    print("── Reparto por género (libros en los que aparece) ─────")
+    conteo = df_g["genre"].value_counts()
     for genero, n in conteo.items():
-        pct = 100 * n / len(df)
-        print(f"  {genero:<28} {n:>5}  ({pct:5.1f}%)")
-    print(f"\n  Total: {len(df)} libros, {df['genre'].nunique()} géneros usados")
+        pct = 100 * n / len(df_b)
+        print(f"  {genero:<28} {n:>5}  ({pct:5.1f}% de libros)")
+
+    print(f"\n  Total pares libro-género: {len(df_g)}")
+    print(f"  Géneros usados: {df_g['genre'].nunique()}")
+
 
 if __name__ == "__main__":
     # Pipeline completo. Cada fase es idempotente.
     # generate_prompts() solo se ejecuta una vez (los prompts ya existen).
     # process_prompts() salta los lotes que ya tienen respuesta.
-    # merge_responses() + validate() reconstruyen el CSV final.
+    # merge_responses() + validate() reconstruyen los CSVs finales.
     generate_prompts(batch_size=50)
     process_prompts()
     merge_responses()
