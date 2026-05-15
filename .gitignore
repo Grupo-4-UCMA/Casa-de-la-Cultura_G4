@@ -149,9 +149,12 @@ data/**/*.csv
 
 # Excepciones: artefactos estables del ETL que sí versionamos para que
 # el resto del equipo pueda arrancar el sistema sin re-ejecutar nada.
-!data/clean/books_with_genre.csv
+# Nota: ratings_clean_extended.csv NO se versiona por tamaño (~150 MB).
+# Cada uno lo regenera en local con etl/etl_ratings_extended.py.
+!data/clean/books_clean_final.csv
+!data/clean/book_genres.csv
 !data/clean/book_authors_extended.csv
-!data/clean/copies_clean.csv
+!data/clean/copies_clean_extended.csv
 !data/clean/users_clean.csv
 
 # Otros formatos comprimidos pesados
