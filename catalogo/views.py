@@ -25,31 +25,34 @@ MAPA_IDIOMAS = {
 }
 
 def cargar_datos_completos():
-    ruta_books = 'data/clean/books_with_genre.csv'
+    ruta_books = 'data/clean/books_clean_final.csv'
     ruta_authors = 'data/clean/book_authors_extended.csv'
+    ruta_genres = 'data/clean/book_genres.csv'
     
-    if os.path.exists(ruta_books) and os.path.exists(ruta_authors):
+    if os.path.exists(ruta_books) and os.path.exists(ruta_authors) and os.path.exists(ruta_genres):
         df_books = pd.read_csv(ruta_books).drop_duplicates('book_id')
         df_authors = pd.read_csv(ruta_authors)
+        df_genres = pd.read_csv(ruta_genres)
         
-        df_books['genre'] = df_books['genre'].fillna('Desconocido')
         df_books['original_publication_year'] = pd.to_numeric(df_books['original_publication_year'], errors='coerce').fillna(0).astype(int)
-        
         df_books['language_display'] = df_books['language_code'].map(MAPA_IDIOMAS).fillna(df_books['language_code'])
         
-        sagas_fantasia = ['Harry Potter', 'Lord of the Rings', 'Chronicles of Narnia', 'Twilight', 'Hunger Games', 'A Song of Ice and Fire']
-        for saga in sagas_fantasia:
-            df_books.loc[df_books['title'].str.contains(saga, case=False, na=False), 'genre'] = 'Fantasía'
-            
         autores_agrupados = df_authors.groupby('book_id')['author'].apply(lambda x: ', '.join(x)).reset_index()
         autores_agrupados.columns = ['book_id', 'authors']
         
-        return pd.merge(df_books, autores_agrupados, on='book_id', how='left')
+        generos_agrupados = df_genres.groupby('book_id')['genre'].apply(list).reset_index()
+        generos_agrupados.columns = ['book_id', 'genre_list']
+        
+        df_merged = pd.merge(df_books, autores_agrupados, on='book_id', how='left')
+        df_merged = pd.merge(df_merged, generos_agrupados, on='book_id', how='left')
+        df_merged['genre_list'] = df_merged['genre_list'].apply(lambda x: x if isinstance(x, list) else ['Desconocido'])
+        
+        return df_merged
     return pd.DataFrame()
 
 def obtener_votos_totales():
     ruta_ratings = 'data/clean/ratings_clean.csv'
-    ruta_copies = 'data/clean/copies_clean.csv'
+    ruta_copies = 'data/clean/copies_clean_extended.csv'
     
     if os.path.exists(ruta_ratings) and os.path.exists(ruta_copies):
         ratings_df = pd.read_csv(ruta_ratings, usecols=['copy_id'])
@@ -80,7 +83,7 @@ def obtener_top_libros():
             TOP_LIBROS_CACHE.append({
                 'title': fila['title'],
                 'authors': fila.get('authors', 'Anónimo'),
-                'genre': fila.get('genre', 'Desconocido'),
+                'genre_list': fila.get('genre_list', ['Desconocido']),
                 'ratings': int(fila['votos']),
                 'pct': int((fila['votos'] / maximo_votos) * 100)
             })
@@ -122,7 +125,7 @@ def buscador_catalogo(request):
 
     if not df_base.empty:
         df_base = pd.merge(df_base, votos_df, on='book_id', how='left').fillna({'votos': 0})
-        lista_generos = sorted(df_base['genre'].unique().tolist())
+        lista_generos = sorted(list(set(g for sublist in df_base['genre_list'] for g in sublist)))
         lista_idiomas = sorted(df_base['language_display'].dropna().unique().tolist())
         resultados_busqueda = df_base.copy()
 
@@ -139,8 +142,8 @@ def buscador_catalogo(request):
                     top_por_autor = df_base[df_base['authors'] == autor_encontrado].sort_values('votos', ascending=False).head(3).to_dict('records')
 
         if filtro_genero:
-            resultados_busqueda = resultados_busqueda[resultados_busqueda['genre'] == filtro_genero]
-            top_por_genero = df_base[df_base['genre'] == filtro_genero].sort_values('votos', ascending=False).head(3).to_dict('records')
+            resultados_busqueda = resultados_busqueda[resultados_busqueda['genre_list'].apply(lambda x: filtro_genero in x)]
+            top_por_genero = df_base[df_base['genre_list'].apply(lambda x: filtro_genero in x)].sort_values('votos', ascending=False).head(3).to_dict('records')
         
         if filtro_idioma:
             resultados_busqueda = resultados_busqueda[resultados_busqueda['language_display'] == filtro_idioma]
@@ -161,11 +164,11 @@ def buscador_catalogo(request):
 
         listado_final = resultados_busqueda.head(20).to_dict('records')
         
-        ruta_copies = 'data/clean/copies_clean.csv'
+        ruta_copies = 'data/clean/copies_clean_extended.csv'
         if listado_final and indices_ia and os.path.exists(ruta_copies):
             df_copias = pd.read_csv(ruta_copies)
             id_referencia = listado_final[0]['book_id']
-            genero_referencia = listado_final[0]['genre']
+            genero_referencia = listado_final[0]['genre_list'][0] if listado_final[0]['genre_list'] else None
             copias_libro = df_copias[df_copias['book_id'] == id_referencia]
             
             if not copias_libro.empty:
@@ -174,10 +177,13 @@ def buscador_catalogo(request):
                 
                 if ids_vecinos:
                     ids_libros_recom = df_copias[df_copias['copy_id'].isin(ids_vecinos)]['book_id'].unique()
-                    afinidad_genero = df_base[(df_base['book_id'].isin(ids_libros_recom)) & (df_base['genre'] == genero_referencia)]
                     
-                    if not afinidad_genero.empty:
-                        recomendaciones = afinidad_genero.head(3).to_dict('records')
+                    if genero_referencia:
+                        afinidad_genero = df_base[(df_base['book_id'].isin(ids_libros_recom)) & (df_base['genre_list'].apply(lambda x: genero_referencia in x))]
+                        if not afinidad_genero.empty:
+                            recomendaciones = afinidad_genero.head(3).to_dict('records')
+                        else:
+                            recomendaciones = df_base[df_base['book_id'].isin(ids_libros_recom)].head(3).to_dict('records')
                     else:
                         recomendaciones = df_base[df_base['book_id'].isin(ids_libros_recom)].head(3).to_dict('records')
                         

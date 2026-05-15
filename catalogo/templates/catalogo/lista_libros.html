@@ -226,6 +226,13 @@
             color: var(--text-muted); 
             font-size: 0.95rem; 
         }
+        
+        .genre-container {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
 
         .genre-tag {
             display: inline-block;
@@ -342,7 +349,11 @@
                 <div class="rec-card">
                     <strong style="display: block; font-size: 0.95rem; margin-bottom: 5px;">{{ rec.title }}</strong>
                     <small>{{ rec.authors }}</small><br>
-                    <span class="genre-tag" style="margin-top: 10px;">{{ rec.genre }}</span>
+                    <div class="genre-container">
+                        {% for g in rec.genre_list %}
+                            <span class="genre-tag">{{ g }}</span>
+                        {% endfor %}
+                    </div>
                 </div>
                 {% endfor %}
             </div>
@@ -393,7 +404,11 @@
                                 ({{ libro.original_publication_year }})
                             {% endif %}
                         </small>
-                        <span class="genre-tag">{{ libro.genre }}</span>
+                        <div class="genre-container">
+                            {% for g in libro.genre_list %}
+                                <span class="genre-tag">{{ g }}</span>
+                            {% endfor %}
+                        </div>
                     </div>
                     <small style="display: block; margin-top: 10px; color: var(--text-muted); font-weight: bold;">
                         {{ libro.votos|floatformat:0 }} valoraciones
