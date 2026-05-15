@@ -242,4 +242,16 @@ git branch -d funcionalidad/mi-tarea
 
 ---
 
+## 8. Cómo regenerar el PDF
+
+La fuente de verdad de esta guía es `docs/guia-flujo-trabajo.md`. Cuando lo actualices, regenera el PDF con:
+
+```bash
+pandoc docs/guia-flujo-trabajo.md -o docs/guia-flujo-trabajo.pdf
+```
+
+Si no tienes `pandoc`, puedes instalarlo desde [pandoc.org/installing.html](https://pandoc.org/installing.html).
+
+---
+
 *Si encuentras algún error en esta guía o crees que falta algo, abre un PR para corregirla. La documentación también es código.*
