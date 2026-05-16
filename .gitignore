@@ -144,8 +144,6 @@ data/raw/
 data/prompts/
 data/responses/
 
-# Por defecto ignoramos todos los CSV bajo data/.
-data/**/*.csv
 
 # Excepciones: artefactos estables del ETL que sí versionamos para que
 # el resto del equipo pueda arrancar el sistema sin re-ejecutar nada.
