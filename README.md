@@ -14,7 +14,6 @@ La Casa de la Cultura es un bibliobús municipal con un fondo amplio de libros y
 
 El sistema debe funcionar de forma local y offline en un único PC en la sede de la Casa de la Cultura, sin dependencias de internet ni licencias de pago.
 
-Más detalle en el [Project Charter](docs/entregables/Project_Charter_Grupo4.pdf) y en el PMP (cuando se entregue).
 
 ## Equipo
 
@@ -24,69 +23,21 @@ Más detalle en el [Project Charter](docs/entregables/Project_Charter_Grupo4.pdf
 | Juan Gabriel Carvajal Franco | Ingeniero de Software (Backend) |
 | Adrián Meneses Ramos | Ingeniero de Software (Recomendación) |
 | Jose Luis Mus Peñarroja | Ingeniero de Datos |
-| Josep Garrido Segues | Apoyo documental y revisión *(pendiente de incorporación)* |
-| Miguel Simón Gil Rosas | Apoyo documental y revisión *(pendiente de incorporación)* |
 
 ## Stack tecnológico
 
-- **Lenguaje:** Python
+- **Lenguaje:** Python3
 - **Framework:** Django
-- **Base de datos:** PostgreSQL
-- **Control de versiones:** Git + GitHub
-- **Metodología:** Ágil (iterativa, con entregables al final de cada fase)
+- **Base de datos:** SQLite
+- **Control de versiones:** GitHub
+- **Metodología:** AGILE(iterativa, con entregables al final de cada fase)
 
-## Estructura del repositorio
+## Estructura de la aplicacion
 
-```
-.
-├── README.md
-├── .gitignore
-└── docs/
-    ├── entregables/         # Documentos finales entregados al cliente / asignatura
-    │   └── justificantes/   # Justificantes de entrega de Moodle
-    └── requisitos/          # Requisitos del cliente y notas relacionadas
-```
-
-A medida que avance el proyecto se irán añadiendo `src/` (código de la aplicación), `data/` (datos depurados) y otras carpetas según haga falta.
-
-## Convenciones de trabajo
-
-### Flujo con ramas y Pull Requests
-
-Nadie hace push directo a `main`. Todos los cambios pasan por una rama propia y se integran a `main` mediante Pull Request, con al menos una aprobación de otro miembro del equipo.
-
-Pasos para una tarea:
-
-1. Sincronizar con `main`: `git pull` desde `main`.
-2. Crear una rama desde `main`: `git checkout -b <tipo>/<descripcion>`.
-3. Trabajar, commits, pruebas.
-4. Subir la rama: `git push -u origin <tipo>/<descripcion>`.
-5. Abrir un Pull Request en GitHub hacia `main`.
-6. Esperar revisión y aprobación de un compañero.
-7. Mergear y borrar la rama.
-
-### Nomenclatura de ramas
-
-- `funcionalidad/<descripcion>` — funcionalidades nuevas.
-- `correccion/<descripcion>` — corrección de errores.
-- `documentacion/<descripcion>` — cambios en documentación.
-- `refactorizacion/<descripcion>` — reorganización de código sin cambios funcionales.
-
-Nombres con guiones, sin tildes ni espacios. Ejemplo: `funcionalidad/limpieza-datos-libros`.
-
-### Commits
-
-Mensajes en español, en imperativo y descriptivos. Ejemplos:
-
-- `Añadir script de limpieza de books.csv`
-- `Corregir error de codificación al leer user_info.csv`
-- `Actualizar README con convenciones de equipo`
-
-## Cómo arrancar el proyecto en local
-
-Pendiente. Se completará cuando esté montado el proyecto Django y la base de datos.
-
-## Documentación del proyecto
-
-- [Project Charter](docs/entregables/Project_Charter_Grupo4.pdf) — versión entregada el 30/04/2026.
-- [Requisitos del cliente](docs/requisitos/requisitos_cliente_foro.md) — notas del foro y comunicación con el cliente.
+Casa-de-la-Cultura_G4/
+├── casa_cultura/      # Configuración y recursos de Django
+├── app/               # Catálogo, dashboard y recomendación con IA
+├── data/              # Datos procesados utilizados por la aplicación
+├── manage.py
+├── requirements.txt   # Dependencias del proyecto
+└── README.md          # Guía de instalación y uso

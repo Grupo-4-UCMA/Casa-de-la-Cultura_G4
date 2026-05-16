@@ -15,7 +15,7 @@ def login_view(request):
 
         error = "El identificador de usuario no existe."
 
-    return render(request, "catalogo/login.html", {"error": error})
+    return render(request, "login.html", {"error": error})
 
 
 def logout_view(request):
@@ -44,6 +44,7 @@ def buscador_catalogo(request):
 
     top_libros = (
         Book.objects
+        .prefetch_related("authors")
         .annotate(num_copias=Count("copies"))
         .order_by("-num_copias")[:5]
     )
@@ -62,7 +63,7 @@ def buscador_catalogo(request):
 
     recomendaciones = []
 
-    return render(request, "catalogo/lista_libros.html", {
+    return render(request, "lista_libros.html", {
         "libros": libros_context,
         "top_libros": top_context,
         "recomendaciones": recomendaciones,
