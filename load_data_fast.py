@@ -10,7 +10,7 @@ django.setup()
 from app.models import Book, Author, Copy, LibraryUser, Rating
 
 
-BATCH_SIZE = 5000
+BATCH_SIZE = 150000
 LIMITE_RATINGS = None  # Carga todos los ratings
 
 
