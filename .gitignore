@@ -133,21 +133,38 @@ db.sqlite3
 *.log
 logs/
 
+# ------------------------------------------------------------
+# Datos
+# ------------------------------------------------------------
+# Datos crudos del cliente: no se versionan (vienen de fuera del repo).
+data/raw/
+!data/raw/.gitkeep
 
-# ------------------------------------------------------------
-# Datos y archivos pesados
-# ------------------------------------------------------------
+# Artefactos intermedios del pipeline de géneros: locales, regenerables.
+data/prompts/
+data/responses/
+
+# Por defecto ignoramos todos los CSV bajo data/.
+data/**/*.csv
+
+# Excepciones: artefactos estables del ETL que sí versionamos para que
+# el resto del equipo pueda arrancar el sistema sin re-ejecutar nada.
+# Nota: ratings_clean_extended.csv NO se versiona por tamaño (~150 MB).
+# Cada uno lo regenera en local con etl/etl_ratings_extended.py.
+!data/clean/books_clean_final.csv
+!data/clean/book_genres.csv
+!data/clean/book_authors_extended.csv
+!data/clean/copies_clean_extended.csv
+!data/clean/users_clean.csv
+
 # ratings.csv pesa >30MB, no va al repo
 ratings.csv
-*.csv.gz
-
-# Datos crudos (viven en local, no se versionan)
-data/raw/*
-!data/raw/.gitkeep
 
 # Outputs de notebooks (se generan en local)
 notebooks/outputs/*
 
+# Otros formatos comprimidos pesados
+*.csv.gz
 
 # ------------------------------------------------------------
 # Otros
