@@ -537,6 +537,16 @@ def resumen_ia_view(request):
     nota = request.GET.get('nota', '')
     votos = request.GET.get('votos', '')
 
+    ruta_sinopsis = 'data/sinopsis.csv'
+    if os.path.exists(ruta_sinopsis):
+        try:
+            df_sinopsis = pd.read_csv(ruta_sinopsis)
+            match = df_sinopsis[df_sinopsis['title'].str.lower() == titulo.lower()]
+            if not match.empty:
+                texto = match.iloc[0]['sinopsis']
+                return JsonResponse({'resumen': texto})
+        except: pass
+
     partes = []
 
     aperturas = [
