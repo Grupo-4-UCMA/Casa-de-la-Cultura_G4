@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa de la Cultura - Mi Perfil</title>
+    <style>
+        :root { --bg-color: #fcfbf9; --text-main: #2c2825; --accent: #8b1e28; --card-bg: #ffffff; --border: #e6e2d8; --genre-bg: #f0ebe4; }
+        [data-theme="dark"] { --bg-color: #1a1817; --text-main: #e8e6e3; --accent: #c43946; --card-bg: #252220; --border: #3d3733; --genre-bg: #3d3733; }
+        body { font-family: "Segoe UI", sans-serif; display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; margin: 0; padding: 30px 20px; box-sizing: border-box; background-color: var(--bg-color); color: var(--text-main); }
+        .login-box { background: var(--card-bg); padding: 40px; border-radius: 8px; border: 1px solid var(--border); box-shadow: 2px 2px 15px rgba(0,0,0,0.1); width: 100%; max-width: 580px; box-sizing: border-box; }
+        .login-box img { max-width: 200px; display: block; margin: 0 auto; }
+        .login-box p.slogan { font-size: 1rem; color: var(--text-muted); font-style: italic; margin-top: -15px; margin-bottom: 25px; text-align: center; }
+        .user-badge { text-align: center; background: var(--bg-color); padding: 10px; border-radius: 4px; border: 1px dashed var(--border); margin-bottom: 25px; font-weight: bold; }
+        input[type="date"] { width: 100%; padding: 12px; margin-top: 5px; margin-bottom: 20px; border: 1px solid var(--border); border-radius: 4px; box-sizing: border-box; background: var(--bg-color); color: var(--text-main); }
+        .btn-main { width: 100%; padding: 12px; background: var(--accent); color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; text-transform: uppercase; margin-bottom: 10px; }
+        .btn-guest { width: 100%; padding: 12px; background: transparent; color: var(--text-main); border: none; font-weight: bold; cursor: pointer; text-align: center; text-decoration: underline; display: block; box-sizing: border-box; }
+        label.field-label { font-weight: bold; font-size: 0.95rem; display: block; margin-bottom: 10px; }
+        .generos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 25px; }
+        .genre-check { display: flex; align-items: center; gap: 7px; background: var(--genre-bg); border: 1px solid var(--border); border-radius: 4px; padding: 7px 10px; cursor: pointer; font-size: 0.88rem; transition: border-color 0.15s; }
+        .genre-check:hover { border-color: var(--accent); }
+        .genre-check input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--accent); flex-shrink: 0; cursor: pointer; }
+        .genre-check.selected { border-color: var(--accent); background: #f5e8e9; font-weight: bold; }
+        [data-theme="dark"] .genre-check.selected { background: #3a1a1d; }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <img src="{% static 'Logo.png' %}" alt="Logo Casa de la Cultura">
+        <p class="slogan">"Tu lectura, nuestra cultura"</p>
+        <div class="user-badge">ID de Lector Activo: {{ user_id }}</div>
+        <form method="post">
+            {% csrf_token %}
+
+            <label class="field-label">Fecha de Nacimiento:</label>
+            <input type="date" name="fecha_nacimiento" value="{{ fecha }}" required>
+
+            <label class="field-label">¿Qué géneros te gustan? (elige los que quieras)</label>
+            <div class="generos-grid">
+                {% for g in generos_disponibles %}
+                    <label class="genre-check {% if g in generos_seleccionados %}selected{% endif %}">
+                        <input type="checkbox" name="generos" value="{{ g }}"
+                               {% if g in generos_seleccionados %}checked{% endif %}>
+                        {{ g }}
+                    </label>
+                {% endfor %}
+            </div>
+
+            <button type="submit" class="btn-main">Guardar Cambios</button>
+        </form>
+        <a href="{% url 'buscador' %}" class="btn-guest">Volver al catálogo sin guardar</a>
+    </div>
+    <script>
+        document.querySelectorAll('.genre-check input').forEach(cb => {
+            cb.addEventListener('change', () => {
+                cb.closest('.genre-check').classList.toggle('selected', cb.checked);
+            });
+        });
+    </script>
+</body>
+</html>
