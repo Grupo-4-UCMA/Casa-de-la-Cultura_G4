@@ -1,6 +1,6 @@
 book_id,isbn,title,original_title,original_publication_year,language_code,genre
 216,1554681723,The Art of Racing in the Rain,The Art of Racing in the Rain,2006.0,eng,Ficción
-324,,Fangirl,,2013.0,eng,Juvenil
+324,9781250030962,Fangirl,,2013.0,eng,Juvenil
 499,0679735771,American Psycho,American Psycho,1991.0,eng,Ficción
 566,,"After You (Me Before You, #2)",After You,2015.0,eng,Romántica
 1003,2266079999,Contact,Contact,1985.0,eng,Ciencia ficción
@@ -30,14 +30,14 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 3945,0446604844,Total Control,Total Control,1996.0,eng,Thriller
 3971,0440132940,Evergreen,Evergreen,1978.0,eng,Ficción
 3993,034554692X,First Comes Love,,2016.0,eng,Romántica
-4098,,The Next Best Thing,The Next Best Thing,2012.0,,Ficción
+4098,9780857208187,The Next Best Thing,The Next Best Thing,2012.0,,Ficción
 4450,,"If You Stay (Beautifully Broken, #1)",If You Stay,2013.0,eng,Romántica
-4540,,14,14,2012.0,eng,Terror
+4540,9781469298955,14,14,2012.0,eng,Terror
 4606,849759388X,Paula,Paula,1994.0,spa,Memorias
 4652,,"Devoured (Devoured, #1)",Devoured,2012.0,eng,Romántica
 4674,1476727910,The Humans,The Humans,2013.0,eng,Ciencia ficción
 4697,1451664125,In One Person,In One Person,2012.0,,Ficción
-4829,,The One That Got Away,The One That Got Away,2015.0,eng,Thriller
+4829,9781469228006,The One That Got Away,The One That Got Away,2015.0,eng,Thriller
 4918,,"The Score (Off-Campus, #3)",The Score,2016.0,eng,Romántica
 4963,0552150215,The Analyst,The Analyst,2002.0,eng,Thriller
 5009,1933480092,Oblomov,Обломов,1859.0,eng,Clásicos
@@ -51,7 +51,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 6111,,"Defiance (Significance, #3)",Defiance,2011.0,eng,Juvenil
 6152,0765328542,Fuzzy Nation,Fuzzy Nation,2011.0,eng,Ciencia ficción
 6194,0374280967,The Uncommon Reader,The Uncommon Reader ,2007.0,eng,Ficción
-6221,,"A Castle of Sand (A Shade of Vampire, #3)",,2013.0,eng,Fantasía
+6221,9781490505770,"A Castle of Sand (A Shade of Vampire, #3)",,2013.0,eng,Fantasía
 6283,0099468387,The Cement Garden,The Cement Garden,1978.0,eng,Ficción
 6394,0316231053,The Fever,The Fever,2014.0,,Thriller
 6436,1409113965,Minding Frankie,Minding Frankie,2010.0,eng,Ficción
@@ -72,8 +72,8 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 7532,1476766665,"Rusty Nailed (Cocktail, #2)",,2014.0,eng,Romántica
 7600,0345495969,"Divine Misdemeanors (Merry Gentry, #8)",Divine Misdemeanors ,2009.0,eng,Fantasía
 7691,,"Timeless (Parasol Protectorate, #5)",Timeless,2012.0,eng,Fantasía
-7726,,The House by the Lake,,2016.0,eng,Ficción histórica
-7782,,Under Locke,Under Locke,2014.0,eng,Romántica
+7726,9781503934153,The House by the Lake,,2016.0,eng,Ficción histórica
+7782,9781953262066,Under Locke,Under Locke,2014.0,eng,Romántica
 7805,0439829127,"A Killing Frost (Tomorrow, #3)","The Third Day, The Frost",1995.0,,Juvenil
 7897,0062060759,"Incarnate (Newsoul, #1)",Incarnate,2012.0,eng,Fantasía
 8110,,"Rock Chick Regret (Rock Chick, #7)",,2011.0,eng,Romántica
@@ -195,7 +195,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 103,0140449264,The Count of Monte Cristo,Le Comte de Monte-Cristo,1844.0,eng,Clásicos
 104,0307265439,The Road,The Road,2006.0,eng,Ficción
 105,0007524277,"Allegiant (Divergent, #3)",Allegiant,2013.0,eng,Juvenil
-106,,Bossypants,Bossypants,2011.0,eng,Memorias
+106,9781847445193,Bossypants,Bossypants,2011.0,eng,Memorias
 107,0446693804,A Walk to Remember,A Walk to Remember,1999.0,eng,Romántica
 108,0440241413,"Confessions of a Shopaholic (Shopaholic, #1)",Confessions of a Shopaholic,2000.0,eng,Romántica
 109,0451525264,Les Misérables,Les Misérables,1862.0,eng,Clásicos
@@ -292,7 +292,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 200,0312330871,And Then There Were None,Ten Little Niggers,1939.0,eng,Misterio
 201,0385504225,"The Lost Symbol (Robert Langdon, #3)",The Lost Symbol,2009.0,eng,Thriller
 202,1416989412,"Hush, Hush (Hush, Hush, #1)","Hush, Hush",2009.0,eng,Juvenil
-203,,"Beautiful Disaster (Beautiful, #1)",Beautiful Disaster,2011.0,eng,Romántica
+203,9782290064948,"Beautiful Disaster (Beautiful, #1)",Beautiful Disaster,2011.0,eng,Romántica
 204,1561797464,A Christmas Carol,A Christmas Carol,1843.0,,Clásicos
 205,0345476875,"Interview with the Vampire (The Vampire Chronicles, #1)",Interview with the Vampire,1976.0,eng,Terror
 206,0062059939,"The Selection (The Selection, #1)",The Selection,2012.0,eng,Juvenil
@@ -348,7 +348,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 257,0517223627,Alice in Wonderland,,1865.0,eng,Infantil
 258,0143034901,"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)",La sombra del viento,2001.0,eng,Ficción
 259,0385738757,"The Scorch Trials (Maze Runner, #2)",The Scorch Trials,2010.0,eng,Ciencia ficción
-260,,How to Win Friends and Influence People,How to Win Friends and Influence People,1936.0,eng,Autoayuda
+260,9788192910994,How to Win Friends and Influence People,How to Win Friends and Influence People,1936.0,eng,Autoayuda
 261,0767900383,Under the Tuscan Sun,Under the Tuscan Sun,1996.0,eng,Memorias
 262,0399167064,Big Little Lies,Big Little Lies,2014.0,eng,Misterio
 263,0590920685,Ella Enchanted,Ella Enchanted,1997.0,eng,Juvenil
@@ -436,7 +436,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 345,0375840400,"Eldest (The Inheritance Cycle, #2)",Eldest,2005.0,eng,Juvenil
 346,0140621679,"The Wonderful Wizard of Oz (Oz, #1)",The Wonderful Wizard of Oz,1900.0,eng,Clásicos
 347,000720230X,"Prince Caspian (Chronicles of Narnia, #2)",Prince Caspian: The Return to Narnia,1951.0,eng,Infantil
-348,,We Were Liars,We Were Liars,2014.0,eng,Juvenil
+348,9781525255571,We Were Liars,We Were Liars,2014.0,eng,Juvenil
 349,0450031063,'Salem's Lot,Salem's Lot,1975.0,eng,Terror
 350,0679785892,Fear and Loathing in Las Vegas,Fear and Loathing in Las Vegas: A Savage Journey to the Heart of the American Dream,1971.0,eng,Memorias
 351,1416975888,"Clockwork Prince (The Infernal Devices, #2)",Clockwork Prince,2011.0,eng,Juvenil
@@ -501,7 +501,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 410,0385474547,"Things Fall Apart (The African Trilogy, #1)",Things Fall Apart,1958.0,eng,Clásicos
 411,0385338694,The Undomestic Goddess,The Undomestic Goddess,2005.0,eng,Romántica
 412,1881273156,The Five Love Languages: How to Express Heartfelt Commitment to Your Mate,The Five Love Languages: How to Express Heartfelt Commitment to Your Mate,1990.0,eng,Autoayuda
-413,,The Three Musketeers,Les Trois Mousquetaires,1844.0,,Clásicos
+413,9789620830150,The Three Musketeers,Les Trois Mousquetaires,1844.0,,Clásicos
 414,1416589643,Little Bee,The Other Hand,2008.0,eng,Ficción
 415,031253275X,"Evermore (The Immortals, #1)",Evermore,2009.0,eng,Juvenil
 416,0590032496,The Witches,The Witches,1983.0,eng,Infantil
@@ -552,7 +552,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 461,1416500189,"The Good Earth (House of Earth, #1)",The Good Earth,1931.0,eng,Clásicos
 462,0140135154,Ways of Seeing,Ways of Seeing,1972.0,eng,Arte
 463,0385335970,"Dragonfly in Amber (Outlander, #2)",Dragonfly in Amber,1992.0,eng,Romántica
-464,,Holy Bible: King James Version,,1611.0,eng,Religión y espiritualidad
+464,9780452000414,Holy Bible: King James Version,,1611.0,eng,Religión y espiritualidad
 465,0743495667,In Her Shoes,In Her Shoes,2002.0,,Ficción
 466,0345368584,The Hobbit: Graphic Novel,The Hobbit,1989.0,eng,Cómic y novela gráfica
 467,1594489580,The Brief Wondrous Life of Oscar Wao,The Brief Wondrous Life of Oscar Wao,2007.0,eng,Ficción
@@ -803,7 +803,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 715,0435233076,Death of a Salesman,Death of a Salesman,1949.0,eng,Clásicos
 716,0446579920,The Choice,The Choice,2007.0,eng,Romántica
 717,0545422906,The Hunger Games: Official Illustrated Movie Companion,,2012.0,eng,No ficción
-718,,The Sound and the Fury,The Sound and the Fury,1929.0,eng,Clásicos
+718,9784061330405,The Sound and the Fury,The Sound and the Fury,1929.0,eng,Clásicos
 719,0452287588,A New Earth: Awakening to Your Life's Purpose,A New Earth: Awakening to Your Life's Purpose,2005.0,eng,Autoayuda
 720,1591164419,"Bleach, Volume 01",BLEACH―ブリーチ―　1,2002.0,eng,Cómic y novela gráfica
 721,1451666179,"Hyperbole and a Half: Unfortunate Situations, Flawed Coping Mechanisms, Mayhem, and Other Things That Happened",,2013.0,eng,Cómic y novela gráfica
@@ -884,7 +884,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 796,,"On Dublin Street (On Dublin Street, #1)",On Dublin Street,2012.0,eng,Romántica
 797,1434768511,Crazy Love: Overwhelmed by a Relentless God,Crazy Love: Overwhelmed by a Relentless God,2008.0,eng,Religión y espiritualidad
 798,0007173687,"One Fish, Two Fish, Red Fish, Blue Fish","One Fish, Two Fish, Red Fish, Blue Fish",1960.0,,Infantil
-799,,Watchers,Watchers,1987.0,,Terror
+799,9784167136130,Watchers,Watchers,1987.0,,Terror
 800,0553213873,The Story of My Life,The Story of My Life,1902.0,eng,Biografía
 801,052595127X,This is Where I Leave You,This Is Where I Leave You,2009.0,eng,Ficción
 802,0446563080,Abraham Lincoln: Vampire Hunter,Abraham Lincoln: Vampire Hunter,2010.0,eng,Ficción histórica
@@ -897,7 +897,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 809,0060776099,Brave New World / Brave New World Revisited,Brave New World/Brave New World Revisited,1932.0,eng,Clásicos
 810,1591169151,"Ouran High School Host Club, Vol. 1 (Ouran High School Host Club, #1)",桜蘭高校ホスト部 1,2003.0,eng,Cómic y novela gráfica
 811,0778316556,The Good Girl,The Good Girl,2014.0,eng,Thriller
-812,,"Fallen Too Far (Rosemary Beach, #1; Too Far, #1)","Fallen Too Far (Too Far, #1)",2012.0,eng,Romántica
+812,9780988301313,"Fallen Too Far (Rosemary Beach, #1; Too Far, #1)","Fallen Too Far (Too Far, #1)",2012.0,eng,Romántica
 813,1250049377,Landline,Landline,2014.0,eng,Romántica
 814,1905654588,"Tempted (House of Night, #6)",Tempted,2008.0,eng,Juvenil
 815,0375706674,No Country for Old Men,No Country for Old Men,2005.0,eng,Ficción
@@ -938,7 +938,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 849,0060288140,"Angus, Thongs and Full-Frontal Snogging (Confessions of Georgia Nicolson, #1)","Angus, Thongs and Full-Frontal Snogging",1999.0,eng,Juvenil
 850,0374214913,"Mr. Penumbra''s 24-Hour Bookstore (Mr. Penumbra''s 24-Hour Bookstore, #1)",Mr. Penumbra's 24-Hour Bookstore,2012.0,eng,Misterio
 851,0743496310,"Flowers in the Attic (Dollanganger, #1)",Flowers in the Attic,1979.0,eng,Ficción
-852,,When Breath Becomes Air,When Breath Becomes Air,2016.0,eng,Memorias
+852,9789048854370,When Breath Becomes Air,When Breath Becomes Air,2016.0,eng,Memorias
 854,0099285444,Invisible Monsters,Invisible Monsters,1999.0,eng,Ficción
 855,0743482778,Twelfth Night,"Twelfth Night; or, What You Will",1601.0,eng,Clásicos
 856,0385732562,"Gathering Blue (The Giver, #2)",Gathering Blue,2000.0,eng,Juvenil
@@ -1019,7 +1019,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 931,081299499X,"Not That Kind of Girl: A Young Woman Tells You What She''s 'Learned'""""",Not that Kind of Girl,2014.0,eng,Memorias
 932,0066620996,Good to Great: Why Some Companies Make the Leap... and Others Don't,Good to Great: Why Some Companies Make the Leap... and Others Don't,2001.0,eng,Negocios
 933,0803734611,"Fire (Graceling Realm, #2)",Fire,2009.0,eng,Fantasía
-934,,Waiting for Godot,En attendant Godot,1952.0,eng,Clásicos
+934,9780571329656,Waiting for Godot,En attendant Godot,1952.0,eng,Clásicos
 935,0439236193,White Fang,White Fang,1906.0,eng,Clásicos
 936,141651693X,"Wolves of the Calla (The Dark Tower, #5)",Wolves of the Calla,2003.0,eng,Fantasía
 937,0440238609,His Dark Materials (His Dark Materials #1-3),His Dark Materials,2000.0,eng,Fantasía
@@ -1146,7 +1146,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 1059,1416924981,"Among the Hidden (Shadow Children, #1)",Among the Hidden ,1998.0,eng,Juvenil
 1060,1594201455,In Defense of Food: An Eater's Manifesto,In Defense of Food: An Eater's Manifesto,2007.0,eng,No ficción
 1061,0440995779,The Witch of Blackbird Pond,The Witch of Blackbird Pond,1958.0,eng,Juvenil
-1062,,"The Heir (The Selection, #4)",The Heir,2015.0,eng,Juvenil
+1062,9788499189949,"The Heir (The Selection, #4)",The Heir,2015.0,eng,Juvenil
 1063,0440241898,"Shopaholic Ties the Knot (Shopaholic, #3)",Shopaholic Ties the Knot,2002.0,eng,Romántica
 1064,0141439610,The Woman in White,The Woman in White,1859.0,eng,Clásicos
 1065,0316349933,"Career of Evil (Cormoran Strike, #3)",Career of Evil,2015.0,eng,Misterio
@@ -1215,14 +1215,14 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 1127,0451458923,"Summer Knight (The Dresden Files, #4)",Summer Knight,2002.0,eng,Fantasía
 1128,0345484266,"Dragonflight (Dragonriders of Pern, #1)",Dragonflight,1968.0,eng,Ciencia ficción
 1129,0618968474,"The History of the Hobbit, Part One: Mr. Baggins","The History of the Hobbit, Part One: Mr. Baggins",2007.0,eng,Ensayo
-1130,,Ugly Love,Ugly Love,2014.0,eng,Romántica
+1130,9788501105738,Ugly Love,Ugly Love,2014.0,eng,Romántica
 1131,014100018X,"Chocolat (Chocolat, #1)",Chocolat,1998.0,eng,Ficción
 1134,1936305550,"Gabriel''s Rapture (Gabriel''s Inferno, #2)",Gabriel's Rapture,2012.0,eng,Romántica
 1135,0192839993,Dubliners,Dubliners,1914.0,eng,Clásicos
 1136,1400063736,Let the Great World Spin,Let the Great World Spin,2009.0,eng,Ficción
 1137,0141321318,"The Eternity Code (Artemis Fowl, #3)",The Eternity Code,2003.0,eng,Juvenil
 1138,0440236703,Tell No One,Tell No One,2001.0,eng,Thriller
-1139,,The Tommyknockers,The Tommyknockers,1987.0,eng,Terror
+1139,9785170835966,The Tommyknockers,The Tommyknockers,1987.0,eng,Terror
 1140,1423121309,"Hex Hall (Hex Hall, #1)",Hex Hall,2010.0,eng,Juvenil
 1141,0761169253,Steal Like an Artist: 10 Things Nobody Told You About Being Creative,Steal Like an Artist,2010.0,eng,Autoayuda
 1142,0060512806,Cryptonomicon,Cryptonomicon,1999.0,eng,Ciencia ficción
@@ -1492,7 +1492,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 1406,0312364121,Winter Garden,Winter Garden,2009.0,eng,Ficción
 1407,0385339658,The King of Torts,The King of Torts,2003.0,eng,Thriller
 1408,0316067598,Lone Survivor: The Eyewitness Account of Operation Redwing and the Lost Heroes of SEAL Team 10,Lone Survivor: The Eyewitness Account of Operation Redwing and the Lost Heroes of SEAL Team 10,2006.0,eng,Memorias
-1409,,The 3 Mistakes of My Life,The 3 Mistakes of My Life,2008.0,eng,Ficción
+1409,9788129113726,The 3 Mistakes of My Life,The 3 Mistakes of My Life,2008.0,eng,Ficción
 1410,1579126278,"The Murder of Roger Ackroyd (Hercule Poirot, #4)",The Murder of Roger Ackroyd,1926.0,eng,Misterio
 1412,0316033650,"Shadow''s Edge (Night Angel, #2)",Shadow's Edge,2008.0,eng,Fantasía
 1413,1907411054,"Under the Never Sky (Under the Never Sky, #1)",Under the Never Sky,2011.0,eng,Juvenil
@@ -1595,7 +1595,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 1509,1844082938,The House of Mirth,The House of Mirth,1905.0,eng,Clásicos
 1510,0345501330,"Fairy Tail, Vol. 1 (Fairy Tail, #1)",Fairy Tail 1,2006.0,eng,Cómic y novela gráfica
 1511,0756410436,The Slow Regard of Silent Things (The Kingkiller Chronicle #2.5),The Slow Regard of Silent Things,2014.0,eng,Fantasía
-1512,,Twelve Years a Slave,Twelve Years a Slave,1853.0,eng,Memorias
+1512,9781017018318,Twelve Years a Slave,Twelve Years a Slave,1853.0,eng,Memorias
 1513,0451229851,"Lover Mine (Black Dagger Brotherhood, #8)","Lover Avenged, part one",2010.0,eng,Romántica
 1514,0141001828,In the Heart of the Sea: The Tragedy of the Whaleship Essex,In the Heart of the Sea: The Tragedy of the Whaleship Essex,1999.0,eng,Historia
 1515,0743289684,Infidel,Infidel,2006.0,eng,Memorias
@@ -1650,7 +1650,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 1565,0307959856,Death Comes to Pemberley,Death Comes to Pemberley,2012.0,eng,Misterio
 1566,0142437808,Ethan Frome,Ethan Frome,1911.0,eng,Clásicos
 1567,0385720106,A Map of the World,A Map of the World,1992.0,eng,Ficción
-1568,,It Ends with Us,It Ends with Us,2016.0,eng,Romántica
+1568,9781804228203,It Ends with Us,It Ends with Us,2016.0,eng,Romántica
 1569,141693586X,The Gift of the Magi,The Gift of the Magi,1905.0,eng,Clásicos
 1570,0553380648,The Electric Kool-Aid Acid Test,The Electric Kool-Aid Acid Test,1968.0,eng,No ficción
 1571,0802140181,Naked Lunch,The Naked Lunch,1959.0,eng,Ficción
@@ -1778,7 +1778,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 1696,0451219945,"Glass Houses (The Morganville Vampires, #1)",Glass Houses,2006.0,eng,Juvenil
 1697,0785264698,Captivating: Unveiling the Mystery of a Woman's Soul,,2004.0,eng,Religión y espiritualidad
 1698,0785121447,The Dark Tower: The Gunslinger Born,The Dark Tower: The Gunslinger Born,2007.0,eng,Cómic y novela gráfica
-1699,,The Lake House,The Lake House,2015.0,eng,Misterio
+1699,9780230759275,The Lake House,The Lake House,2015.0,eng,Misterio
 1700,0670026638,A Tale for the Time Being,A Tale for the Time Being,2013.0,eng,Ficción
 1701,0806527285,"I Hope They Serve Beer in Hell (Tucker Max, #1)",I Hope They Serve Beer in Hell,2006.0,,Memorias
 1702,,"Rule (Marked Men, #1)",Rule,2012.0,eng,Romántica
@@ -1804,11 +1804,11 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 1722,0060012382,"The Wee Free Men (Discworld, #30; Tiffany Aching, #1)",The Wee Free Men,2003.0,eng,Fantasía
 1723,0385344430,"Written in My Own Heart''s Blood (Outlander, #8)",Written in My Own Heart's Blood,2014.0,eng,Ficción histórica
 1724,039925482X,Nightshade (Nightshade #1; Nightshade World #4),Nightshade,2010.0,eng,Juvenil
-1725,,Alice's Adventures in Wonderland,,1865.0,eng,Clásicos
+1725,9780394905921,Alice's Adventures in Wonderland,,1865.0,eng,Clásicos
 1726,190444248X,"Dragon Rider (Dragon Rider, #1)",Drachenreiter,1997.0,eng,Infantil
 1727,0671742515,"The Long Dark Tea-Time of the Soul (Dirk Gently, #2)",The Long Dark Tea-Time of the Soul,1988.0,eng,Ciencia ficción
 1728,0804179034,Uprooted,Uprooted,2015.0,eng,Fantasía
-1729,,Seveneves,Seveneves,2015.0,eng,Ciencia ficción
+1729,9780008132521,Seveneves,Seveneves,2015.0,eng,Ciencia ficción
 1730,0804137250,Armada,Armada,2015.0,eng,Ciencia ficción
 1731,0345503813,"The Desert Spear (Demon Cycle, #2)",The Desert Spear,2010.0,eng,Fantasía
 1732,0007151667,The Man in the Brown Suit,The Man in the Brown Suit,1924.0,eng,Misterio
@@ -1832,7 +1832,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 1750,0671035975,How to Stop Worrying and Start Living,How to Stop Worrying and Start Living,1944.0,eng,Autoayuda
 1751,0515114693,"Born in Fire (Born In Trilogy, #1)",Born in Fire ,1994.0,eng,Romántica
 1752,0060921145,Animal Dreams,Animal Dreams,1990.0,eng,Ficción
-1753,,"Reason to Breathe (Breathing, #1)",Reason to Breathe,2011.0,eng,Juvenil
+1753,9780141348209,"Reason to Breathe (Breathing, #1)",Reason to Breathe,2011.0,eng,Juvenil
 1754,1416997857,"The Mortal Instruments Boxed Set: City of Bones; City of Ashes; City of Glass (The Mortal Instruments, #1-3)",The Mortal Instruments Boxed Set: City of Bones; City of Ashes; City of Glass,2009.0,eng,Juvenil
 1755,0006479677,"If Tomorrow Comes (Tracy Whitney Series, #1)",If Tomorrow Comes,1985.0,eng,Thriller
 1756,3822858641,M.C. Escher: The Graphic Work,M.C. Escher: grafiek en tekeningen,1956.0,eng,Arte
@@ -1852,7 +1852,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 1770,0062200577,NOS4A2,NOS4A2,2013.0,eng,Terror
 1771,0140434747,The Tenant of Wildfell Hall,The Tenant of Wildfell Hall,1848.0,eng,Clásicos
 1772,0965476022,"The Black Stallion (The Black Stallion, #1)",The Black Stallion,1941.0,eng,Infantil
-1773,,"Reckless (Thoughtless, #3)",Reckless,2013.0,eng,Romántica
+1773,9781442362192,"Reckless (Thoughtless, #3)",Reckless,2013.0,eng,Romántica
 1774,0064410145,"The Grim Grotto (A Series of Unfortunate Events, #11)",The Grim Grotto,2004.0,eng,Juvenil
 1775,8424133498,Strega Nona,Strega Nona,1975.0,eng,Infantil
 1776,0983212546,"Playing for Keeps (Neighbor from Hell, #1)",Playing for Keeps,2011.0,eng,Romántica
@@ -2105,7 +2105,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 2024,0679720227,The Fall,La Chute,1956.0,eng,Clásicos
 2025,1842430246,Even Cowgirls Get the Blues,Even Cowgirls Get the Blues,1976.0,eng,Ficción
 2026,0375757856,The Moonstone,The Moonstone,1868.0,eng,Clásicos
-2027,,If on a Winter's Night a Traveler,Se una notte d'inverno un viaggiatore,1979.0,eng,Ficción
+2027,9781784878665,If on a Winter's Night a Traveler,Se una notte d'inverno un viaggiatore,1979.0,eng,Ficción
 2028,0060747226,"Son of a Witch (The Wicked Years, #2)",Son of a Witch,2004.0,eng,Fantasía
 2029,0224081187,On Chesil Beach,On Chesil Beach,2007.0,eng,Ficción
 2030,0449223604,"M is for Malice (Kinsey Millhone, #13)","'M'"" is for Malice""",1996.0,eng,Misterio
@@ -2267,7 +2267,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 2188,0571171788,Pigs in Heaven,Pigs in Heaven,1993.0,eng,Ficción
 2189,0765354063,"The Ghost Brigades (Old Man''s War, #2)",The Ghost Brigades,2006.0,eng,Ciencia ficción
 2190,074326195X,"Cry, the Beloved Country","Cry, The Beloved Country",1948.0,eng,Clásicos
-2191,,Faeries,Faeries,1978.0,,Arte
+2191,9780810909014,Faeries,Faeries,1978.0,,Arte
 2192,0060987529,Confessions of an Ugly Stepsister,Confessions of an Ugly Stepsister,1999.0,eng,Fantasía
 2193,3426615355,How to Be Good,How to Be Good,2001.0,,Ficción
 2372,0399159371,The Witness,The Witness,2012.0,,Romántica
@@ -2305,7 +2305,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 2225,0978970764,"John Dies at the End (John Dies at the End, #1)",John Dies at the End,2007.0,eng,Terror
 2226,0345409469,The Demon-Haunted World: Science as a Candle in the Dark,The Demon-Haunted World: Science as a Candle in the Dark,1995.0,eng,Ciencia
 2227,1906427135,Stolen: A Letter to My Captor,Stolen: A Letter to My Captor,2009.0,eng,Juvenil
-2228,,Solaris,Solaris,1961.0,eng,Ciencia ficción
+2228,9785170117741,Solaris,Solaris,1961.0,eng,Ciencia ficción
 2229,1573225126,Prozac Nation,Prozac Nation,1994.0,eng,Memorias
 2230,080508049X,The Black Cauldron (The Chronicles of Prydain #2),The Black Cauldron,1965.0,eng,Fantasía
 2231,0525949690,This Is Your Brain on Music: The Science of a Human Obsession,This Is Your Brain on Music: The Science of a Human Obsession,2006.0,,Música
@@ -2425,7 +2425,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 2345,0373210515,"The Immortal Rules (Blood of Eden, #1)",The Immortal Rules,2012.0,eng,Fantasía
 2346,0446546933,Columbine,Columbine,2009.0,eng,No ficción
 2347,0099471434,"Lasher (Lives of the Mayfair Witches, #2)",Lasher,1993.0,eng,Terror
-2348,,Yellow Crocus,,2010.0,eng,Ficción histórica
+2348,9781477824757,Yellow Crocus,,2010.0,eng,Ficción histórica
 2349,0525953728,No Easy Day: The Firsthand Account of the Mission That Killed Osama Bin Laden,No Easy Day: The Firsthand Account of the Mission That Killed Osama Bin Laden,2012.0,eng,Memorias
 2350,1594487014,The Chaperone,The Chaperone,2012.0,eng,Ficción histórica
 2351,0684193957,"All That Remains (Kay Scarpetta, #3)",All That Remains,1992.0,eng,Thriller
@@ -2526,7 +2526,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 2447,0385735332,"The Warlock (The Secrets of the Immortal Nicholas Flamel, #5)",The Warlock,2011.0,eng,Fantasía
 2448,044101769X,"First Lord''s Fury (Codex Alera, #6)",First Lord's Fury,2008.0,eng,Fantasía
 2449,0385343663,The Imperfectionists,The Imperfectionists,2010.0,eng,Ficción
-2450,,The Sea of Tranquility,The Sea of Tranquility,2012.0,eng,Juvenil
+2450,9781476730936,The Sea of Tranquility,The Sea of Tranquility,2012.0,eng,Juvenil
 2451,0375714669,"Persepolis 2: The Story of a Return (Persepolis, #2)",Persepolis 2 ,2001.0,eng,Cómic y novela gráfica
 2452,0061020656,"Pyramids (Discworld, #7)",Pyramids,1989.0,eng,Fantasía
 2453,0586064176,"Silverthorn (The Riftwar Saga, #3)",Silverthorn,1985.0,eng,Fantasía
@@ -2592,7 +2592,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 2514,0785123113,Marvel 1602,Marvel 1602,2003.0,eng,Cómic y novela gráfica
 2515,0743270371,"Act of Treason (Mitch Rapp, #9)",Act of Treason,2006.0,eng,Thriller
 2516,0307959945,The Dog Stars,The Dog Stars,2012.0,,Ciencia ficción
-2517,,The Spy Who Came In from the Cold,The Spy Who Came In from the Cold,1963.0,eng,Thriller
+2517,9788490327791,The Spy Who Came In from the Cold,The Spy Who Came In from the Cold,1963.0,eng,Thriller
 2518,0441013406,"Academ''s Fury (Codex Alera, #2)",Academ's Fury,2005.0,eng,Fantasía
 2519,0446676438,"When the Wind Blows (When the Wind Blows, #1)",When the Wind Blows,1998.0,eng,Thriller
 2520,4103534222,"1Q84 BOOK 1 (1Q84, #1)",1Q84 Book 1 [Ichi-kyū-hachi-yon],2009.0,jpn,Ficción
@@ -2674,11 +2674,11 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 2595,0440060672,The Other Side of Midnight (Midnight #1),The Other Side of Midnight,1973.0,eng,Thriller
 2596,0316069485,"The Reversal (Harry Bosch, #16; Mickey Haller, #4; Harry Bosch Universe, #19)",The Reversal,2010.0,eng,Thriller
 2597,0380731509,Wayside School Is Falling Down (Wayside School #2),Wayside School is Falling Down,1989.0,eng,Infantil
-7273,,Wave,Wave,2013.0,eng,Memorias
+7273,9780771025365,Wave,Wave,2013.0,eng,Memorias
 2598,0307713547,The Invisible Bridge,The Invisible Bridge,2010.0,eng,Ficción histórica
 2599,0061974618,"The Fall of Five (Lorien Legacies, #4)",The Fall of Five,2013.0,eng,Ciencia ficción
 2600,0141439785,The Mayor of Casterbridge,The Mayor of Casterbridge,1886.0,eng,Clásicos
-2601,,The Red Pony,The Red Pony,1933.0,,Clásicos
+2601,9780241952504,The Red Pony,The Red Pony,1933.0,,Clásicos
 2602,0099478536,"The Devil''s Star (Harry Hole, #5)",Marekors ,2003.0,eng,Thriller
 2603,0425169693,Here on Earth,Here on Earth ,1997.0,eng,Ficción
 2604,0679436545,"Taltos (Lives of the Mayfair Witches, #3)",Taltos,1994.0,,Fantasía
@@ -2689,7 +2689,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 2610,0060090375,Lucy Sullivan Is Getting Married,Lucy Sullivan is Getting Married,1996.0,eng,Romántica
 2611,055255264X,"A Hat Full of Sky (Discworld, #32; Tiffany Aching, #2)",A Hat Full of Sky,2004.0,eng,Fantasía
 2612,0060786523,"A Suitable Boy (A Suitable Boy, #1)",A Suitable Boy,1993.0,eng,Ficción
-2613,,We Should All Be Feminists,We Should All Be Feminists,2014.0,eng,Ensayo
+2613,9780525658894,We Should All Be Feminists,We Should All Be Feminists,2014.0,eng,Ensayo
 2614,1841497975,"River Marked (Mercy Thompson, #6)",River Marked,2011.0,eng,Fantasía
 2615,0446578843,I Like You: Hospitality Under the Influence,I Like You: Hospitality Under the Influence,2006.0,eng,No ficción
 2616,0425198685,"Pattern Recognition (Blue Ant, #1)",Pattern Recognition,2003.0,eng,Ciencia ficción
@@ -2700,7 +2700,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 2621,0385496095,Traveling Mercies: Some Thoughts on Faith,Traveling Mercies: Some Thoughts on Faith,1999.0,eng,Religión y espiritualidad
 2622,1416548009,"Memorial Day (Mitch Rapp, #7)",Memorial Day,2004.0,eng,Thriller
 2623,1416903437,"Wild Magic (Immortals, #1)","Wild Magic (Immortals, #1)",1992.0,eng,Fantasía
-2624,,Prelude to Foundation,Prelude to Foundation,1988.0,eng,Ciencia ficción
+2624,9788497931274,Prelude to Foundation,Prelude to Foundation,1988.0,eng,Ciencia ficción
 2625,1859855423,"You Are Special (Wemmicksville, #1)",You Are Special: A Story for Everyone,1997.0,eng,Infantil
 2626,0399171614,"The Wrath and the Dawn (The Wrath and the Dawn, #1)",The Wrath & the Dawn,2015.0,eng,Fantasía
 2627,0307267148,Half the Sky: Turning Oppression into Opportunity for Women Worldwide,Half the Sky: Turning Oppression into Opportunity for Women Worldwide,2008.0,eng,Ensayo
@@ -2764,7 +2764,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 2685,0061566128,"Killer (Pretty Little Liars, #6)",Killer ,2009.0,eng,Juvenil
 2686,1591396190,Blue Ocean Strategy: How To Create Uncontested Market Space And Make The Competition Irrelevant,Blue Ocean Strategy: How to Create Uncontested Market Space and Make Competition Irrelevant,2004.0,,Negocios
 2687,0316036196,"Fang (Maximum Ride, #6)",Fang,2010.0,eng,Juvenil
-7412,,Binge,Binge,2015.0,,Memorias
+7412,9781501117701,Binge,Binge,2015.0,,Memorias
 2688,0553807226,The Peach Keeper,The Peach Keeper ,2011.0,eng,Ficción
 2689,0152026320,The Napping House,The Napping House,1984.0,,Infantil
 2690,,"The Short Drop (Gibson Vaughn, #1)",,2015.0,eng,Thriller
@@ -2795,7 +2795,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 2714,0062011995,"Starcrossed (Starcrossed, #1)",Starcrossed,2011.0,eng,Juvenil
 2715,0312590989,"Night Star (The Immortals, #5)",Night Star,2010.0,eng,Juvenil
 2716,0553282980,Dead Poets Society,Dead Poets Society ,1988.0,eng,Ficción
-2717,,Wreckage,,2015.0,eng,Ficción
+2717,9781501220883,Wreckage,,2015.0,eng,Ficción
 2718,0552154229,"The Fifth Elephant (Discworld, #24; City Watch, #5)",The Fifth Elephant,1999.0,eng,Fantasía
 2719,1741661285,"The Sorcerer in the North (Ranger''s Apprentice, #5)",The Sorcerer in the North,2006.0,eng,Juvenil
 2720,0876120834,Autobiography of a Yogi,Autobiography of a Yogi,1946.0,eng,Biografía
@@ -2821,11 +2821,11 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 2740,0671729470,"Petals on the Wind (Dollanganger, #2)",Petals on the Wind,1980.0,eng,Ficción
 2741,0375814256,Danny the Champion of the World,Danny: The Champion of the World,1975.0,,Infantil
 2742,1594202842,Battle Hymn of the Tiger Mother,,2011.0,eng,Memorias
-2743,,Nimona,Nimona,2015.0,eng,Cómic y novela gráfica
+2743,9786077357766,Nimona,Nimona,2015.0,eng,Cómic y novela gráfica
 2744,1400052580,Everyday Italian: 125 Simple and Delicious Recipes,Everyday Italian: 125 Simple and Delicious Recipes,2005.0,,Cocina
 2745,0425204693,"From Potter''s Field (Kay Scarpetta, #6)",From Potter's Field,1995.0,eng,Thriller
 2746,0446619035,"Mary, Mary (Alex Cross, #11)","Mary, Mary",2005.0,eng,Thriller
-2747,,Oranges Are Not the Only Fruit,Oranges Are Not the Only Fruit,1985.0,eng,Ficción
+2747,9780099598183,Oranges Are Not the Only Fruit,Oranges Are Not the Only Fruit,1985.0,eng,Ficción
 2748,,"Grounded (Up in the Air, #3)",Grounded (Up In The Air #3),2013.0,eng,Romántica
 2749,8188575704,I Too Had a Love Story,I Too Had A Love Story,2007.0,eng,Romántica
 2750,0064401480,"Mrs. Piggle-Wiggle (Mrs. Piggle Wiggle, #1)",Mrs. Piggle-Wiggle,1947.0,eng,Infantil
@@ -2850,7 +2850,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 2768,0804178747,"Personal (Jack Reacher, #19)",Personal,2014.0,eng,Thriller
 2769,1250028647,Z: A Novel of Zelda Fitzgerald,Z: A Novel of Zelda Fitzgerald,2013.0,eng,Ficción histórica
 2770,081297736X,A Man Without a Country,A Man Without a Country,2005.0,eng,Ensayo
-2771,,When I Found You,When I Found You,2009.0,eng,Ficción
+2771,9780552775724,When I Found You,When I Found You,2009.0,eng,Ficción
 2772,1101883073,Lilac Girls,Lilac Girls,2016.0,eng,Ficción histórica
 2773,0316017701,"7th Heaven (Women''s Murder Club, #7)",7th Heaven,2008.0,eng,Misterio
 2774,0593073894,"Make Me (Jack Reacher, #20)",Make Me,2015.0,eng,Thriller
@@ -2872,7 +2872,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 2792,0765378558,"Shadows of Self (Mistborn, #5)",Shadows of Self,2015.0,eng,Fantasía
 2793,0345807952,"Mad About the Boy (Bridget Jones, #3)",Mad About the Boy,2013.0,eng,Romántica
 2794,0006280897,The Four Loves,The Four Loves,1960.0,eng,Religión y espiritualidad
-2795,,Archer's Voice,Archer's Voice,2014.0,eng,Romántica
+2795,9781538766941,Archer's Voice,Archer's Voice,2014.0,eng,Romántica
 2796,042524413X,The Lost Wife,The Lost Wife,2011.0,eng,Ficción histórica
 2797,0847826465,History of Beauty,Storia della bellezza,2004.0,eng,Arte
 2798,067972477X,"I, Claudius (Claudius, #1)","I, Claudius",1934.0,eng,Ficción histórica
@@ -2916,7 +2916,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 2836,0439829100,"Tomorrow, When the War Began (Tomorrow, #1)","Tomorrow, When the War Began",1993.0,eng,Juvenil
 2837,1599951495,"The Monuments Men: Allied Heroes, Nazi Thieves, and the Greatest Treasure Hunt in History","Monuments Men: Allied Heroes, Nazi Thieves and the Greatest Treasure Hunt in History ",2009.0,eng,Historia
 2838,0374346674,Love Letters to the Dead,Love Letters to the Dead,2014.0,eng,Juvenil
-2839,,War Brides,War Brides,2007.0,eng,Ficción histórica
+2839,9780141027128,War Brides,War Brides,2007.0,eng,Ficción histórica
 2840,1101947136,Homegoing,Homegoing,2016.0,eng,Ficción histórica
 2841,0393068471,Packing for Mars: The Curious Science of Life in the Void,Packing for Mars: The Curious Science of Life in the Void ,2010.0,eng,Ciencia
 2842,0446195502,"Divine Justice (Camel Club, #4)",Divine Justice,2008.0,eng,Thriller
@@ -3088,7 +3088,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 3009,0446677477,Rich Dad's Cashflow Quadrant: Rich Dad's Guide to Financial Freedom,Cashflow Quadrant: Rich Dad's Guide to Financial Freedom,1998.0,vie,Negocios
 3010,1605980927,"The Ice Princess (Patrik Hedström, #1)",Isprinsessan,2004.0,eng,Misterio
 3011,0767907817,Bookends,Bookends,2000.0,eng,Ficción
-3012,,Maude,,2014.0,,Ficción
+3012,9781501086137,Maude,,2014.0,,Ficción
 3013,0765316978,The Last Colony (Old Man's War #3),The Last Colony,2007.0,eng,Ciencia ficción
 3014,0060283289,If You Take a Mouse to School, ,2002.0,eng,Infantil
 3015,147677143X,"Finding Cinderella (Hopeless, #2.5)",Finding Cinderella,2013.0,eng,Romántica
@@ -3205,7 +3205,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 3127,0671037706,"Dandelion Wine (Green Town, #1)",Dandelion Wine,1957.0,eng,Ficción
 3128,009947137X,The Mummy (Ramses the Damned #1),The Mummy,1989.0,eng,Terror
 3129,0385528752,Switch: How to Change Things When Change Is Hard,Switch: How to Change Things When Change Is Hard,2010.0,eng,Autoayuda
-3130,,Trail of Broken Wings,Trail of Broken Wings,2015.0,eng,Ficción
+3130,9781477822081,Trail of Broken Wings,Trail of Broken Wings,2015.0,eng,Ficción
 3131,0099470470,The Collector,The Collector,1963.0,eng,Ficción
 3132,0060734086,Fairest,Fairest,2006.0,eng,Juvenil
 3133,0099267543,Timequake,Timequake,1997.0,eng,Ciencia ficción
@@ -3362,7 +3362,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 3285,0062300806,"The World of Divergent: The Path to Allegiant (Divergent, #2.5)",,2013.0,eng,Juvenil
 3286,0842329218,"Tribulation Force (Left Behind, #2)",Tribulation Force: The Continuing Drama of Those Left Behind,1996.0,eng,Ficción
 3287,014311638X,Food Rules: An Eater's Manual,Food Rules,2008.0,eng,Cocina
-3288,,في قلبي أنثى عبرية,في قلبي أنثى عبرية,2012.0,ara,Ficción
+3288,9789776376441,في قلبي أنثى عبرية,في قلبي أنثى عبرية,2012.0,ara,Ficción
 3289,0060093366,"Vampire Kisses (Vampire Kisses, #1)",Vampire Kisses,2003.0,eng,Juvenil
 3290,0312577214,"Fly Away (Firefly Lane, #2)",Fly Away,2013.0,eng,Ficción
 3291,0756402972,"Stone of Farewell (Memory, Sorrow, and Thorn, #2)",Stone of Farewell,1990.0,eng,Fantasía
@@ -3457,7 +3457,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 3380,0061655503,"Nemesis (Harry Hole, #4)",Sorgenfri,2002.0,eng,Thriller
 3381,0808595040,The Collected Poems,The Collected Poems,1981.0,,Poesía
 3382,0312992424,"Night Play (Dark-Hunter #5, Were-Hunter #1)",Night Play,2004.0,eng,Romántica
-3383,,Aleph,Aleph,2010.0,por,Ficción
+3383,9781410446145,Aleph,Aleph,2010.0,por,Ficción
 3384,,"Perfection (Neighbor from Hell, #2)",Perfection,2011.0,eng,Romántica
 3385,0670021253,Too Big to Fail: The Inside Story of How Wall Street and Washington Fought to Save the Financial System from Crisis — and Themselves,Too Big to Fail The Inside Story of How Wall Street and Washington Fought to Save the Financial System from Crisis - and Lost,2008.0,eng,Negocios
 3386,0345467531,Magic Hour,Magic Hour,2006.0,eng,Ficción
@@ -3639,7 +3639,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 3566,0812974018,Black Swan Green,Black Swan Green,2006.0,,Ficción
 3567,0452287146,The Other Woman,The Other Woman,2004.0,eng,Romántica
 3568,0965030067,A Girl Named Zippy,"A Girl Named Zippy: Growing up Small in Mooreland, Indiana ",2001.0,,Memorias
-3569,,Nothing Lasts Forever,Nothing Lasts Forever,1994.0,eng,Ficción
+3569,9784900430617,Nothing Lasts Forever,Nothing Lasts Forever,1994.0,eng,Ficción
 3570,0670037605,"Mayflower: A Story of Courage, Community, and War","Mayflower: A Story of Courage, Community, and War",2006.0,eng,Historia
 3571,1416547037,Wicked Deeds on a Winter's Night (Immortals After Dark #4),Wicked Deeds on a Winter's Night (Immortals After Dark #4),2007.0,eng,Romántica
 3572,1400032539,His Excellency: George Washington,His Excellency: George Washington,2004.0,eng,Biografía
@@ -3733,7 +3733,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 3660,1563892871,The Wake (The Sandman #10),The Sandman: The Wake,1996.0,eng,Cómic y novela gráfica
 3661,0060521996,The Innovator's Dilemma: The Revolutionary Book that Will Change the Way You Do Business (Collins Business Essentials),The Innovator's Dilemma: The Revolutionary Book that Will Change the Way You Do Business (Collins Business Essentials),1997.0,,Negocios
 3662,030700113X,Lady and the Tramp,Lady and the Tramp (Little Golden Book),1940.0,eng,Infantil
-3663,,"Squire (Protector of the Small, #3)",Squire,2001.0,eng,Fantasía
+3663,9780439013192,"Squire (Protector of the Small, #3)",Squire,2001.0,eng,Fantasía
 3664,1406309354,"Snakehead (Alex Rider, #7)",Snakehead,2007.0,eng,Juvenil
 3665,1423147947,"Out of Sight, Out of Time (Gallagher Girls, #5)","Out of Sight, Out of Time",2012.0,eng,Juvenil
 3667,0805098542,Killing Jesus: A History,Killing Jesus: A History ,2013.0,eng,Historia
@@ -3760,7 +3760,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 3688,0446611239,"The Cabinet of Curiosities (Pendergast, #3)",The Cabinet of Curiosities,2001.0,eng,Thriller
 3689,0883681056,The Practice of the Presence of God,The Practice of the Presence of God,1691.0,,Religión y espiritualidad
 3690,,"Second Son (Jack Reacher, #15.5)",Second Son,2011.0,,Thriller
-3691,,Take Me with You,,2014.0,eng,Ficción
+3691,9781480598034,Take Me with You,,2014.0,eng,Ficción
 3826,068987121X,"Over Sea, Under Stone (The Dark Is Rising, #1)","Over Sea, Under Stone",1965.0,,Fantasía
 3692,037575931X,Crossing to Safety,Crossing to Safety,1987.0,eng,Ficción
 3693,0399157387,"Buried Prey (Lucas Davenport, #21)",Buried Prey,2011.0,eng,Thriller
@@ -3912,11 +3912,11 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 3842,1416983090,"Thirst No. 2: Phantom, Evil Thirst, and Creatures of Forever (Thirst, #2)",Thirst No. 2,2010.0,eng,Terror
 3843,1595543414,Thr3e,Thr3e,2003.0,,Thriller
 3844,0618001905,King Leopold's Ghost,King Leopold's Ghost,1998.0,eng,Historia
-3845,,Guilty Wives,Guilty Wives,2012.0,eng,Thriller
+3845,9781846057908,Guilty Wives,Guilty Wives,2012.0,eng,Thriller
 3846,1451635753,"Between the Lines (Between the Lines, #1)",Between the Lines,2012.0,eng,Juvenil
 3847,0778329860,The Midwife's Confession,The Midwife's Confession,2011.0,eng,Ficción
-7413,,Black Lies,Black Lies,2014.0,eng,Thriller
-3848,,"Tales from a Not-So-Talented Pop Star (Dork Diaries, #3)",Tales From a Not-So-Talented Pop Star,2011.0,eng,Infantil
+7413,9782755623215,Black Lies,Black Lies,2014.0,eng,Thriller
+3848,9781432874766,"Tales from a Not-So-Talented Pop Star (Dork Diaries, #3)",Tales From a Not-So-Talented Pop Star,2011.0,eng,Infantil
 3849,0375424148,Habibi,Habibi,2011.0,eng,Cómic y novela gráfica
 3850,0316196991,"The House of Silk (Sherlock Holmes, #1)",The House of Silk,2011.0,eng,Misterio
 3851,0446679097,"The Lion''s Game (John Corey, #2)",The Lion's Game,2000.0,,Thriller
@@ -3947,7 +3947,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 3876,0751525359,"The Last Precinct (Kay Scarpetta, #11)",The Last Precinct,2000.0,eng,Misterio
 3877,0307596850,Girls in White Dresses,Girls in White Dresses,2011.0,eng,Ficción
 3878,0143039598,Cold Comfort Farm,Cold Comfort Farm,1932.0,eng,Ficción
-3879,,"Just One Year (Just One Day, #2)",Just One Year,2013.0,eng,Juvenil
+3879,9780525426431,"Just One Year (Just One Day, #2)",Just One Year,2013.0,eng,Juvenil
 3880,1250109302,"One with You (Crossfire, #5)",One With You,2016.0,eng,Romántica
 3881,3822812153,Vincent Van Gogh: The Complete Paintings,,1988.0,eng,Arte
 3882,0307951529,"The $100 Startup: Reinvent the Way You Make a Living, Do What You Love, and Create a New Future",,2012.0,eng,Negocios
@@ -4041,7 +4041,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 3973,038531387X,Deliverance,Deliverance,1970.0,eng,Ficción
 3974,0689860072,"Dragonsinger (Harper Hall, #2)",Dragonsinger,1977.0,eng,Fantasía
 3975,0061996203,"Boundless (Unearthly, #3)",Boundless,2013.0,eng,Juvenil
-3976,,The Whistler,The Whistler,2016.0,eng,Thriller
+3976,9782709650700,The Whistler,The Whistler,2016.0,eng,Thriller
 3977,1421506238,"D.Gray-man, Volume 01","D.Gray-man, Volume 1",2004.0,eng,Cómic y novela gráfica
 3978,0553299492,The Robots of Dawn (Robot #3),The Robots of Dawn,1983.0,eng,Ciencia ficción
 3979,0440241359,The Rule of Four,The Rule of Four,2004.0,eng,Thriller
@@ -4058,7 +4058,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 3990,0425217248,"The Harlequin (Anita Blake, Vampire Hunter #15)","The Harlequin (Anita Blake, Vampire Hunter, #15)",2007.0,eng,Fantasía
 3991,0064410471,So B. It,So B. It,2004.0,eng,Juvenil
 3992,1416954171,"Found (The Missing, #1)",Found,2008.0,eng,Juvenil
-3994,,The Basketball Diaries,The Basketball Diaries 1963-1966,1978.0,eng,Memorias
+3994,9780553202403,The Basketball Diaries,The Basketball Diaries 1963-1966,1978.0,eng,Memorias
 3995,,"Sin City, Vol. 4: That Yellow Bastard (Sin City, #4)",Sin City: That Yellow Bastard,1996.0,eng,Cómic y novela gráfica
 3996,8370540791,"Krew elfów (Saga o Wiedźminie, #3)",Krew elfów,1994.0,pol,Fantasía
 3997,0060759968,Little Altars Everywhere,Little Altars Everywhere,1992.0,,Ficción
@@ -4097,7 +4097,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 4030,0312938810,"The Dream Hunter (Dark-Hunter #10, Dream-Hunter #1)",The Dream Hunter,2007.0,eng,Romántica
 4031,0060735449,Island of the Sequined Love Nun,Island of the Sequined Love Nun,1997.0,eng,Ficción
 4032,1250074134,All the Ugly and Wonderful Things,All the Ugly and Wonderful Things,2016.0,eng,Ficción
-4034,,Time Enough for Love,Time Enough for Love,1973.0,eng,Ciencia ficción
+4034,9780425034712,Time Enough for Love,Time Enough for Love,1973.0,eng,Ciencia ficción
 4035,0609602195,The Barefoot Contessa Cookbook,The Barefoot Contessa Cookbook,1999.0,eng,Cocina
 4036,1595143424,"Virals (Virals, #1)",Virals,2010.0,eng,Juvenil
 4037,,"An Invisible Thread: The True Story of an 11-Year-Old Panhandler, a Busy Sales Executive, and an Unlikely Meeting with Destiny","An Invisible Thread: The True Story of an 11-Year-Old Panhandler, a Busy Sales Executive, and an Unlikely Meeting with Destiny",2010.0,eng,Memorias
@@ -4171,7 +4171,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 4106,067973452X,Notes from Underground,,1864.0,eng,Clásicos
 4107,1608870081,Harry Potter: A Pop-Up Book: Based on the Film Phenomenon,,2010.0,,Infantil
 4108,0060898488,Portrait in Sepia,Retrato en sepia,2000.0,,Ficción histórica
-4109,,Making Faces,Making Faces,2013.0,eng,Romántica
+4109,9781633920958,Making Faces,Making Faces,2013.0,eng,Romántica
 4110,0739467042,Q & A,Q & A: Slumdog Millionaire,2005.0,eng,Ficción
 4111,0670026336,The Trespasser (Dublin Murder Squad #6),,2016.0,eng,Misterio
 4112,0553157248,"Encyclopedia Brown, Boy Detective (Encyclopedia Brown, #1)","Encyclopedia Brown, Boy Detective (Encyclopedia Brown, #1)",1963.0,eng,Infantil
@@ -4194,7 +4194,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 4129,0345494857,Innocent Traitor, Innocent Traitor,2006.0,eng,Ficción histórica
 4130,0345463153,The Fourth Hand,The Fourth Hand,2001.0,eng,Ficción
 4131,0380730359,"Gone, Baby, Gone (Kenzie & Gennaro, #4)","Gone, Baby, Gone",1998.0,eng,Misterio
-4132,,"Tunnels of Blood (Cirque Du Freak, #3)","Tunnels of Blood (Cirque du Freak, #3) ",2000.0,,Juvenil
+4132,9781306769129,"Tunnels of Blood (Cirque Du Freak, #3)","Tunnels of Blood (Cirque du Freak, #3) ",2000.0,,Juvenil
 4133,0345471172,On Mystic Lake,On Mystic Lake,1999.0,eng,Ficción
 4134,0553581554,"The Killing Game (Eve Duncan, #2)",The Killing Game,1999.0,eng,Thriller
 4135,1442484233,"The Retribution of Mara Dyer (Mara Dyer, #3)",The Retribution of Mara Dyer,2014.0,eng,Juvenil
@@ -4206,7 +4206,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 4141,0007233701,The Book of Tomorrow,The Book of Tomorrow,2009.0,eng,Ficción
 4142,1423147952,"Uncommon Criminals (Heist Society, #2)",Uncommon Criminals,2011.0,,Juvenil
 4143,0062235672,On the Fence,On the Fence,2014.0,eng,Juvenil
-4144,,Follow You Home,Follow You Home,2015.0,eng,Thriller
+4144,9781503944374,Follow You Home,Follow You Home,2015.0,eng,Thriller
 4145,0375913750,"Love, Stargirl (Stargirl, #2)","Love, Stargirl",2007.0,,Juvenil
 4147,1592406599,"You Are Not So Smart: Why You Have Too Many Friends on Facebook, Why Your Memory Is Mostly Fiction, and 46 Other Ways You''re Deluding Yourself",‎You Are Not So Smart‎,2011.0,eng,Psicología
 4148,0553578529,"Into the Wilderness (Wilderness, #1)",Into the Wilderness,1998.0,eng,Ficción histórica
@@ -4237,7 +4237,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 4173,078512179X,Civil War: A Marvel Comics Event,Civil War: A Marvel Comics Event,2006.0,eng,Cómic y novela gráfica
 4174,0805421300,The Vow: The Kim & Krickitt Carpenter Story,The Vow: The Kim and Krickitt Carpenter Story,2000.0,eng,Biografía
 4175,143913376X,The Puppet Masters,The Puppet Masters,1951.0,eng,Ciencia ficción
-4176,,All the Missing Girls,All the Missing Girls,2016.0,eng,Thriller
+4176,9781501146244,All the Missing Girls,All the Missing Girls,2016.0,eng,Thriller
 4177,0307119408,Just Go to Bed,Just Go to Bed,1983.0,eng,Infantil
 4178,0316403431,Today Will Be Different,,2016.0,,Ficción
 4179,0345470583,"xxxHolic, Vol. 1 (xxxHOLiC, #1)",xxxHOLiC #1,2003.0,eng,Cómic y novela gráfica
@@ -4361,7 +4361,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 4297,1423409450,"Piano/Vocal/Guitar Sheet Music: The Chronicles of Narnia: The Lion, the Witch and The Wardrobe","The Chronicles of Narnia: The Lion, the Witch and The Wardrobe (Sheet Music)",2006.0,,Música
 4298,0451187849,We the Living,We the Living,1936.0,eng,Ficción
 4299,0374384711,"The Winner''s Crime (The Winner''s Trilogy, #2)",The Winner's Crime,2015.0,eng,Fantasía
-4300,,The Ladies' Room,,2011.0,eng,Romántica
+4300,9780803476028,The Ladies' Room,,2011.0,eng,Romántica
 4324,0451419715,"Down London Road (On Dublin Street, #2)",Down London Road,2013.0,eng,Romántica
 4301,0802130720,100 Selected Poems,100 Selected Poems by e. e. Cummings,1954.0,eng,Poesía
 4302,0451223896,"Such a Pretty Fat: One Narcissist''s Quest to Discover If Her Life Makes Her Ass Look Big, or Why Pie Is Not the Answer","Such a Pretty Fat: One Narcissist''s Quest to Discover if Her Life Makes Her Ass Look Big, or Why Pie is Not the Answer",2008.0,eng,Memorias
@@ -4423,7 +4423,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 4359,0486424588,"Women in Love (Brangwen Family, #2)",Women in Love,1920.0,eng,Clásicos
 4360,0670038571,Second Chance,Second Chance,2007.0,eng,Ficción
 4361,0553278746,The Postman,The Postman,1985.0,eng,Ciencia ficción
-4362,,Summerland,Summerland,2012.0,eng,Ficción
+4362,9780316208109,Summerland,Summerland,2012.0,eng,Ficción
 4363,1841150509,The Patron Saint of Liars,The Patron Saint of Liars,1992.0,eng,Ficción
 4364,0060594896,The Success Principles: How to Get from Where You Are to Where You Want to Be,The Success Principles,2004.0,eng,Autoayuda
 4365,,"Knight (Unfinished Hero, #1)",Knight,2012.0,eng,Romántica
@@ -4700,7 +4700,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 4638,0142004413,"My Family and Other Animals (Corfu Trilogy, #1)",My Family and Other Animals,1956.0,eng,Memorias
 4639,0451212452,Back Roads,Back Roads,1999.0,eng,Ficción
 4640,0679723692,Cathedral,Cathedral,1983.0,eng,Ficción
-4641,,Fantastic Beasts and Where to Find Them: The Original Screenplay,Fantastic Beasts and Where to Find Them: The Original Screenplay,2016.0,eng,Fantasía
+4641,9781510054585,Fantastic Beasts and Where to Find Them: The Original Screenplay,Fantastic Beasts and Where to Find Them: The Original Screenplay,2016.0,eng,Fantasía
 4642,0582418178,The Body,Different Seasons,1982.0,eng,Terror
 4643,0785213066,A Million Miles in a Thousand Years: What I Learned While Editing My Life,A Million Miles in a Thousand Years: What I Learned While Editing My Life,2009.0,eng,Memorias
 4644,0670063118,"Eona: The Last Dragoneye (Eon, #2)",Eona: The Last Dragoneye,2011.0,eng,Fantasía
@@ -4807,7 +4807,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 4749,0743449746,"D-Day, June 6, 1944: The Battle for the Normandy Beaches","D-Day June 6, 1944: The Climactic Battle of WWII",1994.0,eng,Historia
 4750,0547251270,A Long Walk to Water: Based on a True Story,A Long Walk to Water,2010.0,eng,Juvenil
 4751,0061449180,"Light (Gone, #6)",Light,2013.0,eng,Ciencia ficción
-4752,,Stuck-Up Suit,Stuck-Up Suit,2016.0,eng,Romántica
+4752,9781951045210,Stuck-Up Suit,Stuck-Up Suit,2016.0,eng,Romántica
 4753,0345419677,"To Your Scattered Bodies Go (Riverworld, #1)",To Your Scattered Bodies Go,1971.0,eng,Ciencia ficción
 4754,0515142867,Midnight Bayou,Midnight Bayou,2001.0,eng,Romántica
 4755,0156031191,Winter's Tale,Winter's Tale,1983.0,eng,Fantasía
@@ -4815,7 +4815,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 4757,1423301854,"Rapture in Death (In Death, #4)",Rapture in Death,1996.0,,Thriller
 4758,0143036254,Common Sense,Common Sense,1776.0,eng,Ensayo
 4759,0767903579,Falling Leaves: The Memoir of an Unwanted Chinese Daughter,Falling Leaves: The Memoir of an Unwanted Chinese Daughter,1997.0,eng,Memorias
-4760,,رحلتي من الشك إلى الإيمان,رحلتي من الشك إلى الإيمان,1970.0,ara,Religión y espiritualidad
+4760,9789770810187,رحلتي من الشك إلى الإيمان,رحلتي من الشك إلى الإيمان,1970.0,ara,Religión y espiritualidad
 4761,1250011914,"Whispers at Moonrise (Shadow Falls, #4)",Whispers at Moonrise ,2012.0,eng,Juvenil
 4762,030746363X,"The 4-Hour Body: An Uncommon Guide to Rapid Fat-Loss, Incredible Sex, and Becoming Superhuman",The 4-Hour Body,2000.0,eng,Autoayuda
 4763,0375727019,The Elementary Particles,Les Particules élémentaires,1998.0,eng,Ficción
@@ -4842,7 +4842,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 4784,1741753597,The Slap,The Slap,2008.0,eng,Ficción
 4785,0064301389,"The Art Spirit: Notes, Articles, Fragments of Letters and Talks to Students, Bearing on the Concept and Technique of Picture Making, the Study of Art (Icon Editions)","The Art Spirit: Notes, Articles, Fragments of Letters and Talks to Students, Bearing on the Concept and Technique of Picture Making, the Study of Art Generally, and on Appreciation (Icon Editions)",1929.0,eng,Arte
 4786,1611099692,"Brilliance (Brilliance Saga, #1)",Brilliance,2013.0,eng,Ciencia ficción
-4787,,Life and Other Near-Death Experiences,,2015.0,eng,Ficción
+4787,9781503945623,Life and Other Near-Death Experiences,,2015.0,eng,Ficción
 4788,0571219357,The Fortress of Solitude,The Fortress of Solitude,2003.0,eng,Ficción
 4789,0553804820,The Darkest Evening of the Year,The Darkest Evening of the Year,2007.0,eng,Thriller
 4790,0374104107,"Authority (Southern Reach, #2)",Authority ,2014.0,eng,Ciencia ficción
@@ -4881,14 +4881,14 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 4823,0609610570,Execution: The Discipline of Getting Things Done,,2009.0,eng,Negocios
 4824,0393240231,Smoke Gets in Your Eyes: And Other Lessons from the Crematory,Smoke Gets in Your Eyes: And Other Lessons from the Crematory,2014.0,eng,Memorias
 4825,0399156585,"The Rembrandt Affair (Gabriel Allon, #10)",The Rembrandt Affair,2010.0,eng,Thriller
-4826,,The Call of Cthulhu,The Call of Cthulhu,1928.0,eng,Terror
+4826,9781798850466,The Call of Cthulhu,The Call of Cthulhu,1928.0,eng,Terror
 4827,0061147974,20th Century Ghosts,20th Century Ghosts,2005.0,eng,Terror
 4828,0375724508,Ghostwritten,Ghostwritten,1999.0,eng,Ficción
 4830,159514322X,"The Ruby Circle (Bloodlines, #6)",The Ruby Circle,2015.0,eng,Juvenil
 4831,0316114278,Where the Mountain Meets the Moon,Where the Mountain Meets the Moon,2009.0,eng,Infantil
 4832,087923573X,"Swallows and Amazons (Swallows and Amazons, #1)",Swallows and Amazons,1930.0,eng,Infantil
 4833,1402245793,"Rock Hard (Sinners on Tour, #2)",Rock Hard,2011.0,eng,Romántica
-4834,,How to Build a Girl,How to Build a Girl,2014.0,eng,Ficción
+4834,9780091949006,How to Build a Girl,How to Build a Girl,2014.0,eng,Ficción
 4835,9793062924,"Sang Pemimpi (Tetralogi Laskar Pelangi, #2)",Sang Pemimpi,2006.0,ind,Ficción
 4836,0743250621,The Know-It-All: One Man's Humble Quest to Become the Smartest Person in the World,The Know-It-All: One Man's Humble Quest to Become the Smartest Person in the World,2004.0,eng,Memorias
 4837,0525953078,"Touch & Go (Tessa Leoni, #2)",,2013.0,eng,Thriller
@@ -4907,7 +4907,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 4850,0553351397,Peace Is Every Step: The Path of Mindfulness in Everyday Life,Peace Is Every Step: The Path of Mindfulness in Everyday Life,1990.0,eng,Religión y espiritualidad
 4851,,"Electric Daisy, Vol. 1 (Dengeki Daisy, #1)",電撃デイジー 1,2007.0,ind,Cómic y novela gráfica
 4852,1501117203,Scrappy Little Nobody,Scrappy Little Nobody,2016.0,eng,Memorias
-4853,,The Einstein Prophecy,,2015.0,eng,Thriller
+4853,9781501247538,The Einstein Prophecy,,2015.0,eng,Thriller
 4854,0385608020,"Started Early, Took My Dog (Jackson Brodie, #4)","Started Early, Took My Dog",2010.0,eng,Misterio
 4855,0930289447,Batman: A Death in the Family,Batman: A Death in the Family,1988.0,eng,Cómic y novela gráfica
 4856,1400069599,TransAtlantic,TransAtlantic,2013.0,eng,Ficción histórica
@@ -4920,7 +4920,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 4863,0061006629,Fatherland,Fatherland,1992.0,eng,Ficción histórica
 4864,0525951571,"Freedom™ (Daemon, #2)",Freedom™,2010.0,eng,Ciencia ficción
 4865,0060088877,The Bridge of San Luis Rey,The Bridge of San Luis Rey,1927.0,eng,Clásicos
-4866,,White Nights,Белые ночи,1848.0,eng,Clásicos
+4866,9780241252086,White Nights,Белые ночи,1848.0,eng,Clásicos
 4867,0425227723,"Skin Trade (Anita Blake, Vampire Hunter #17)",Skin Trade,2009.0,eng,Fantasía
 4890,0310240018,Joni: An Unforgettable Story,Joni,1976.0,eng,Biografía
 4868,0875793266,Jesus the Christ,Jesus the Christ: A Study of the Messiah and His Mission according to Holy Scriptures both Ancient and Modern,1915.0,,Religión y espiritualidad
@@ -5162,7 +5162,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 5108,0440228654,Chinese Cinderella: The True Story of an Unwanted Daughter,Chinese Cinderella: The True Story of an Unwanted Daughter,1999.0,eng,Memorias
 5109,0425182878,"Chosen Prey (Lucas Davenport, #12)",Chosen Prey,2001.0,eng,Thriller
 5110,0785139877,Raymond E. Feist's Magician Master,,2010.0,,Cómic y novela gráfica
-5111,,Bossman,,2016.0,eng,Romántica
+5111,9782755634761,Bossman,,2016.0,eng,Romántica
 5112,0451225007,The Black Dagger Brotherhood: An Insider's Guide,The Black Dagger Brotherhood: An Insider's Guide,2008.0,eng,No ficción
 5113,1600104835,"Locke & Key, Vol. 2: Head Games",Head Games ,2009.0,eng,Cómic y novela gráfica
 5114,0192751034,"Ramona and Her Father (Ramona, #4)",Ramona and Her Father,1984.0,eng,Infantil
@@ -5267,7 +5267,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 5216,0812974042,In the Company of the Courtesan,In the Company of the Courtesan,2006.0,eng,Ficción histórica
 5217,0345531485,"The Skull Throne (Demon Cycle, #4)",The Skull Throne,2015.0,eng,Fantasía
 5218,0312369506,"Devil May Cry (Dark-Hunter, #11)",Devil May Cry,2007.0,eng,Fantasía
-5219,,Two By Two,Two By Two,2016.0,eng,Romántica
+5219,9785171004576,Two By Two,Two By Two,2016.0,eng,Romántica
 5220,0316013838,Sea Glass,Sea Glass,2002.0,eng,Ficción
 5221,1582349010,"River Secrets (The Books of Bayern, #3)",River Secrets,2006.0,,Fantasía
 5222,1250034485,"Be Careful What You Wish For (The Clifton Chronicles, #4)",Be Careful What You Wish For,2014.0,eng,Ficción
@@ -5327,7 +5327,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 5277,051511779X,"Born in Shame (Born In Trilogy, #3)",Born in Shame,1996.0,eng,Romántica
 5300,061579615X,"Damaged (Damaged, #1)",Damaged,2013.0,eng,Romántica
 5278,0738718688,"Return to Paradise (Leaving Paradise, #2)",Return to Paradise,2010.0,eng,Juvenil
-5279,,My Heart and Other Black Holes,My Heart and Other Black Holes,2015.0,eng,Juvenil
+5279,9781481533096,My Heart and Other Black Holes,My Heart and Other Black Holes,2015.0,eng,Juvenil
 5280,0062295896,Girl in a Band,Girl in a Band,2015.0,eng,Memorias
 5281,0525478922,"Ninth Grade Slays (The Chronicles of Vladimir Tod, #2)","Ninth Grade Slays (The Chronicles of Vladimir Tod, #2)",2008.0,eng,Juvenil
 5282,0399153934,"Book of the Dead (Kay Scarpetta, #15)",Book of the Dead,2007.0,eng,Thriller
@@ -5344,7 +5344,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 5293,0970398107,Anne Rice's The Tale of the Body Thief (A Graphic Novel),Anne Rice's The Tale of the Body Thief (Graphic Novel),2000.0,eng,Cómic y novela gráfica
 5294,0802141676,The Lone Ranger and Tonto Fistfight in Heaven,The Lone Ranger and Tonto Fistfight in Heaven,1993.0,eng,Ficción
 5295,0345443608,"A Stroke of Midnight (Merry Gentry, #4)","A Stroke of Midnight (Merry Gentry, #4)",2005.0,eng,Fantasía
-5296,,The Chemist,The Chemist,2016.0,eng,Thriller
+5296,9781945540189,The Chemist,The Chemist,2016.0,eng,Thriller
 5297,0618562036,"Empress Orchid (Empress Orchid, #1)",Empress Orchid,2003.0,eng,Ficción histórica
 5298,1401323588,And Another Thing...,"And Another Thing... (Hitchhiker''s Guide to the Galaxy, #6)",2009.0,eng,Ciencia ficción
 5299,0743453018,"Monday Mourning (Temperance Brennan, #7)",,2004.0,eng,Thriller
@@ -5426,7 +5426,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 5376,1557091528,The Constitution of the United States of America,The Constitution of the United States of America,1787.0,,Historia
 5377,382285980X,Gustav Klimt: 1862-1918,Gustav Klimt: le monde comme une forme féminine,1992.0,,Arte
 5378,0060955228,Under the Volcano,Under the Volcano,1947.0,eng,Clásicos
-5379,,Sleep Tight,Sleep tight,2014.0,eng,Thriller
+5379,9780957652231,Sleep Tight,Sleep tight,2014.0,eng,Thriller
 5380,0679824111,"Dinosaurs Before Dark (Magic Tree House, #1)",Dinosaurs Before Dark,2002.0,eng,Infantil
 5381,1416505490,Have Space Suit—Will Travel,Have Space Suit - Will Travel,1958.0,eng,Ciencia ficción
 5382,1598184318,The Sea Wolf,The Sea Wolf,1904.0,eng,Clásicos
@@ -5488,7 +5488,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 5438,0375836977,A Color of His Own,A Color of His Own,1975.0,,Infantil
 5439,0671664263,Don't Panic: The Official Hitchhiker's Guide to the Galaxy Companion,Don't Panic: The Official Hitchhikers Guide to the Galaxy Companion,1987.0,eng,No ficción
 5440,0142400769,"Things Not Seen (Things, #1)",Things Not Seen,2002.0,eng,Juvenil
-5441,,House,House,2006.0,eng,Terror
+5441,9781595541550,House,House,2006.0,eng,Terror
 5442,0765335344,"Vicious (Villains, #1)",Vicious,2013.0,eng,Ciencia ficción
 5443,0425194523,"Raise the Titanic! (Dirk Pitt, #4)",Raise the Titanic!,1976.0,eng,Aventura
 5444,078685149X,The Supernaturalist,The Supernaturalist,2004.0,eng,Juvenil
@@ -5547,7 +5547,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 5498,0886777631,"City of Golden Shadow (Otherland, #1)",City of Golden Shadow,1996.0,eng,Ciencia ficción
 5635,1523662441,RoomHate,RoomHate,2016.0,eng,Romántica
 5499,0425217299,"An Ice Cold Grave (Harper Connelly, #3)",An Ice Cold Grave,2007.0,eng,Misterio
-5500,,Jacob Have I Loved,Jacob Have I Loved,1980.0,eng,Juvenil
+5500,9780140329674,Jacob Have I Loved,Jacob Have I Loved,1980.0,eng,Juvenil
 5501,0316089516,The Postcard Killers,The Postcard Killers,2010.0,eng,Thriller
 5502,1421536382,"Kamisama Kiss, Vol. 1",神様はじめました 1,2008.0,eng,Cómic y novela gráfica
 5503,,"Maybe Not (Maybe, #1.5)",Maybe Not,2014.0,eng,Romántica
@@ -5694,7 +5694,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 5646,0380794470,"Dream a Little Dream (Chicago Stars, #4)",Dream a Little Dream,1998.0,eng,Romántica
 5647,,تاكسي: حواديت المشاوير,تاكسي: حواديت المشاوير,2006.0,ara,Ficción
 5648,0312144075,The Samurai's Garden,The Samurai's Garden,1994.0,eng,Ficción histórica
-5649,,The Hating Game,The Hating Game,2016.0,eng,Romántica
+5649,9780062439598,The Hating Game,The Hating Game,2016.0,eng,Romántica
 5650,0804177996,Black-Eyed Susans,Black-Eyed Susans,2015.0,eng,Thriller
 5651,,"Neanderthal Seeks Human (Knitting in the City, #1)",Neanderthal Seeks Human,2013.0,eng,Romántica
 5652,1416971777,"Goliath (Leviathan, #3)",Goliath,2011.0,eng,Ciencia ficción
@@ -5726,9 +5726,9 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 5678,0140184937,Our Man in Havana,Our Man in Havana,1958.0,eng,Clásicos
 5679,140123206X,Batman: The Black Mirror,Batman: The Black Mirror,2011.0,eng,Cómic y novela gráfica
 5680,0316097543,Kill Me If You Can,Kill Me If You Can,2011.0,eng,Thriller
-5681,,"Killers of the Dawn (Cirque Du Freak, #9)","Killers of the Dawn (Cirque Du Freak, #9)",2003.0,,Juvenil
+5681,9781417749546,"Killers of the Dawn (Cirque Du Freak, #9)","Killers of the Dawn (Cirque Du Freak, #9)",2003.0,,Juvenil
 5682,0515089931,Tramp for the Lord,Tramp for the Lord,1974.0,,Religión y espiritualidad
-8119,,Falling into Place,Falling Into Place,2014.0,,Juvenil
+8119,9780062367884,Falling into Place,Falling Into Place,2014.0,,Juvenil
 5683,0060278684,If You Take a Mouse to the Movies,If You Take a Mouse to the Movies,2000.0,,Infantil
 5684,1423340418,"A Lick of Frost (Merry Gentry, #6)",A Lick of Frost,2007.0,eng,Fantasía
 5685,0099690608,The Abyss,The Abyss,1989.0,eng,Ciencia ficción
@@ -5854,7 +5854,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 5804,0140045295,Sometimes a Great Notion,Sometimes a Great Notion,1964.0,,Ficción
 5805,0590554093,"Tris''s Book (Circle of Magic, #2)",Tris's Book,1998.0,eng,Juvenil
 5806,1439171211,The Moral Landscape: How Science Can Determine Human Values,The Moral Landscape: How Science Can Determine Human Values,2010.0,eng,Ensayo
-5807,,The Mill River Recluse,The Mill River Recluse,2014.0,eng,Ficción
+5807,9781410472090,The Mill River Recluse,The Mill River Recluse,2014.0,eng,Ficción
 5808,1582344159,Hey Nostradamus!,Hey Nostradamus!,2003.0,eng,Ficción
 5809,0802135587,Che Guevara: A Revolutionary Life,Che Guevara: A Revolutionary Life,1997.0,eng,Biografía
 5810,,"The Secret Hour (Midnighters, #1)",The Secret Hour,2004.0,eng,Juvenil
@@ -5879,7 +5879,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 5828,1848764561,The Elephant Tree,,2010.0,eng,Ficción
 5829,0743294378,"Bones to Ashes (Temperance Brennan, #10)",Bones to Ashes,2007.0,eng,Misterio
 5830,,Grimm's Fairy Tales,Grimms Märchen,1857.0,eng,Infantil
-5831,,The Definitive Book of Body Language,The Definitive Book of Body Language,2004.0,eng,Psicología
+5831,9780752863856,The Definitive Book of Body Language,The Definitive Book of Body Language,2004.0,eng,Psicología
 5832,,"Between the Lines (Between the Lines, #1)",Between the Lines,2011.0,eng,Romántica
 5833,0316881791,Never Cry Wolf,Never Cry Wolf : The Amazing True Story of Life Among Arctic Wolves,1963.0,eng,No ficción
 5834,031612852X,"Tick Tock (Michael Bennett, #4)",Tick Tock,2010.0,eng,Thriller
@@ -5889,7 +5889,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 5838,0765316986,"Zoe''s Tale (Old Man''s War, #4)",Zoe's Tale,2008.0,eng,Ciencia ficción
 5839,1416543791,"The First Commandment (Scot Harvath, #6)",The First Commandment,2007.0,eng,Thriller
 5840,0007144350,Complete Works of Oscar Wilde,Collected Works,1908.0,eng,Clásicos
-5841,,The New Best Recipe,"The New Best Recipe: All-New Edition with 1,000 Recipes",1995.0,,Cocina
+5841,9780936184746,The New Best Recipe,"The New Best Recipe: All-New Edition with 1,000 Recipes",1995.0,,Cocina
 5842,0399171622,"The Rose & the Dagger (The Wrath & the Dawn, #2)",The Rose & the Dagger,2016.0,eng,Fantasía
 5843,0553418297,The Fold,The Fold,2015.0,eng,Ciencia ficción
 5844,1250022088,The Nature of the Beast (Chief Inspector Armand Gamache #11),The Nature of the Beast,2015.0,eng,Misterio
@@ -5932,7 +5932,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 5881,0816638624,A Single Man,A Single Man,1964.0,eng,Ficción
 5882,1455502758,Mortality,Mortality,2012.0,eng,Ensayo
 5883,0439672465,"Icefire (The Last Dragon Chronicles, #2)",Icefire,2003.0,eng,Juvenil
-5884,,Norse Mythology,Norse Mythology,2017.0,eng,Fantasía
+5884,9781410499493,Norse Mythology,Norse Mythology,2017.0,eng,Fantasía
 5885,0684848015,Citizen Soldiers: The U. S. Army from the Normandy Beaches to the Bulge to the Surrender of Germany,Citizen Soldiers: The U. S. Army from the Normandy Beaches to the Bulge to the Surrender of Germany,1997.0,,Historia
 5886,0671737821,Honor's Splendour,Honor's Splendour,1987.0,eng,Romántica
 5887,0316175560,Shut Out,Shut Out,2011.0,eng,Juvenil
@@ -6034,7 +6034,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 5984,0316123080,"Who Could That Be at This Hour? (All the Wrong Questions, #1)","'Who Could That Be at This Hour?'""""",2012.0,eng,Juvenil
 5985,0061797057,"The Calling (Darkness Rising, #2)",The Calling,2012.0,eng,Juvenil
 5986,159582748X,Avatar: The Last Airbender: The Lost Adventures,Avatar The Last Airbender: The Lost Adventures,2011.0,eng,Cómic y novela gráfica
-5987,,Hidden,Hidden,2013.0,eng,Thriller
+5987,9780544264977,Hidden,Hidden,2013.0,eng,Thriller
 5988,1416916172,Five Little Peppers and How They Grew,Five Little Peppers and How They Grew,1881.0,eng,Infantil
 5989,1599903229,"Princess of the Midnight Ball (The Princesses of Westfalin Trilogy, #1)",Princess of the Midnight Ball,2009.0,eng,Juvenil
 5990,,الطنطورية,الطنطورية ,2010.0,ara,Ficción histórica
@@ -6078,7 +6078,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 6028,0446583146,One Summer,One Summer,2011.0,eng,Ficción
 6029,1416530711,"Whitney, My Love (Westmoreland, #2)","Whitney, My Love",1985.0,eng,Romántica
 6030,0802132219,Train to Pakistan,Train to Pakistan,1956.0,eng,Ficción histórica
-6031,,Jasper Jones,Jasper Jones,2009.0,eng,Juvenil
+6031,9780375966668,Jasper Jones,Jasper Jones,2009.0,eng,Juvenil
 6032,1572245379,The Untethered Soul: The Journey Beyond Yourself,The Untethered Soul,2007.0,,Autoayuda
 6033,159448600X,A Brief History of Seven Killings,A Brief History of Seven Killings,2014.0,eng,Ficción histórica
 6034,0525421556,Hold Still,Hold Still,2009.0,eng,Juvenil
@@ -6162,7 +6162,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 6113,0451210638,A Case of Need,A Case of Need,1968.0,eng,Thriller
 6114,0805097457,The Love Affairs of Nathaniel P.,The Love Affairs of Nathaniel P. ,2013.0,eng,Ficción
 6115,,"Revealed (House of Night, #11)",Revealed,2013.0,eng,Fantasía
-6116,,We're All Damaged,,2016.0,eng,Ficción
+6116,9781503933385,We're All Damaged,,2016.0,eng,Ficción
 6117,0312374976,"Sworn to Silence (Kate Burkholder, #1)",Sworn to Silence,2009.0,eng,Thriller
 6118,0425256227,"Magic Breaks (Kate Daniels, #7)",Magic Breaks,2014.0,eng,Fantasía
 6119,0413771008,The Seagull,Чайка,1895.0,eng,Clásicos
@@ -6173,7 +6173,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 6124,0316011274,Luna,Luna,2004.0,eng,Juvenil
 6125,1400077915,Runaway,Runaway,2004.0,eng,Ficción
 6126,1841494186,"Matter (Culture, #8)",Matter,2008.0,eng,Ciencia ficción
-6127,,Leo,Leo,2013.0,eng,Romántica
+6127,9785041082352,Leo,Leo,2013.0,eng,Romántica
 6128,0393310329,Maurice,Maurice,1971.0,eng,Clásicos
 6129,1441836314,"New York to Dallas (In Death, #33)",New York to Dallas,2011.0,eng,Thriller
 6130,0060080841,The Stepford Wives,The Stepford Wives,1972.0,eng,Ciencia ficción
@@ -6191,7 +6191,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 6142,0310247527,"One Tuesday Morning (9/11, #1)",One Tuesday Morning,2003.0,eng,Ficción
 6143,0425241130,"Hit List (Anita Blake, Vampire Hunter #20)",Hit List,2011.0,eng,Fantasía
 6144,0413772195,Interesting Times: The Play,Interesting Times,1995.0,eng,Fantasía
-6145,,The Wall of Winnipeg and Me,The Wall of Winnipeg and Me,2016.0,eng,Romántica
+6145,9781515956075,The Wall of Winnipeg and Me,The Wall of Winnipeg and Me,2016.0,eng,Romántica
 6146,1416516743,Let Me Call You Sweetheart,Let Me Call You Sweetheart,1995.0,eng,Misterio
 6147,0385341598,The Onion Field,The Onion Field,1973.0,,No ficción
 6148,0743233492,"Break No Bones (Temperance Brennan, #9)",Break No Bones,2006.0,eng,Thriller
@@ -6250,7 +6250,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 6250,2081354802,Soumission,Soumission ,2015.0,fre,Ficción
 6204,1570625190,The Tao of Physics: An Exploration of the Parallels between Modern Physics and Eastern Mysticism,The Tao of Physics: An Exploration of the Parallels Between Modern Physics and Eastern Mysticism,1975.0,eng,Ciencia
 6205,,"Unbeautifully (Undeniable, #2)",,2013.0,eng,Romántica
-6206,,The Girl With No Past,The Girl With No Past,2015.0,eng,Thriller
+6206,9781910751244,The Girl With No Past,The Girl With No Past,2015.0,eng,Thriller
 6207,0374104115,"Acceptance (Southern Reach, #3)",Acceptance,2014.0,eng,Ciencia ficción
 6208,,"Lady Luck (Colorado Mountain, #3)",Lady Luck,2011.0,eng,Romántica
 6209,0545140315,"The Lonely Hearts Club (The Lonely Hearts Club, #1)",The Lonely Hearts Club,2010.0,eng,Juvenil
@@ -6330,7 +6330,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 6286,,"The Bet (The Bet, #1)",The Bet,2013.0,eng,Romántica
 6287,0061930059,Little Princes: One Man's Promise to Bring Home the Lost Children of Nepal,Little Princes: One Man's Promise to Bring Home the Lost Children of Nepal,2010.0,eng,Memorias
 6288,1400066336,The Descendants,The Descendants,2007.0,,Ficción
-6289,,Too Late,,2016.0,eng,Romántica
+6289,9781408729465,Too Late,,2016.0,eng,Romántica
 6290,0345496205,"Kitchen Princess, Vol. 01 (Kitchen Princess, #1)",Kitchen no Ohimesama,2005.0,eng,Cómic y novela gráfica
 6291,0099416425,Lust for Life,Lust for Life: A Novel of Vincent Van Gogh,1934.0,eng,Biografía
 6292,0451462807,"Skinwalker (Jane Yellowrock, #1)",Skinwalker,2009.0,eng,Fantasía
@@ -6399,7 +6399,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 6355,1476702993,The House We Grew Up In,The House We Grew Up In,2013.0,eng,Ficción
 6356,0007466064,"A Dance with Dragons: Dreams and Dust (A Song of Ice and Fire #5, Part 1 of 2)",A Dance With Dragons: Part 1 Dreams and Dust,2011.0,eng,Fantasía
 6357,141658661X,"Full Black (Scot Harvath, #10)",Full Black,2011.0,eng,Thriller
-6358,,The Sisterhood,,2012.0,eng,Ficción histórica
+6358,9781491512432,The Sisterhood,,2012.0,eng,Ficción histórica
 6359,0340796146,"Five on a Treasure Island (Famous Five, #1)",Five on a Treasure Island ,1942.0,eng,Infantil
 6360,0312997191,Summer People,Summer People,2003.0,eng,Ficción
 6361,0836213122,There's Treasure Everywhere: A Calvin and Hobbes Collection,There's Treasure Everywhere: A Calvin and Hobbes Collection,1996.0,eng,Cómic y novela gráfica
@@ -6472,7 +6472,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 6429,0448445867,Nancy Drew: #1-64,"Nancy Drew Complete Series Set, Books 1-64",,eng,Juvenil
 6430,1593080786,Pygmalion and Three Other Plays,Pygmalion and Three Other Plays,2004.0,eng,Clásicos
 6431,0345477367,"Path of Destruction (Star Wars: Darth Bane, #1)",,2006.0,eng,Ciencia ficción
-6432,,Miramont's Ghost,,2015.0,eng,Ficción histórica
+6432,9781477820469,Miramont's Ghost,,2015.0,eng,Ficción histórica
 6433,0758272812,"Storm (Elemental, #1)",Storm,2012.0,eng,Juvenil
 6434,0061976792,"The Last Little Blue Envelope (Little Blue Envelope, #2)",The Last Little Blue Envelope,2011.0,eng,Juvenil
 6435,0684813785,The Making of the Atomic Bomb,The Making of the Atomic Bomb,1986.0,eng,Historia
@@ -6520,7 +6520,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 6479,031623107X,You Will Know Me,You Will Know Me,2016.0,eng,Thriller
 6480,0345363132,The Sunne in Splendour,The Sunne in Splendour,1982.0,eng,Ficción histórica
 6481,0571169341,Arcadia,Arcadia,1993.0,eng,Ficción
-6482,,An Innocent Client,An Innocent Client,2008.0,eng,Thriller
+6482,9781480030473,An Innocent Client,An Innocent Client,2008.0,eng,Thriller
 6483,0671725661,West Side Story,West Side Story,1961.0,,Ficción
 6484,0552142743,"The Masterharper of Pern (Pern, #15)",The MasterHarper of Pern,1998.0,eng,Ciencia ficción
 6485,0375424040,The Drunkard's Walk: How Randomness Rules Our Lives,The Drunkard's Walk: How Randomness Rules Our Lives,2008.0,eng,Ciencia
@@ -6729,7 +6729,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 6692,1853262439,The Comedy of Errors,,1594.0,,Clásicos
 6693,0425098087,Zodiac,Zodiac,1986.0,,No ficción
 6694,1784751995,15th Affair (Women's Murder Club #15),15th Affair,2016.0,eng,Misterio
-6695,,The Constant Gardener,The Constant Gardener,2001.0,,Thriller
+6695,9780743215565,The Constant Gardener,The Constant Gardener,2001.0,,Thriller
 6696,0446699489,Wish You Well,Wish You Well,2000.0,eng,Ficción
 6697,1563054426,Barnyard Dance,Barnyard Dance,1993.0,eng,Infantil
 6698,0399162380,"Field of Prey (Lucas Davenport, #24)",,2014.0,eng,Thriller
@@ -6912,7 +6912,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 6878,0399157565,"The Bone Bed (Kay Scarpetta, #20)",The Bone Bed,2012.0,eng,Thriller
 6879,0718154835,The Fry Chronicles (Memoir #2),The Fry Chronicles: An Autobiography,2010.0,eng,Memorias
 6880,0915144867,Second Treatise of Government,Second Treatise of Government,1689.0,eng,Ensayo
-6881,,Better off Friends,Better Off Friends,2014.0,eng,Juvenil
+6881,9780545872119,Better off Friends,Better Off Friends,2014.0,eng,Juvenil
 6882,0393072223,The Shallows: What the Internet is Doing to Our Brains,The Shallows: What the Internet is Doing to Our Brains,2010.0,eng,Ensayo
 6883,0452297648,The House at Tyneford,The House at Tyneford,2011.0,eng,Ficción histórica
 6884,0446676500,"The Autobiography of Martin Luther King, Jr.","The Autobiography of Martin Luther King, Jr.",1986.0,eng,Biografía
@@ -6938,7 +6938,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 6904,0993800130,"Pucked (Pucked, #1)",,2015.0,eng,Romántica
 6905,0062415832,Notorious RBG: The Life and Times of Ruth Bader Ginsburg,,2015.0,eng,Biografía
 6906,0758266928,"Touch of Frost (Mythos Academy, #1)",Touch of Frost,2011.0,eng,Juvenil
-6907,,Never Knowing,Never Knowing,2011.0,eng,Thriller
+6907,9780312595685,Never Knowing,Never Knowing,2011.0,eng,Thriller
 6908,0752858521,The Aquitaine Progression,The Aquitaine Progression,1984.0,eng,Thriller
 6909,0192838628,"The Forsyte Saga (The Forsyte Chronicles, #1-3)",The Forsyte Saga,1921.0,eng,Clásicos
 6910,0449003787,"O is for Outlaw (Kinsey Millhone, #15)","'O'"" is for Outlaw""",1999.0,eng,Misterio
@@ -6995,8 +6995,8 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 6961,0849945119,Blink,Blink,2002.0,,Thriller
 6962,006232022X,"The Black Widow (Gabriel Allon, #16)",The Black Widow,2016.0,eng,Thriller
 6963,1570089264,Believing Christ: The Parable of the Bicycle and Other Good News,Believing Christ: The Parable of the Bicycle and Other Good News,1992.0,eng,Religión y espiritualidad
-6964,,Wake (Watersong #1),Wake (Watersong #1),2012.0,eng,Juvenil
-6965,,A Dark Lure,,2015.0,eng,Thriller
+6964,9781250008121,Wake (Watersong #1),Wake (Watersong #1),2012.0,eng,Juvenil
+6965,9781477828731,A Dark Lure,,2015.0,eng,Thriller
 6966,0385495323,The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography,"The Code Book. How to Make It, Break It, Hack It, Crack It",1999.0,eng,Ciencia
 6967,0451460936,"Touch the Dark (Cassandra Palmer, #1)",Touch the Dark,2006.0,eng,Fantasía
 6968,0446359203,Carrion Comfort,Carrion Comfort,1989.0,eng,Terror
@@ -7035,7 +7035,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 7001,0670021156,"Stones Into Schools: Promoting Peace With Books, Not Bombs, in Afghanistan and Pakistan","Stones into Schools: Promoting Peace with Books, Not Bombs, in Afghanistan and Pakistan",2009.0,eng,Memorias
 7002,0307264238,A Mercy,A Mercy,2008.0,eng,Ficción histórica
 7003,0553573861,Zodiac,Zodiac,1988.0,eng,Thriller
-7004,,Departure,Departure,2014.0,eng,Ciencia ficción
+7004,9780008156862,Departure,Departure,2014.0,eng,Ciencia ficción
 7005,1453720693,"Rock Chick Redemption (Rock Chick, #3)",,2010.0,eng,Romántica
 7006,1579126952,"The Mystery of the Blue Train (Hercule Poirot, #6)",The Mystery of the Blue Train,1928.0,eng,Misterio
 7007,0316097403,"Private #1 Suspect (Private, #2)",Private:  #1 Suspect,2011.0,eng,Thriller
@@ -7067,7 +7067,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 7033,1466867507,"Cometh the Hour (The Clifton Chronicles, #6)",Cometh the Hour,2016.0,eng,Ficción
 7034,1402792808,A Walk Across the Sun,A Walk Across the Sun,2011.0,eng,Thriller
 7035,0575099127,House of Suns,House of Suns,2008.0,eng,Ciencia ficción
-7036,,"A Shadow of Light (A Shade of Vampire, #4)",,2013.0,eng,Fantasía
+7036,9781491231135,"A Shadow of Light (A Shade of Vampire, #4)",,2013.0,eng,Fantasía
 7037,1594561753,The Black Cat,The Black Cat,1843.0,eng,Clásicos
 7039,1930900244,The Brothers Lionheart,Bröderna Lejonhjärta,1973.0,eng,Infantil
 7040,1250010071,Don't Go,,2013.0,eng,Thriller
@@ -7101,9 +7101,9 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 7068,0140187723,Martin Eden,Martin Eden,1909.0,eng,Clásicos
 7069,8370541240,"Wieża Jaskółki (Saga o Wiedźminie, #6)",Wieża Jaskółki,1997.0,pol,Fantasía
 7070,0385339526,"Genghis: Lords of the Bow (Conqueror, #2)","Lords of the Bow (Conqueror, #2)",2008.0,eng,Ficción histórica
-7071,,A Death in Sweden,,2016.0,,Thriller
+7071,9781503947870,A Death in Sweden,,2016.0,,Thriller
 7072,1401235638,"Wonder Woman, Volume 1: Blood","Wonder Woman, Volume 1: Blood",2012.0,eng,Cómic y novela gráfica
-7073,,Loving Mr. Daniels,Loving Mr. Daniels,2014.0,eng,Romántica
+7073,9781531876197,Loving Mr. Daniels,Loving Mr. Daniels,2014.0,eng,Romántica
 7074,1904271359,"King Henry IV, Part 1 (Wars of the Roses, #2)",The History of Henry the Fourth,1597.0,eng,Clásicos
 7075,0316236535,"Go Away, Big Green Monster!","Go Away, Big Green Monster!",1992.0,eng,Infantil
 7076,1427817413,"Deadman Wonderland, Volume 1 (Deadman Wonderland, #1)",デッドマン・ワンダーランド 1,2007.0,eng,Cómic y novela gráfica
@@ -7137,7 +7137,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 7105,1841498874,"The Dragon''s Path (The Dagger and the Coin, #1)",The Dragon's Path,2011.0,eng,Fantasía
 7106,0151686564,Old Possum's Book of Practical Cats,Old Possum's Book of Practical Cats,1939.0,eng,Poesía
 7107,1471132978,"The Taming of the Queen (The Plantagenet and Tudor Novels, #11)",The Taming of the Queen,2015.0,eng,Ficción histórica
-7108,,The Pecan Man,,2012.0,,Ficción
+7108,9781483023038,The Pecan Man,,2012.0,,Ficción
 7109,1565849930,"The Man Who Smiled (Kurt Wallander, #4)",Mannen som log,1994.0,eng,Misterio
 7110,1931514607,"Paradise Kiss, Vol. 1 (Paradise Kiss, #1)",Paradise Kiss 1,2000.0,eng,Cómic y novela gráfica
 7133,0345516532,Under the Wide and Starry Sky,Under the Wide and Starry Sky,2014.0,eng,Ficción histórica
@@ -7284,7 +7284,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 7253,0345418476,"The One Tree (The Second Chronicles of Thomas Covenant, #2)",The One Tree,1982.0,eng,Fantasía
 7254,0836217691,Homicidal Psycho Jungle Cat: A Calvin and Hobbes Collection,Homicidal Psycho Jungle Cat: A Calvin and Hobbes Collection,1994.0,eng,Cómic y novela gráfica
 7255,,"Surrender Your Love (Surrender Your Love, #1)",Surrender Your Love,2013.0,eng,Romántica
-7256,,CyberStorm,CyberStorm,2013.0,eng,Thriller
+7256,9781482962246,CyberStorm,CyberStorm,2013.0,eng,Thriller
 7257,0743406567,Fargo Rock City: A Heavy Metal Odyssey in Rural North Dakota,Fargo Rock City: A Heavy Metal Odyssey in Rural North Dakota,2001.0,eng,Memorias
 7258,0886775981,"To Green Angel Tower, Part 1 (Memory, Sorrow, and Thorn, #3; Part 1)",To Green Angel Tower (Siege),1993.0,eng,Fantasía
 7259,0307589676,"I Am Nujood, Age 10 and Divorced","Moi Nojoud, 10 ans, divorcée",2009.0,eng,Memorias
@@ -7308,7 +7308,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 7278,0007201788,"Bones of the Hills (Conqueror, #3)",Bones of the Hills,2008.0,eng,Ficción histórica
 7279,0307957241,Hallucinations,Hallucinations,1995.0,eng,Ciencia
 7280,0385344414,"Burned (Fever, #7)",Burned,2015.0,eng,Fantasía
-7281,,The Murders in the Rue Morgue,The Murders in the Rue Morgue,1841.0,eng,Clásicos
+7281,9798407267133,The Murders in the Rue Morgue,The Murders in the Rue Morgue,1841.0,eng,Clásicos
 7282,0451458222,The Summer Tree (The Fionavar Tapestry #1),The Summer Tree,1984.0,eng,Fantasía
 7283,0064400964,"Betsy-Tacy (Betsy-Tacy, #1)",Betsy-Tacy,1940.0,eng,Infantil
 7284,0316014559,Sweethearts,Sweethearts,2008.0,eng,Juvenil
@@ -7452,8 +7452,8 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 7428,0521357306,Two Treatises of Government,Two Treatises of Government,1689.0,eng,Ensayo
 7429,1420925229,Civil Disobedience and Other Essays,Civil Disobedience and Reading,1995.0,eng,Ensayo
 7430,0316030899,"Rose in Bloom (Eight Cousins, #2)",Rose in Bloom,1876.0,eng,Clásicos
-7431,,Mosquitoland,Mosquitoland,2015.0,eng,Juvenil
-7432,,The Perfect Son,The Perfect Son,2015.0,eng,Ficción
+7431,9780451470775,Mosquitoland,Mosquitoland,2015.0,eng,Juvenil
+7432,9781477830048,The Perfect Son,The Perfect Son,2015.0,eng,Ficción
 7433,0375836942,Looking for Alibrandi,Looking for Alibrandi,1992.0,eng,Juvenil
 7434,,"Raid (Unfinished Hero, #3)",Raid,2013.0,eng,Romántica
 7435,1250014409,"Fifth Grave Past the Light (Charley Davidson, #5)",Fifth Grave Past the Light,2013.0,eng,Fantasía
@@ -7471,7 +7471,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 7447,0373776578,The Darkest Seduction (Lords of the Underworld #9),The Darkest Seduction,2012.0,eng,Romántica
 7448,0062310712,"King''s Cage (Red Queen, #3)",King's Cage,2017.0,eng,Juvenil
 7449,0805090800,Invisible,Invisible,2009.0,eng,Ficción
-7450,,ظل الأفعى,ظل الأفعى,2006.0,ara,Ficción
+7450,9789770930755,ظل الأفعى,ظل الأفعى,2006.0,ara,Ficción
 7451,0061701246,Ten Things We Did (and Probably Shouldn't Have),Ten Things We Did (and Probably Shouldn't Have) ,2011.0,eng,Juvenil
 7452,1442430001,"Rebel Heart (Dust Lands, #2)",Rebel Heart,2012.0,eng,Juvenil
 7453,0553803077,Sickened: The Memoir of a Munchausen by Proxy Childhood,Sickened,2003.0,,Memorias
@@ -7576,7 +7576,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 7552,1416551603,"The Dirty Life: On Farming, Food, and Love","The Dirty Life: On Farming, Food, and Love",2010.0,eng,Memorias
 7553,1442402350,"Dust & Decay (Rot & Ruin, #2)",Dust & Decay,2011.0,eng,Juvenil
 7554,1423170288,"Alienated (Alienated, #1)",Alienated,2014.0,eng,Juvenil
-7555,,Bone Gap,Bone Gap,2015.0,eng,Juvenil
+7555,9780571332762,Bone Gap,Bone Gap,2015.0,eng,Juvenil
 7556,0743430344,"Big Cherry Holler (Big Stone Gap, #2)","Big Cherry Holler (Big Stone Gap, Book 2)",2001.0,eng,Ficción
 7557,0385342608,"Yes, Chef",,2012.0,eng,Memorias
 7558,0060096187,Teen Idol,Teen Idol,2004.0,eng,Juvenil
@@ -7711,7 +7711,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 7689,1591827582,Finding Nemo,Finding Nemo,1996.0,,Infantil
 7690,0060087803,Calling Doctor Amelia Bedelia,Calling Doctor Amelia Bedelia (I Can Read Book 2),2002.0,,Infantil
 7692,1589190645,"These High, Green Hills (Mitford Years, #3)","These High, Green Hills",1995.0,,Ficción
-7693,,How Google Works,How Google Works,2014.0,eng,Negocios
+7693,9781444792492,How Google Works,How Google Works,2014.0,eng,Negocios
 7694,,"Killing Sarai (In the Company of Killers, #1)",Killing Sarai,2013.0,eng,Thriller
 7695,0007350430,The Time of My Life,The Time of My Life,2011.0,eng,Ficción
 7696,0525444467,"Now We Are Six (Winnie-the-Pooh, #4)",Now We Are Six,1927.0,eng,Infantil
@@ -7790,7 +7790,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 7770,0609809547,Tales of a Female Nomad: Living at Large in the World,Tales of a Female Nomad: Living at Large in the World,2001.0,eng,Memorias
 7771,0312241224,Birds of America,Birds of America: Stories,1998.0,eng,Ficción
 7772,0692572031,Big Rock,Big Rock,2016.0,eng,Romántica
-7773,,"Three Dark Crowns (Three Dark Crowns, #1)",Three Dark Crowns,2016.0,eng,Fantasía
+7773,9789123969289,"Three Dark Crowns (Three Dark Crowns, #1)",Three Dark Crowns,2016.0,eng,Fantasía
 7774,031604279X,"Lunch in Paris: A Love Story, with Recipes","Lunch in Paris: A Love Story, with Recipes",2010.0,eng,Memorias
 7775,0451200829,"Love and War (North and South, #2)",Love and War ,1984.0,eng,Ficción histórica
 7776,0061668125,"Destined (Wings, #4)",Destined,2012.0,eng,Juvenil
@@ -7821,7 +7821,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 7801,,"Addicted to You (Addicted, #1)",Addicted to You,2013.0,eng,Romántica
 7802,0698184890,"Just One Night (Just One Day, #2.5)",Just One Night,2014.0,eng,Juvenil
 7804,1611139856,"The Fire (Witch & Wizard, #3)",,2011.0,,Juvenil
-7806,,Sadako and the Thousand Paper Cranes,Sadako and the Thousand Paper Cranes,1977.0,,Infantil
+7806,9780613230292,Sadako and the Thousand Paper Cranes,Sadako and the Thousand Paper Cranes,1977.0,,Infantil
 7807,142150331X,"Death Note, Vol. 4: Love (Death Note, #4)",デスノート #4 (Desu Nōto) Koigokoro (恋心),2004.0,eng,Cómic y novela gráfica
 7808,0684803860,"The Daughter of Time (Inspector Alan Grant, #5)",The Daughter of Time,1951.0,eng,Misterio
 7809,0451215737,"Prince of Fire (Gabriel Allon, #5)",Prince of Fire,2005.0,eng,Thriller
@@ -7935,7 +7935,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 7918,0307588653,Madame Tussaud: A Novel of the French Revolution,,2011.0,eng,Ficción histórica
 7919,0141383356,Airman,Airman,2007.0,eng,Juvenil
 7920,,"Great by Choice: Uncertainty, Chaos, and Luck--Why Some Thrive Despite Them All",,2011.0,eng,Negocios
-7921,,2BR02B,2BR02B,1962.0,eng,Ciencia ficción
+7921,9781480216518,2BR02B,2BR02B,1962.0,eng,Ciencia ficción
 7922,1595144293,"Vampire Academy: The Graphic Novel (Vampire Academy: The Graphic Novel, #1)",Vampire Academy: The Graphic Novel,2011.0,,Cómic y novela gráfica
 7923,0330343475,An Anthropologist on Mars: Seven Paradoxical Tales,An Anthropologist on Mars: Seven Paradoxical Tales,1995.0,eng,Psicología
 7924,0385532350,"Dexter Is Delicious (Dexter, #5)",Dexter Is Delicious,2010.0,,Thriller
@@ -8031,7 +8031,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8014,0671700758,"Psycho-Cybernetics, A New Way to Get More Living Out of Life",Psycho-Cybernetics. A New Way to Get More Living Out of Life,1960.0,,Autoayuda
 8015,061871166X,The Hungry Tide,The Hungry Tide,2004.0,eng,Ficción
 8016,0385337639,Crow Lake,Crow Lake,2002.0,eng,Ficción
-8017,,Don't Let Me Go,Don't Let Me Go,2011.0,eng,Ficción
+8017,9781444810844,Don't Let Me Go,Don't Let Me Go,2011.0,eng,Ficción
 8018,0140086838,Ceremony,Ceremony,1977.0,eng,Ficción
 8019,0307594165,Home,Home,2011.0,,Ficción
 8020,1632156741,"Paper Girls, Vol. 1 (Paper Girls, #1)",The Paper Girls - Vol 1,2016.0,eng,Cómic y novela gráfica
@@ -8149,15 +8149,15 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8134,0425210812,"Undead and Unreturnable (Undead, #4)",Undead and Unreturnable,2005.0,eng,Fantasía
 8135,0441014763,"Fearless (The Lost Fleet, #2)","Fearless (The Lost Fleet, #2)",2007.0,,Ciencia ficción
 8136,0553578553,"Dawn on a Distant Shore (Wilderness, #2)",Dawn on a Distant Shore,2000.0,eng,Ficción histórica
-8137,,F*ck Love,,2015.0,,Romántica
-8138,,The Danish Girl,The Danish Girl,2000.0,eng,Ficción histórica
+8137,9781522778158,F*ck Love,,2015.0,,Romántica
+8138,9789863442295,The Danish Girl,The Danish Girl,2000.0,eng,Ficción histórica
 8139,0525426361,This Star Won't Go Out: The Life and Words of Esther Grace Earl,,2014.0,eng,Memorias
 8140,0060898526,Brave New World Revisited ,Brave New World Revisited ,1958.0,eng,Ensayo
 8141,0345301110,Story of O (Story of O #1),Histoire d'O,1954.0,eng,Ficción
 8142,0060757639,"Forest Mage (Soldier Son, #2)",Forest Mage,2006.0,eng,Fantasía
 8143,0380726297,"Sacred (Kenzie & Gennaro, #3)",Sacred,1997.0,,Thriller
 8144,,Hidden (Bone Secrets. #1),Hidden ,2012.0,eng,Thriller
-8145,,Punk 57,Punk 57,2016.0,,Romántica
+8145,9781952646041,Punk 57,Punk 57,2016.0,,Romántica
 8146,0425138232,"Eye of the Storm (Sean Dillon, #1)",Eye of the Storm,1992.0,eng,Thriller
 8147,,Nikola Tesla: Imagination and the Man That Invented the 20th Century,Nikola Tesla: Imagination and the Man That Invented the 20th Century,2013.0,eng,Biografía
 8148,0060880120,How to Be Popular,How to Be Popular,2006.0,eng,Juvenil
@@ -8236,7 +8236,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8221,081120958X,Selected Poems,Selected Poems,1949.0,,Poesía
 8222,0553100351,"Vision of the Future (Star Wars: The Hand of Thrawn, #2)",Star Wars: Vision of the Future,1998.0,eng,Ciencia ficción
 8223,4103534230,"1Q84 BOOK 2 (1Q84, #2)",1Q84 Book 2 [Ichi-kyū-hachi-yon],2009.0,jpn,Ficción
-8224,,How to Be Both,How to Be Both,2014.0,eng,Ficción
+8224,9780375424106,How to Be Both,How to Be Both,2014.0,eng,Ficción
 8225,0060724560,"Princess on the Brink (The Princess Diaries, #8)",Princess on the Brink,2006.0,,Juvenil
 8226,0140435476,The Woodlanders,The Woodlanders,1887.0,eng,Clásicos
 8227,0312591845,Tempting Fate,,2014.0,eng,Ficción
@@ -8307,7 +8307,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8294,0765309416,The Android's Dream,The Android's Dream,2006.0,eng,Ciencia ficción
 8295,0743217187,The Stories of Eva Luna,Cuentos de Eva Luna,1988.0,eng,Ficción
 8296,0767901576,Awakening the Buddha Within: Tibetan Wisdom for the Western World,Awakening the Buddha Within : Tibetan Wisdom for the Western World,1997.0,eng,Religión y espiritualidad
-8297,,Long Time Coming,Long Time Coming,2003.0,eng,Misterio
+8297,9781480262669,Long Time Coming,Long Time Coming,2003.0,eng,Misterio
 8298,0316014532,Story of a Girl,Story of a Girl,2007.0,eng,Juvenil
 8299,,High Heat (Jack Reacher #17.5),High Heat,2013.0,eng,Thriller
 8300,0062338307,Orphan Number Eight,,2015.0,eng,Ficción histórica
@@ -8317,7 +8317,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8304,1250019699,Save the Date,Save the Date,2014.0,eng,Romántica
 8305,0965913228,Oracle Night,Oracle Night,2004.0,eng,Ficción
 8306,0575073608,"Time and Again (Time, #1)",Time and Again,1970.0,eng,Ciencia ficción
-8307,,One Lavender Ribbon,One Lavender Ribbon ,2014.0,eng,Romántica
+8307,9781477823149,One Lavender Ribbon,One Lavender Ribbon ,2014.0,eng,Romántica
 8308,0882706306,Run Baby Run,Run Baby Run,1969.0,eng,Biografía
 8309,0452264014,Fences (The Century Cycle #6),Fences (The Century Cycle #6),1986.0,eng,Ficción
 8310,0340863684,Tortured for Christ N/E,Tortured for Christ,1940.0,eng,Religión y espiritualidad
@@ -8325,7 +8325,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8312,0006280943,Miracles,Miracles: A Preliminary Study,1947.0,eng,Religión y espiritualidad
 8313,1598878735,"The Talent Code: Unlocking the Secret of Skill in Sports, Art, Music, Math, and Just About Everything Else","The Talent Code: Unlocking the Secret of Skill in Sports, Art, Music, Math, and Just About Everything Else",2009.0,,Autoayuda
 8314,0670016381,Dear Daughter,Dear Daughter,2014.0,eng,Thriller
-8315,,The Mermaid's Sister,The Mermaid's Sister,2015.0,eng,Fantasía
+8315,9781477820889,The Mermaid's Sister,The Mermaid's Sister,2015.0,eng,Fantasía
 8316,0140284125,"The Inimitable Jeeves (Jeeves, #2)",The Inimitable Jeeves ,1923.0,eng,Clásicos
 8317,0786901896,"Dragons of Summer Flame (Dragonlance: The Second Generation, #2)",Dragons of Summer Flame,1995.0,eng,Fantasía
 8318,0446402400,"The Secret Speech (Leo Demidov, #2)",The Secret Speech,2009.0,eng,Thriller
@@ -8363,13 +8363,13 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8350,0739318926,That Old Cape Magic,That Old Cape Magic,2009.0,eng,Ficción
 8351,0425227944,"The Darkest Hour (KGI, #1)",The Darkest Hour,2010.0,eng,Romántica
 8352,038553504X,The Devil All the Time,The Devil All the Time,2011.0,eng,Ficción
-8353,,A Long Way Home,A Long Way Home,2013.0,eng,Memorias
+8353,9781405912938,A Long Way Home,A Long Way Home,2013.0,eng,Memorias
 8354,0060827645,"Twilight (Warriors: The New Prophecy, #5)",Twilight,2006.0,eng,Juvenil
 8355,1400033888,Istanbul: Memories and the City,İstanbul: Hatıralar ve Şehir,2003.0,eng,Memorias
 8356,0452286107,The Second Assistant: A Tale from the Bottom of the Hollywood Ladder,The Second Assistant: A Tale from the Bottom of the Hollywood Ladder,2004.0,eng,Ficción
 8357,0140436146,Martin Chuzzlewit,The Life and Adventures of Martin Chuzzlewit,1844.0,eng,Clásicos
 8358,043985802X,"Darkness, Be My Friend (Tomorrow, #4)","Darkness, Be My Friend",1996.0,eng,Juvenil
-8359,,UR,UR,2009.0,eng,Terror
+8359,9781442303096,UR,UR,2009.0,eng,Terror
 8360,0449206521,Tales of the South Pacific,Tales of the South Pacific,1947.0,eng,Ficción
 8361,0330487140,A Bend in the River,A Bend in the River,1979.0,eng,Ficción
 8362,0553447432,Evicted: Poverty and Profit in the American City,Evicted: Poverty and Profit in the American City,2016.0,eng,No ficción
@@ -8382,7 +8382,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8369,1416554955,"Harry, a History: The True Story of a Boy Wizard, His Fans, and Life Inside the Harry Potter Phenomenon","Harry, A History: The True Story of a Boy Wizard, His Fans, and Life Inside the Harry Potter Phenomenon",2008.0,eng,No ficción
 8370,0545054745,Marcelo in the Real World,Marcelo in the Real World,2008.0,eng,Juvenil
 8371,0451190556,"The Green Mile, Part 4: The Bad Death of Eduard Delacroix","The Green Mile, Part 4: The Bad Death of Eduard Delacroix",1996.0,eng,Terror
-8372,,Daun Yang Jatuh Tak Pernah Membenci Angin,Daun Yang Jatuh Tak Pernah Membenci Angin,2010.0,ind,Ficción
+8372,9789792257809,Daun Yang Jatuh Tak Pernah Membenci Angin,Daun Yang Jatuh Tak Pernah Membenci Angin,2010.0,ind,Ficción
 8373,0439925509,"Alcatraz Versus the Evil Librarians (Alcatraz, #1)",Alcatraz Versus the Evil Librarians,2007.0,eng,Juvenil
 8374,145210655X,Darth Vader and Son,Darth Vader and Son,2012.0,eng,Cómic y novela gráfica
 8375,068482471X,Darwin's Dangerous Idea: Evolution and the Meanings of Life,Darwin's Dangerous Idea: Evolution and the Meanings of Life,1995.0,eng,Ciencia
@@ -8401,11 +8401,11 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8388,0553290983,"Elven Star (The Death Gate Cycle, #2)","Elven Star (The Death Gate Cycle, #2)",1990.0,eng,Fantasía
 8389,0802170374,Flight,Flight: A Novel,2007.0,eng,Ficción
 8390,0631231277,Philosophical Investigations,Philosophische Untersuchungen,1953.0,eng,Ensayo
-8391,,"Endure (Need, #4)",Endure,2012.0,eng,Juvenil
+8391,9781599905549,"Endure (Need, #4)",Endure,2012.0,eng,Juvenil
 8392,,"Kaleidoscope Hearts (Hearts, #1)", Kaleidoscope Hearts,2015.0,eng,Romántica
 8393,0312187149,"Enemy of God (The Warlord Chronicles, #2)",Enemy of God,1996.0,eng,Ficción histórica
 8394,,"Cage (Corps Security, #2)",,2013.0,eng,Romántica
-8395,,Mud Vein,Mud Vein,2014.0,eng,Ficción
+8395,9781522664314,Mud Vein,Mud Vein,2014.0,eng,Ficción
 8396,0609804618,Our Dumb Century: The Onion Presents 100 Years of Headlines from America's Finest News Source,Our Dumb Century: The Onion Presents 100 Years of Headlines from America's Finest News Source,1998.0,eng,No ficción
 8397,0060521600,Ice Hunt,Ice Hunt,2003.0,eng,Thriller
 8398,0425212017,"Strange Candy (Anita Blake, Vampire Hunter #0.5)",Strange Candy,2006.0,eng,Fantasía
@@ -8446,7 +8446,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8433,0802715524,A History of the World in 6 Glasses,A History of the World in 6 Glasses,2005.0,eng,Historia
 8434,0451470893,The Sound of Glass,,2015.0,eng,Ficción
 8435,0446697435,The Widow of the South,The Widow of the South,2005.0,eng,Ficción histórica
-8436,,Obsession,,2013.0,eng,Romántica
+8436,9781473615922,Obsession,,2013.0,eng,Romántica
 8437,1414358466,Courageous,Courageous,2011.0,,Religión y espiritualidad
 8438,0763644102,The Magician's Elephant,The Magician's Elephant,2009.0,eng,Infantil
 8439,0345477243,Back When We Were Grownups,Back When We Were Grownups,2001.0,eng,Ficción
@@ -8463,7 +8463,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8450,0451412702,"Curse the Dawn (Cassandra Palmer, #4)",Curse the Dawn,2009.0,eng,Fantasía
 8451,0805423516,Praying God's Word: Breaking Free From Spiritual Strongholds,Praying God's Word: Breaking Free From Spiritual Strongholds,2000.0,,Religión y espiritualidad
 8452,0679772669,In the Skin of a Lion,In the Skin of a Lion,1987.0,,Ficción
-8453,,Where There's Smoke,Where There's Smoke,2014.0,eng,Ficción
+8453,9781444799897,Where There's Smoke,Where There's Smoke,2014.0,eng,Ficción
 8454,5559608475,Jack: Straight from the Gut,Jack: Straight from the Gut,2001.0,eng,Biografía
 8455,0060256575,The Missing Piece Meets the Big O ,The Missing Piece Meets the Big O,1981.0,eng,Infantil
 8456,0060997028,Life is Elsewhere,Život je jinde,1969.0,eng,Ficción
@@ -8522,7 +8522,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8509,1475145578,"Eden (Providence, #3)",,2011.0,,Romántica
 8510,0689857977,"Among the Enemy (Shadow Children, #6)","Among the Enemy (Shadow Children, #6)",2005.0,eng,Juvenil
 8511,,"Incendiary (The Premonition, #4)",Incendiary,2012.0,eng,Juvenil
-8512,,Battlefield Earth: A Saga of the Year 3000,Battlefield Earth: A Saga of the Year 3000,1982.0,eng,Ciencia ficción
+8512,9781900944885,Battlefield Earth: A Saga of the Year 3000,Battlefield Earth: A Saga of the Year 3000,1982.0,eng,Ciencia ficción
 8513,0670032085,Financial Peace Revisited,Financial Peace Revisited,1992.0,,Negocios
 8514,0671888587,I'll Be Seeing You,I'll Be Seeing You,1993.0,eng,Thriller
 8515,0307461181,This Time Together: Laughter and Reflection,,2010.0,eng,Memorias
@@ -8547,7 +8547,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8535,1857239407,A New Hope  (Star Wars: Novelizations #4),Star Wars: From the Adventures of Luke Skywalker,1976.0,eng,Ciencia ficción
 8536,0345498208,Summer House,Summer House,2009.0,eng,Ficción
 8537,1592400825,Almost French: Love and a New Life in Paris,Almost French: Love and a New Life in Paris,2003.0,,Memorias
-8538,,Stupeur et tremblements,Stupeur et tremblements,1999.0,fre,Ficción
+8538,9780312347321,Stupeur et tremblements,Stupeur et tremblements,1999.0,fre,Ficción
 8539,0345476867,Pandora / Vittorio the Vampire (New Tales of the Vampires),Pandora / Vittorio the Vampire (New Tales of the Vampires),1998.0,,Terror
 8540,0061728934,"Summer and the City (The Carrie Diaries, #2)",Summer and the City,2011.0,eng,Juvenil
 8541,1410400964,"The Stone Monkey (Lincoln Rhyme, #4)",The Stone Monkey,2002.0,eng,Thriller
@@ -8591,7 +8591,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8580,1555977073,The Argonauts,The Argonauts,2015.0,eng,Memorias
 8581,0316005274,Gonzo: The Life of Hunter S. Thompson,Gonzo: The Life of Hunter S. Thompson,2007.0,eng,Biografía
 8582,0374106681,The Last Painting of Sara de Vos,The Last Painting of Sara de Vos,2016.0,eng,Ficción
-8583,,The Sister,The Sister,2016.0,eng,Thriller
+8583,9781786810021,The Sister,The Sister,2016.0,eng,Thriller
 8584,0758266944,"Kiss of Frost (Mythos Academy, #2)",Kiss of Frost,2011.0,,Juvenil
 8585,0439050235,Duck On A Bike,Duck On A Bike,2002.0,eng,Infantil
 8586,1401341705,The Soldier's Wife,The Collaborator,2011.0,eng,Ficción histórica
@@ -8687,7 +8687,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8675,0440220424,Having Our Say: The Delany Sisters' First 100 Years,Having Our Say: The Delany Sisters' First 100 Years,1993.0,eng,Memorias
 8676,0374299250,Lush Life,Lush Life,2008.0,eng,Ficción
 8677,0671038540,What's Eating Gilbert Grape,What's Eating Gilbert Grape,1991.0,eng,Ficción
-8678,,"Curtsies & Conspiracies (Finishing School, #2)",Curtsies & Conspiracies,2013.0,eng,Juvenil
+8678,9780316190114,"Curtsies & Conspiracies (Finishing School, #2)",Curtsies & Conspiracies,2013.0,eng,Juvenil
 8679,0385342942,The Truth According to Us,,2015.0,eng,Ficción histórica
 8680,0842386882,"Reunion (Redemption, #5)",Reunion,2004.0,eng,Romántica
 8681,055299877X,"More Tales of the City (Tales of the City, #2)",More Tales of the City,1980.0,eng,Ficción
@@ -8721,7 +8721,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8710,0345505719,"Victims (Alex Delaware, #27)",Victims,2012.0,eng,Thriller
 8711,0345543122,"The Job (Fox and O''Hare, #3)",,2014.0,eng,Thriller
 8712,1419717014,"Old School (Diary of a Wimpy Kid, #10)",Old School,2015.0,eng,Infantil
-8713,,"Evelyn, After","Evelyn, After",2016.0,eng,Ficción
+8713,9781503938717,"Evelyn, After","Evelyn, After",2016.0,eng,Ficción
 8714,0786813075,The Skin I'm In,The Skin I'm In,1998.0,eng,Juvenil
 8715,006178480X,The Eye of God (Sigma Force #9),The Eye of God: A Sigma Force Novel,2013.0,eng,Thriller
 8716,0571225365,An Artist of the Floating World,An Artist of the Floating World,1986.0,eng,Ficción
@@ -8740,7 +8740,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8729,0756403014,"Dragon Prince (Dragon Prince, #1)",Dragon Prince,1985.0,eng,Fantasía
 8730,1439156336,"The Burning Wire (Lincoln Rhyme, #9)",The Burning Wire,2010.0,eng,Thriller
 8731,0316899984,"River, Cross My Heart","River, Cross My Heart",1999.0,eng,Ficción
-8825,,The Color of Secrets,,2015.0,,Ficción histórica
+8825,9781477828434,The Color of Secrets,,2015.0,,Ficción histórica
 8732,0802472966,Lies Women Believe: And the Truth that Sets Them Free,Lies Women Believe: And the Truth that Sets Them Free,2000.0,eng,Religión y espiritualidad
 8733,0968709184,To Build a Fire,To Build a Fire,1903.0,eng,Clásicos
 8734,0316701343,"Invasion of the Boy Snatchers (The Clique, #4)",Invasion of the Boy Snatchers,2005.0,,Juvenil
@@ -8753,7 +8753,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8741,0062227327,The Ghost Bride,The Ghost Bride,2013.0,eng,Ficción histórica
 8742,0099409968,Star Wars - Episode I: The Phantom Menace,The Phantom Menace,1999.0,eng,Ciencia ficción
 8743,1595828753,"Avatar: The Last Airbender (The Promise, #2)",,2012.0,eng,Cómic y novela gráfica
-8744,,The Pact,,2014.0,eng,Romántica
+8744,9781505724523,The Pact,,2014.0,eng,Romántica
 8745,0552551317,"Girls in Love (Girls, #1)",Girls in Love,1997.0,eng,Juvenil
 8746,0064440516,Little Bear's Friend,Little Bear's Friend,1960.0,,Infantil
 8747,0743235274,The Creative Habit: Learn It and Use It for Life,The Creative Habit: Learn It and Use It for Life,2003.0,eng,Autoayuda
@@ -8766,7 +8766,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8754,0061767891,Does the Noise in My Head Bother You?,Does the Noise in My Head Bother You?,2011.0,eng,Biografía
 8755,,"The Sworn Sword (The Tales of Dunk and Egg, #2)",The Sworn Sword,2003.0,eng,Fantasía
 8756,1416549978,"The Broken Window (Lincoln Rhyme, #8)",The Broken Window,2008.0,eng,Thriller
-8757,,The Complete Works of H.P. Lovecraft,,1978.0,eng,Terror
+8757,9781774378762,The Complete Works of H.P. Lovecraft,,1978.0,eng,Terror
 8758,1476778019,"Beautiful Secret (Beautiful Bastard, #4)",Beautiful Secret,2015.0,eng,Romántica
 8759,0399157573,"Dust (Kay Scarpetta, #21)",Dust,2013.0,eng,Thriller
 8760,0486275442,The Three Sisters,Три сестры,1900.0,eng,Clásicos
@@ -8829,7 +8829,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8818,0099449897,"Will You Please Be Quiet, Please?","Will You Please Be Quiet, Please?",1976.0,eng,Ficción
 8819,0679722017,The Selected Poetry of Rainer Maria Rilke,,1976.0,mul,Poesía
 8820,044657449X,"Eternal Rider (Lords of Deliverance, #1, Demonica, #6)",Eternal Rider,2011.0,eng,Fantasía
-8821,,The Story of a Shipwrecked Sailor,Relato de un náufrago,1970.0,eng,No ficción
+8821,9781665039833,The Story of a Shipwrecked Sailor,Relato de un náufrago,1970.0,eng,No ficción
 8822,039916443X,"Concealed in Death (In Death, #38)",Concealed in Death,2014.0,eng,Thriller
 8823,0553384104,"Women''s Bodies, Women''s Wisdom: Creating Physical and Emotional Health and Healing","Women''s Bodies, Women''s Wisdom: Creating Physical and Emotional Health and Healing",1994.0,,Autoayuda
 8824,0425152898,"Mind Prey (Lucas Davenport, #7)",Mind Prey,1995.0,eng,Thriller
@@ -8841,8 +8841,8 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8831,1556520743,Assata: An Autobiography,Assata: An Autobiography,1987.0,eng,Biografía
 8832,0060596384,"Days of Magic, Nights of War (Abarat, #2)","Days of Magic, Nights of War",2004.0,eng,Fantasía
 8833,0899190359,The Three Billy Goats Gruff,The Three Billy Goats Gruff,1841.0,eng,Infantil
-8834,,True Love Story,True Love Story,2013.0,eng,Romántica
-8835,,The Moonlit Garden,Der Mondscheingarten,2013.0,eng,Ficción histórica
+8834,9781482319057,True Love Story,True Love Story,2013.0,eng,Romántica
+8835,9781503950641,The Moonlit Garden,Der Mondscheingarten,2013.0,eng,Ficción histórica
 8836,0446539252,True Compass: A Memoir,True Compass: A Memoir,2009.0,eng,Memorias
 8837,0142002054,"Diamonds Are Forever (James Bond, #4)",Diamonds are Forever,1956.0,eng,Thriller
 8838,0060594527,Lost Horizon,Lost Horizon,1933.0,,Clásicos
@@ -8898,7 +8898,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8889,,"Beautiful Burn (The Maddox Brothers, #4)",Beautiful Burn,2016.0,eng,Romántica
 8890,1591826047,"Fruits Basket, Vol. 2",フルーツバスケット 2,1999.0,eng,Cómic y novela gráfica
 8891,0060859512,Misquoting Jesus: The Story Behind Who Changed the Bible and Why,Misquoting Jesus: The Story Behind Who Changed the Bible and Why,2005.0,eng,Religión y espiritualidad
-8892,,Wait for It,Wait for It,2016.0,eng,Romántica
+8892,9780990429258,Wait for It,Wait for It,2016.0,eng,Romántica
 8893,044101125X,"The Other Wind (Earthsea Cycle, #6)",The Other Wind,2001.0,eng,Fantasía
 8894,0739329189,"The Paris Vendetta (Cotton Malone, #5)",The Paris Vendetta,2009.0,eng,Thriller
 8895,0062377183,Moriarty (Sherlock Holmes #2),Moriarty,2014.0,eng,Misterio
@@ -8960,8 +8960,8 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 8951,0140376410,"The Ear, the Eye, and the Arm","The Ear, the Eye, and the Arm",1994.0,,Juvenil
 8952,,"Take This Regret (Take This Regret, #1)",Pulled,2011.0,eng,Romántica
 8953,0439568455,"Stay Out of the Basement  (Goosebumps, #2)",Stay Out of the Basement,1992.0,,Infantil
-8954,,The Girl You Lost,,2016.0,eng,Thriller
-8955,,Willing Captive,Willing Captive,2013.0,eng,Romántica
+8954,9781910751718,The Girl You Lost,,2016.0,eng,Thriller
+8955,9781500749750,Willing Captive,Willing Captive,2013.0,eng,Romántica
 8956,0439568412,"One Day at Horrorland (Goosebumps, #16)",One Day at Horrorland,1994.0,,Infantil
 8957,0767928881,The Sweet Life in Paris: Delicious Adventures in the World's Most Glorious - and Perplexing - City,The Sweet Life in Paris: A Recipe for Living in the World's Most Delicious City,2009.0,eng,Viajes
 8958,0373211392,"Talon (Talon, #1)",Talon,2014.0,eng,Juvenil
@@ -9095,7 +9095,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9087,0618750436,"The Lemonade War (The Lemonade War, #1)",The Lemonade War,2007.0,eng,Infantil
 9088,067982412X,"The Knight at Dawn (Magic Tree House, #2)","The Knight at Dawn (Magic Tree House, #2)",1993.0,eng,Infantil
 9089,,"The Arrangement: The Ferro Family (The Arrangement, #1)",,2013.0,eng,Romántica
-9090,,Winter in Tokyo,Winter in Tokyo,2008.0,ind,Romántica
+9090,9789792239836,Winter in Tokyo,Winter in Tokyo,2008.0,ind,Romántica
 9091,0060779632,Help for the Haunted,,2013.0,eng,Misterio
 9092,1421506270,"Death Note, Vol. 6: Give-and-Take (Death Note, #6)",デスノート #6 (Desu Nōto) Kōkan (交換),2005.0,eng,Cómic y novela gráfica
 9093,1423116968,"The Lightning Thief: The Graphic Novel (Percy Jackson and the Olympians, #1)",The Lightning Thief: The Graphic Novel,2010.0,eng,Cómic y novela gráfica
@@ -9140,7 +9140,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9133,0786939508,"Servant of the Shard (Forgotten Realms: Paths of Darkness, #3; The Sellswords, #1)",,2000.0,eng,Fantasía
 9134,0310210062,Streams in the Desert,Streams in the Desert,1904.0,,Religión y espiritualidad
 9135,1439148015,"Venom (Elemental Assassin, #3)",,2010.0,eng,Fantasía
-9136,,The Shadowhunter's Codex,The Shadowhunter's Codex,2013.0,eng,Juvenil
+9136,9781406365467,The Shadowhunter's Codex,The Shadowhunter's Codex,2013.0,eng,Juvenil
 9137,1577344677,"Tennis Shoes Among the Nephites (Tennis Shoes, #1)","Tennis Shoes Among the Nephites (Tennis Shoes, #1)",1989.0,eng,Juvenil
 9138,0738703915,"Blue is for Nightmares (Blue is for Nightmares, #1)",Blue Is for Nightmares,2003.0,eng,Juvenil
 9139,0517219026,Carrie / 'Salem's Lot / The Shining,Three Complete Novels: Carrie/Salem's Lot/The Shining,1983.0,eng,Terror
@@ -9211,7 +9211,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9204,0143036580,The End of Poverty,,2005.0,,Ensayo
 9205,1846687756,Half Blood Blues,Half Blood Blues,2011.0,eng,Ficción histórica
 9206,0060564784,The Kindness of Strangers,The Kindness of Strangers,2006.0,eng,Ficción
-9207,,Emmy & Oliver,Emmy & Oliver,2015.0,eng,Juvenil
+9207,9781471144134,Emmy & Oliver,Emmy & Oliver,2015.0,eng,Juvenil
 9208,1596435739,The Sculptor,The Sculptor,2015.0,eng,Cómic y novela gráfica
 9209,0803740166,Roller Girl,Roller Girl,2015.0,eng,Cómic y novela gráfica
 9210,0394800516,The Best Nest,The Best Nest,1968.0,eng,Infantil
@@ -9228,9 +9228,9 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9221,,رغم الفراق,,2012.0,ara,Ficción
 9222,0143034669,"Ghost Wars: The Secret History of the CIA, Afghanistan, and bin Laden from the Soviet Invasion to September 10, 2001","Ghost Wars: The Secret History of the CIA, Afghanistan, and Bin Laden, from the Soviet Invasion to September 10, 2001",2004.0,eng,Historia
 9223,8489163413,La vida del Lazarillo de Tormes,La vida del Lazarillo de Tormes y sus fortunas y adversidades ,1554.0,spa,Clásicos
-9224,,Broken Grace,,2015.0,eng,Thriller
+9224,9781503946187,Broken Grace,,2015.0,eng,Thriller
 9225,0345299116,The Midwich Cuckoos,The Midwich Cuckoos,1957.0,eng,Ciencia ficción
-9226,,I Am Livia,,2011.0,eng,Ficción histórica
+9226,9781477848821,I Am Livia,,2011.0,eng,Ficción histórica
 9227,1416563067,Smoke Screen,Smoke Screen,2008.0,eng,Thriller
 9228,054514096X,Bone: Tall Tales,,2010.0,eng,Cómic y novela gráfica
 9229,0375870644,The Fourteenth Goldfish,The Fourteenth Goldfish,2014.0,eng,Juvenil
@@ -9265,7 +9265,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9258,1402271514,"Double Time (Sinners on Tour, #5)",Double Time,2012.0,eng,Romántica
 9259,144240339X,"Red Glove (Curse Workers, #2)",,2011.0,eng,Fantasía
 9260,1451673442,"The Magic (The Secret, #3)",The Magic (The Secret #3),2012.0,eng,Autoayuda
-9261,,Kulti,,2015.0,,Romántica
+9261,9781494512729,Kulti,,2015.0,,Romántica
 9262,0830819711,Too Busy Not to Pray: Slowing Down to Be With God,Too Busy Not to Pray: Slowing Down to Be With God,1988.0,eng,Religión y espiritualidad
 9263,054705484X,Indignation,Indignation,2008.0,eng,Ficción
 9264,1400068096,Open City,Open City,2011.0,eng,Ficción
@@ -9371,10 +9371,10 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9367,1419702173,My Friend Dahmer,My Friend Dahmer,2012.0,eng,Cómic y novela gráfica
 9368,067173783X,"The Lion''s Lady (Crown''s Spies, #1)",The Lion's Lady,1988.0,eng,Romántica
 9369,1250065933,Beach Town,,2015.0,,Romántica
-9370,,Heart on a Chain,Heart on a Chain,2010.0,eng,Juvenil
+9370,9781458186188,Heart on a Chain,Heart on a Chain,2010.0,eng,Juvenil
 9371,0142501093,"The Legend of Luke (Redwall, #12)",The Legend of Luke,1999.0,,Fantasía
 9372,0375829709,Babe: The Gallant Pig,The Sheep-Pig,1983.0,eng,Infantil
-9373,,Wishin' and Hopin',Wishin' and Hopin': A Christmas Story,2009.0,eng,Ficción
+9373,9780061941009,Wishin' and Hopin',Wishin' and Hopin': A Christmas Story,2009.0,eng,Ficción
 9374,0345520483,"Dream Team: How Michael, Magic, Larry, Charles, and the Greatest Team of All Time Conquered the World and Changed the Game of Basketball Forever",Dream Team,2012.0,eng,Deportes
 9375,007148499X,Influencer: The Power to Change Anything,Influencer: The Power to Change Anything,2007.0,eng,Negocios
 9376,0380016648,The Hand of Oberon (The Chronicles of Amber #4),The Hand of Oberon - The Courts of Chaos ,1976.0,eng,Fantasía
@@ -9414,7 +9414,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9410,0345537262,Rogues,Rogues,2014.0,eng,Ficción
 9411,,"The Midwife''s Revolt (The Midwife Series, #1)",,2012.0,eng,Ficción histórica
 9412,,"Bound by Honor (Born in Blood Mafia Chronicles, #1)",Bound by Honor,2014.0,eng,Romántica
-9413,,Anti-Stepbrother,,2016.0,eng,Romántica
+9413,9781682307557,Anti-Stepbrother,,2016.0,eng,Romántica
 9414,0440246113,"Deeper Than Midnight (Midnight Breed, #9)",Deeper than Midnight,2011.0,eng,Romántica
 9415,0451463722,"Mercy Blade (Jane Yellowrock, #3)",Mercy Blade,2011.0,eng,Fantasía
 9416,0743496973,I Do -- But I Don't,I Do (But I Don't),2003.0,,Romántica
@@ -9541,7 +9541,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9537,0091933684,Plenty,Plenty,2010.0,eng,Cocina
 9538,1596060204,Agent to the Stars,Agent to the stars,2004.0,eng,Ciencia ficción
 9539,0615651011,"The First Confessor (The Legend of Magda Searus, #1)",The First Confessor,2012.0,eng,Fantasía
-9540,,In the Penal Colony,In der Strafkolonie,1919.0,eng,Clásicos
+9540,9781731464415,In the Penal Colony,In der Strafkolonie,1919.0,eng,Clásicos
 9541,0981546269,"The Second Ship (The Rho Agenda, #1)",The Second Ship,2006.0,,Ciencia ficción
 9542,0060835273,The Beet Queen,The Beet Queen,1985.0,eng,Ficción
 9543,1479372749,"Disastrous (Disastrous, #1)",,2012.0,eng,Romántica
@@ -9572,7 +9572,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9569,0062498533,The Hate U Give,The Hate U Give,2017.0,eng,Juvenil
 9570,,المانيفستو,المانيفستو,2013.0,ara,Ensayo
 9571,0345511565,"Dynasty of Evil (Star Wars: Darth Bane, #3)",,2009.0,eng,Ciencia ficción
-9572,,Love Left Behind,,2012.0,eng,Romántica
+9572,9781480503748,Love Left Behind,,2012.0,eng,Romántica
 9573,0670012254,Keep Holding On,Keep Holding On,2012.0,eng,Juvenil
 9574,0571242448,The Private Patient (Adam Dalgliesh #14),The Private Patient,2008.0,eng,Misterio
 9575,0671876813,"Flag in Exile (Honor Harrington, #5)",Flag in Exile,1995.0,eng,Ciencia ficción
@@ -9631,7 +9631,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9628,0061092037,The Fourth Estate,The Fourth Estate,1996.0,eng,Ficción
 9629,034542705X,The Man Who Listens to Horses,The Man Who Listens to Horses,1997.0,eng,Memorias
 9630,0316010766,Oblivion,Oblivion,2004.0,eng,Ficción
-9631,,"Holy Blood, Holy Grail",The Holy Blood and the Holy Grail,1982.0,eng,No ficción
+9631,9780099682417,"Holy Blood, Holy Grail",The Holy Blood and the Holy Grail,1982.0,eng,No ficción
 9632,1416546022,Falling Man,Falling Man,2007.0,eng,Ficción
 9633,0062332589,"The Calling (Endgame, #1)",Endgame: The Calling,2014.0,eng,Juvenil
 9634,0062237381,"Annabel (Delirium, #0.5)",Annabel,2012.0,,Juvenil
@@ -9673,7 +9673,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9671,0749744812,"First Term at Malory Towers (Malory Towers, #1)",First Term at Malory Towers,1946.0,eng,Infantil
 9672,0439858046,"The Night Is for Hunting (Tomorrow, #6)",The Night is for Hunting,1998.0,eng,Juvenil
 9673,1591826055,"Fruits Basket, Vol. 3",フルーツバスケット 3,1999.0,eng,Cómic y novela gráfica
-9674,,After Anna,After Anna,2015.0,eng,Thriller
+9674,9780008150914,After Anna,After Anna,2015.0,eng,Thriller
 9675,0553580337,House Corrino (Prelude to Dune #3),Dune: House Corrino,2001.0,eng,Ciencia ficción
 9676,0399156240,"Fantasy in Death (In Death, #30)",Fantasy In Death,2010.0,eng,Thriller
 9677,0446580309,"The Devil You Know (Felix Castor, #1)",The Devil You Know,2006.0,eng,Fantasía
@@ -9684,7 +9684,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9682,1416935711,"H.I.V.E. Higher Institute of Villainous Education (H.I.V.E., #1)",H.I.V.E.: Higher Institute of Villainous Education,2006.0,eng,Juvenil
 9683,,صانع الظلام,صانع الظلام,2012.0,ara,Desconocido
 9684,0399156046,The Law of Nines,The Law of Nines,2009.0,eng,Fantasía
-9685,,Cape Fear,The Executioners,1958.0,,Thriller
+9685,9780747537762,Cape Fear,The Executioners,1958.0,,Thriller
 9686,0340796154,"Five Go Adventuring Again (Famous Five, #2)",Five Go Adventuring Again,1943.0,eng,Infantil
 9687,0330519476,"Forsaken (The Demon Trappers, #1)",The Demon Trapper's Daughter,2011.0,eng,Fantasía
 9688,1590304497,The Places That Scare You: A Guide to Fearlessness in Difficult Times,The Places That Scare You: A Guide to Fearlessness in Difficult Times,2001.0,,Religión y espiritualidad
@@ -9775,7 +9775,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9774,0007325983,"Mortal Coil (Skulduggery Pleasant, #5)",Mortal Coil,2010.0,eng,Juvenil
 9775,1401226965,"Sweet Tooth, Volume 1: Out of the Deep Woods","Sweet Tooth, Volume 1: Out of the Deep Woods",2010.0,eng,Cómic y novela gráfica
 9776,1250045649,"Seventh Grave and No Body (Charley Davidson, #7)",,2014.0,eng,Fantasía
-9777,,Half Way Home,,2010.0,eng,Ciencia ficción
+9777,9780358211587,Half Way Home,,2010.0,eng,Ciencia ficción
 9778,1406800163,Captain Blood,Captain Blood: His Odyssey,1922.0,eng,Aventura
 9779,0785122583,Iron Man: Extremis,Iron Man: Extremis,2004.0,eng,Cómic y novela gráfica
 9780,0575081562,Necronomicon: The Best Weird Tales,The Necronomicon,1930.0,eng,Terror
@@ -9799,7 +9799,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9798,1591164435,"Bleach, Volume 03",BLEACH―ブリーチ―　3,2002.0,eng,Cómic y novela gráfica
 9799,,"The Space Between (Outlander, #7.5)",,2013.0,eng,Ficción histórica
 9800,0735814864,Cinderella,Cinderella,1812.0,eng,Infantil
-9801,,Zoya,Zoya,1988.0,,Romántica
+9801,9788497599764,Zoya,Zoya,1988.0,,Romántica
 9802,0307977935,Rump: The True Story of Rumpelstiltskin,,2013.0,eng,Infantil
 9803,0394865707,The Berenstain Bears and Too Much TV,The Berenstain Bears and Too Much TV,1984.0,eng,Infantil
 9804,0230711251,"Heartstone (Matthew Shardlake, #5)",Heartstone,2010.0,eng,Ficción histórica
@@ -9814,7 +9814,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9813,1571316515,Perfect,Perfect,2004.0,eng,Juvenil
 9814,055329802X,"Champions of the Force (Star Wars: The Jedi Academy Trilogy, #3)","Star Wars: The Jedi Academy Trilogy, Volume III - Champions of the Force",1994.0,eng,Ciencia ficción
 9815,0307460444,Martha Stewart's Cupcakes: 175 Inspired Ideas for Everyone's Favorite Treat,Martha Stewart's Cupcakes: 175 Inspired Ideas for Everyone's Favorite Treats,2009.0,,Cocina
-9816,,Neighbor Dearest,,2016.0,,Romántica
+9816,9781535036573,Neighbor Dearest,,2016.0,,Romántica
 9817,0061229695,Vampires are Forever (Argeneau #8),Vampires are Forever,2008.0,eng,Romántica
 9818,0717283534,The Lion King (Disney's Wonderful World of Reading),,1994.0,eng,Infantil
 9819,1402179626,Two Years Before the Mast: A Sailor's Life at Sea,Two Years Before the Mast,1840.0,eng,Clásicos
@@ -9823,7 +9823,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9822,0744592704,Owl Babies,Owl Babies,1975.0,eng,Infantil
 9823,0544303164,The Turner House,The Turner House,2015.0,eng,Ficción
 9824,1414310552,Danger in the Shadows (O'Malley #0.5),Danger in the Shadows,1999.0,eng,Thriller
-9825,,Trouble,Trouble,2013.0,eng,Romántica
+9825,9781493752652,Trouble,Trouble,2013.0,eng,Romántica
 9826,0875420281,Animal-Speak: The Spiritual & Magical Powers of Creatures Great & Small,Animal Speak: The Spiritual & Magical Powers of Creatures Great & Small,1996.0,eng,Religión y espiritualidad
 9827,0778326438,"Summer on Blossom Street (Blossom Street, #6)",Summer On Blossom Street (Blossom Street #6),2009.0,eng,Romántica
 9828,0307265781,Whitethorn Woods,Whitethorn Woods,2006.0,eng,Ficción
@@ -9838,7 +9838,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9837,0525426035,Grasshopper Jungle,Grasshopper Jungle,2014.0,eng,Juvenil
 9838,0060827874,"The Chronicles of Narnia - The Lion, the Witch, and the Wardrobe Official Illustrated Movie Companion","The Chronicles of Narnia - The Lion, the Witch, and the Wardrobe Official Illustrated Movie Companion",2005.0,eng,No ficción
 9839,041330860X,Antigone,Antigone,1944.0,,Clásicos
-9840,,Crooked Little Lies,,2015.0,,Thriller
+9840,9781511359405,Crooked Little Lies,,2015.0,,Thriller
 9841,0380815923,Blackberry Wine,Blackberry Wine,1999.0,eng,Ficción
 9842,1250058902,Humans of New York: Stories,Humans of New York: Stories,2015.0,eng,No ficción
 9843,0439858054,"The Other Side of Dawn (Tomorrow, #7)",The Other Side of Dawn,1999.0,,Juvenil
@@ -9870,7 +9870,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9869,,"Then Came You (The Gamblers, #1)",Then Came You,1993.0,eng,Romántica
 9870,0060892056,"Dark River (Warriors: Power of Three, #2)",,2007.0,,Juvenil
 9871,0380712040,"Black Cherry Blues (Dave Robicheaux, #3)",Black Cherry Blues,1989.0,eng,Misterio
-9872,,The Versions of Us,The Versions of Us,2015.0,eng,Ficción
+9872,9780544634244,The Versions of Us,The Versions of Us,2015.0,eng,Ficción
 9873,0545208874,"The Last Council (Amulet, #4)",,2011.0,eng,Cómic y novela gráfica
 9874,0060959681,Dancing Wu Li Masters: An Overview of the New Physics (Perennial Classics),The Dancing Wu Li Masters: An Overview of the New Physics,1979.0,eng,Ciencia
 9875,0425200280,The Next Big Thing,The Next Big Thing,2005.0,,Ficción
@@ -9890,7 +9890,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9890,0425098605,The Vision,The Vision,1977.0,eng,Terror
 9891,9684114737,Las batallas en el desierto,Las batallas en el desierto,1981.0,spa,Ficción
 9892,0749908904,"Salvation in Death (In Death, #27)",Salvation in Death,2008.0,eng,Misterio
-9893,,Open Road Summer,Open Road Summer,2014.0,eng,Juvenil
+9893,9780802738011,Open Road Summer,Open Road Summer,2014.0,eng,Juvenil
 9894,074341196X,"Inversions (Culture, #6)",Inversions,1998.0,,Ciencia ficción
 9895,,"Dirty English (English, #1)",Dirty English,2015.0,eng,Romántica
 9896,0385669852,Turn of Mind,Turn of Mind,2011.0,,Misterio
@@ -9910,7 +9910,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9910,0394726251,The Discoverers: A History of Man's Search to Know His World and Himself,The Discoverers: A History of Man's Search to Know His World and Himself,1983.0,,Historia
 9911,0345424646,"A Knight of the Word (Word & Void, #2)",A Knight of the Word ,1998.0,eng,Fantasía
 9912,043977733X,Henry's Freedom Box: A True Story from the Underground Railroad,,2007.0,eng,Infantil
-9913,,A Thousand Boy Kisses,A Thousand Boy Kisses,2016.0,eng,Romántica
+9913,9781504757638,A Thousand Boy Kisses,A Thousand Boy Kisses,2016.0,eng,Romántica
 9914,0312651201,"Eve (Eve Duncan, #12; Eve, Quinn and Bonnie #1)",,2011.0,eng,Thriller
 9915,0553807188,The Accident,The Accident,2011.0,eng,Thriller
 9916,0812998251,"Shopaholic to the Rescue (Shopaholic, #8)",Shopaholic to the Rescue,2015.0,eng,Ficción
@@ -9926,7 +9926,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9926,0061935123,"Hidden (Firelight, #3)",Hidden,2012.0,eng,Juvenil
 9927,0812976525,Thank You for Smoking,Thank You for Smoking,1994.0,,Ficción
 9928,0375509321,Thirteen Moons,Thirteen Moons,2006.0,eng,Ficción histórica
-9929,,زغازيغ,,,ara,Desconocido
+9929,9789778200232,زغازيغ,,,ara,Desconocido
 9930,0061458570,Big Brother,Big Brother,2013.0,eng,Ficción
 9931,0718154959,"Blue Monday (Frieda Klein, #1)",Blue Monday,2011.0,eng,Thriller
 9932,0310328179,Bread and   Wine: A Love Letter to Life Around the Table with Recipes,,2013.0,eng,Cocina
@@ -9964,7 +9964,7 @@ book_id,isbn,title,original_title,original_publication_year,language_code,genre
 9964,1408857391,"The Mime Order (The Bone Season, #2)",The Mime Order,2015.0,eng,Fantasía
 9965,0060182989,Mister B. Gone,Mister B. Gone,2007.0,eng,Terror
 9966,0312254997,The Ground Beneath Her Feet,The Ground Beneath Her Feet,1999.0,eng,Ficción
-9967,,الحرافيش,ملحمة الحرافيش,1977.0,ara,Ficción
+9967,9789770915226,الحرافيش,ملحمة الحرافيش,1977.0,ara,Ficción
 9968,0060005777,The Story of the Trapp Family Singers,The Story of the Trapp Family Singers,1949.0,,Memorias
 9969,1771641495,Gut: The Inside Story of Our Body’s Most Underrated Organ,Darm mit Charme,2014.0,eng,Ciencia
 9970,0676979564,The Virgin Cure,The Virgin Cure,2011.0,,Ficción histórica
