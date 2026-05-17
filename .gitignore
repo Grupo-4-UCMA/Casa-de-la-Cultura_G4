@@ -157,6 +157,7 @@ data/responses/
 
 # Logs de scripts locales
 sinopsis_log.txt
+isbn_log.txt
 
 
 # ------------------------------------------------------------
