@@ -155,9 +155,13 @@ data/responses/
 # Otros formatos comprimidos pesados
 *.csv.gz
 
-# Logs de scripts locales
+# Logs de scripts locales y servidor
 sinopsis_log.txt
 isbn_log.txt
+server_log.txt
+
+# Configuración de Claude Code
+.claude/
 
 
 # ------------------------------------------------------------
