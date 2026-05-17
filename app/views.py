@@ -217,29 +217,37 @@ def logout_view(request):
     return redirect('login')
 
 def registro_view(request):
+    generos_disponibles = []
+    try:
+        df_base = cargar_datos_completos()
+        if not df_base.empty:
+            generos_disponibles = sorted(set(g for sub in df_base['genre_list'] for g in sub if g and g != 'Desconocido'))
+    except: pass
+
     if request.method == 'POST':
-        gustos = request.POST.get('gustos', '')
+        generos_elegidos = request.POST.getlist('generos')
+        gustos = ', '.join(generos_elegidos)
         fecha_nacimiento = request.POST.get('fecha_nacimiento', '')
-        
+
         nuevo_id = 1
         try:
             max_user = LibraryUser.objects.order_by('-user_id').first()
             if max_user: nuevo_id = max_user.user_id + 1
-            
+
             user = LibraryUser(user_id=nuevo_id)
             if hasattr(user, 'comment'): user.comment = gustos
             elif hasattr(user, 'preferences'): user.preferences = gustos
-            
+
             if hasattr(user, 'birth_date'): user.birth_date = fecha_nacimiento
             elif hasattr(user, 'birthdate'): user.birthdate = fecha_nacimiento
-            
+
             user.save()
         except: pass
-            
+
         request.session['user_id'] = str(nuevo_id)
-        return redirect('perfil')
-        
-    return render(request, 'registro.html')
+        return redirect('buscador')
+
+    return render(request, 'registro.html', {'generos_disponibles': generos_disponibles})
 
 def perfil_view(request):
     user_id = request.session.get('user_id')
@@ -333,6 +341,18 @@ def buscador_catalogo(request):
                         'origen': top_rating.copy.book.title[:35],
                         'destino': top_rec.book.title[:35],
                     }
+                elif top_rating and not top_rec:
+                    ext_id = top_rating.copy.book.book_id
+                    recs_ids = RECS_BOOK_CACHE.get(ext_id, [])
+                    if recs_ids:
+                        df_tmp2 = cargar_datos_completos()
+                        destino_row = df_tmp2[df_tmp2['book_id'].isin(recs_ids)].head(1)
+                        if not destino_row.empty:
+                            sugerencia = {
+                                'tipo': 'libro',
+                                'origen': top_rating.copy.book.title[:35],
+                                'destino': destino_row.iloc[0]['title'][:35],
+                            }
                 elif not top_rating and not top_rec:
                     gustos = str(getattr(user_obj, 'comment', '') or '').strip()
                     if gustos and gustos not in ('nan', 'None'):
@@ -482,12 +502,19 @@ def buscador_catalogo(request):
                     if rec_book_ids:
                         recomendaciones = df_base[df_base['book_id'].isin(rec_book_ids)].head(3).to_dict('records')
                     else:
-                        gustos = str(getattr(user_obj, 'comment', '') or '').strip()
-                        if gustos and gustos not in ('nan', 'None'):
-                            generos_usuario = [g.strip() for g in gustos.split(',') if g.strip()]
-                            if generos_usuario:
-                                df_gen = df_base[df_base['genre_list'].apply(lambda x: any(g in x for g in generos_usuario))]
-                                recomendaciones = df_gen.sort_values(['nota_media', 'votos'], ascending=[False, False]).drop_duplicates(subset=['authors']).head(3).to_dict('records')
+                        top_rating = Rating.objects.filter(user=user_obj).select_related('copy__book').order_by('-rating', '-created_at').first()
+                        if top_rating:
+                            ext_id = top_rating.copy.book.book_id
+                            recs_ids = RECS_BOOK_CACHE.get(ext_id, [])
+                            if recs_ids:
+                                recomendaciones = df_base[df_base['book_id'].isin(recs_ids)].drop_duplicates(subset=['authors']).head(3).to_dict('records')
+                        if not recomendaciones:
+                            gustos = str(getattr(user_obj, 'comment', '') or '').strip()
+                            if gustos and gustos not in ('nan', 'None'):
+                                generos_usuario = [g.strip() for g in gustos.split(',') if g.strip()]
+                                if generos_usuario:
+                                    df_gen = df_base[df_base['genre_list'].apply(lambda x: any(g in x for g in generos_usuario))]
+                                    recomendaciones = df_gen.sort_values(['nota_media', 'votos'], ascending=[False, False]).drop_duplicates(subset=['authors']).head(3).to_dict('records')
             except: pass
 
         if not recomendaciones:

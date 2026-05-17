@@ -11,7 +11,7 @@ from app.models import Book, Author, Copy, LibraryUser, Rating
 
 
 BATCH_SIZE = 5000
-LIMITE_RATINGS = 10000  # Para pruebas. Sube este valor cuando quieras cargar más ratings.
+LIMITE_RATINGS = None  # Carga todos los ratings
 
 
 def parse_date(value):
