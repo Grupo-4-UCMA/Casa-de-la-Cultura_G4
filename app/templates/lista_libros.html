@@ -531,7 +531,7 @@
                             </small>
                         </div>
                         <div>
-                            <button class="btn-ia" onclick="pedirResumen(this, '{{ libro.title|escapejs }}', '{{ libro.authors|escapejs }}')">✨ Preguntar a la IA</button>
+                            <button class="btn-ia" onclick="pedirResumen(this, '{{ libro.title|escapejs }}', '{{ libro.authors|escapejs }}', '{{ libro.genre_list.0|escapejs }}', '{{ libro.original_publication_year }}', '{{ libro.nota_media }}', '{{ libro.votos|floatformat:0 }}')">✨ Preguntar a la IA</button>
                             <div class="ia-box"></div>
                         </div>
                         {% if user_active %}
@@ -707,21 +707,36 @@
             form.submit();
         }
 
-        function pedirResumen(btn, titulo, autor) {
+        function escribirTexto(elemento, texto, velocidad) {
+            let i = 0;
+            elemento.innerHTML = '';
+            function paso() {
+                if (i < texto.length) {
+                    elemento.innerHTML += texto.charAt(i);
+                    i++;
+                    setTimeout(paso, velocidad);
+                }
+            }
+            paso();
+        }
+
+        function pedirResumen(btn, titulo, autor, genero, anio, nota, votos) {
             const box = btn.nextElementSibling;
             if (box.style.display === 'block') {
                 box.style.display = 'none';
                 return;
             }
             box.style.display = 'block';
-            box.innerHTML = '<span class="loading-ia">Preguntando al modelo de IA local...</span>';
-            
-            fetch(`/api/ia/?titulo=${encodeURIComponent(titulo)}&autor=${encodeURIComponent(autor)}`)
+            box.innerHTML = '<span class="loading-ia">Analizando con IA...</span>';
+
+            const params = new URLSearchParams({ titulo, autor, genero: genero||'', anio: anio||'', nota: nota||'', votos: votos||'' });
+            fetch(`/api/ia/?${params}`)
                 .then(res => res.json())
                 .then(data => {
-                    box.innerHTML = data.resumen;
+                    const velocidad = Math.max(10, Math.round(2800 / data.resumen.length));
+                    escribirTexto(box, data.resumen, velocidad);
                 })
-                .catch(err => {
+                .catch(() => {
                     box.innerHTML = 'Error de conexión con el modelo local.';
                 });
         }

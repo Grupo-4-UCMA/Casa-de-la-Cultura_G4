@@ -529,18 +529,73 @@ def valorar_libro(request, book_id):
 
 
 def resumen_ia_view(request):
+    import random
     titulo = request.GET.get('titulo', '')
     autor = request.GET.get('autor', '')
-    
-    ruta_sinopsis = 'data/sinopsis.csv'
-    if os.path.exists(ruta_sinopsis):
-        try:
-            df_sinopsis = pd.read_csv(ruta_sinopsis)
-            match = df_sinopsis[df_sinopsis['title'].str.lower() == titulo.lower()]
-            if not match.empty:
-                texto = match.iloc[0]['sinopsis']
-                return JsonResponse({'resumen': f"Resumen extraido: {texto}"})
-        except: pass
+    genero = request.GET.get('genero', '')
+    anio = request.GET.get('anio', '')
+    nota = request.GET.get('nota', '')
+    votos = request.GET.get('votos', '')
 
-    respuesta_offline = f"El libro '{titulo}', escrito por {autor}, es una obra destacada en su género. Explora temas profundos con una narrativa envolvente, lo que lo convierte en una lectura recomendada en el catálogo."
-    return JsonResponse({'resumen': f"Resumen IA: {respuesta_offline}"})
+    partes = []
+
+    aperturas = [
+        f"'{titulo}' es una obra de {autor} que ha logrado conectar con lectores de perfiles muy distintos.",
+        f"Con '{titulo}', {autor} consigue algo difícil: crear una experiencia que permanece en la memoria del lector.",
+        f"Pocas obras del catálogo generan el tipo de fidelidad lectora que ha conseguido '{titulo}', de {autor}.",
+        f"'{titulo}' representa uno de los títulos más singulares que {autor} ha puesto en circulación.",
+        f"La propuesta literaria de {autor} en '{titulo}' destaca por su coherencia y su capacidad de sorprender.",
+    ]
+    partes.append(random.choice(aperturas))
+
+    if genero and anio and anio not in ('0', ''):
+        contextos = [
+            f"Publicada en {anio}, esta obra de {genero.lower()} explora con madurez los temas que definen el género.",
+            f"Desde {anio}, este título de {genero.lower()} mantiene una presencia destacada entre los lectores más exigentes.",
+            f"En el terreno del {genero.lower()}, pocas obras publicadas en {anio} han tenido un recorrido tan sostenido.",
+        ]
+        partes.append(random.choice(contextos))
+    elif genero:
+        opciones = [
+            f"Inscrita en el {genero.lower()}, la obra trabaja con soltura los recursos propios del género sin caer en lo predecible.",
+            f"El {genero.lower()} encuentra en este libro una de sus expresiones más cuidadas.",
+        ]
+        partes.append(random.choice(opciones))
+    elif anio and anio not in ('0', ''):
+        partes.append(random.choice([
+            f"Publicada en {anio}, la obra conserva una vigencia que pocos títulos de su época pueden reclamar.",
+            f"Aunque data de {anio}, su lectura resulta igual de pertinente hoy que en el momento de su publicación.",
+        ]))
+
+    try:
+        nota_f = float(nota)
+        votos_i = int(votos) if votos else 0
+        if nota_f >= 4.2:
+            valoraciones = [
+                f"Con una valoración media de {nota_f:.1f} sobre 5 entre {votos_i:,} lectores, figura entre las obras mejor recibidas del catálogo.",
+                f"Sus {votos_i:,} valoraciones con una media de {nota_f:.1f} sobre 5 la convierten en una de las referencias más fiables del fondo.",
+            ]
+        elif nota_f >= 3.5:
+            valoraciones = [
+                f"Acumula {votos_i:,} valoraciones con una media de {nota_f:.1f} sobre 5, reflejo de una acogida consistentemente positiva.",
+                f"La nota media de {nota_f:.1f} entre {votos_i:,} lectores habla de un libro que cumple con creces lo que promete.",
+            ]
+        else:
+            valoraciones = [
+                f"Con {votos_i:,} valoraciones registradas, genera lecturas e interpretaciones muy diversas.",
+                f"Un título que no deja indiferente: {votos_i:,} valoraciones dan fe de la conversación que ha generado.",
+            ]
+        partes.append(random.choice(valoraciones))
+    except: pass
+
+    cierres = [
+        "Una lectura que, una vez empezada, resulta difícil de abandonar.",
+        "Ideal para quien busca algo más que entretenimiento en sus lecturas.",
+        "Sin duda, un título que justifica el tiempo que se le dedica.",
+        "De esas obras que siguen resonando mucho después de cerrar la última página.",
+        "Una propuesta que equilibra accesibilidad y profundidad de manera poco frecuente.",
+        "Muy recomendable para lectores que valoran tanto la forma como el fondo.",
+    ]
+    partes.append(random.choice(cierres))
+
+    return JsonResponse({'resumen': ' '.join(partes)})
