@@ -155,6 +155,9 @@ data/responses/
 # Otros formatos comprimidos pesados
 *.csv.gz
 
+# Logs de scripts locales
+sinopsis_log.txt
+
 
 # ------------------------------------------------------------
 # Otros
