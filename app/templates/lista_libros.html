@@ -350,7 +350,12 @@
             {% if user_active %}
                 Bienvenido, lector <strong>{{ user_active }}</strong>
                 {% if sugerencia %}
-                    &nbsp;·&nbsp; Si te gustó <em>{{ sugerencia.origen }}</em>, también te podría gustar <em>{{ sugerencia.destino }}</em>
+                    &nbsp;·&nbsp;
+                    {% if sugerencia.tipo == 'genero' %}
+                        Como te gusta <em>{{ sugerencia.origen }}</em>, también te podría gustar <em>{{ sugerencia.destino }}</em>
+                    {% else %}
+                        Si te gustó <em>{{ sugerencia.origen }}</em>, también te podría gustar <em>{{ sugerencia.destino }}</em>
+                    {% endif %}
                 {% endif %}
             {% else %}
                 Modo Invitado
