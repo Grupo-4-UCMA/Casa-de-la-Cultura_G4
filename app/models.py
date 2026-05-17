@@ -114,6 +114,7 @@ class Rating(models.Model):
     )
 
     class Meta:
+        unique_together = ("user", "copy")
         indexes = [
             models.Index(fields=["user"]),
             models.Index(fields=["copy"]),
